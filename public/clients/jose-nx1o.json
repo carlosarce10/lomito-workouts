@@ -242,6 +242,22 @@
           "warmupSets": 0
         },
         {
+          "exerciseId": "reverse-machine-fly",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
           "exerciseId": "cable-overhead-triceps-extension",
           "reps": {
             "min": 12,
