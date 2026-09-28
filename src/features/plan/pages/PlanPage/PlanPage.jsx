@@ -40,7 +40,7 @@ export default function PlanPage() {
       <MethodologySection />
       <RoutineTabs routines={plan.routines} active={activa} onSelect={setActiva} />
       <RoutineSection routine={routine} />
-      <TrackingLink />
+      <TrackingLink plan={plan} />
     </div>
   );
 }

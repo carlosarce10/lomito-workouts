@@ -97,6 +97,10 @@ Palabras prohibidas y su sustituto:
 | `serie` en identificadores                                                               | `set`                             |
 | `weight`, `record`, `session`, `history`, `timer`, `log`, `settings`, `theme`, `storage` | No existen en el producto         |
 
+Excepcion: el archivo de exportacion usa los campos de Lomito Train
+(`muscleGroupIds`, `colorId`), porque son de otra aplicacion. Ver
+[docs/tracking-export.md](docs/tracking-export.md).
+
 Si un concepto no esta en esta tabla, se anade a la tabla antes de escribir la
 primera linea de codigo.
 

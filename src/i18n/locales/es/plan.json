@@ -54,6 +54,14 @@
   "tracking": {
     "title": "Registra tu entrenamiento en Lomito Train",
     "hint": "Crea allí una rutina por cada día de este plan y anota el peso y las repeticiones de cada serie.",
-    "action": "Abrir Lomito Train"
+    "action": "Abrir Lomito Train",
+    "exportHint": "Descarga tu plan y ábrelo en Lomito Train: tendrás cada día como una rutina, con sus ejercicios y las series listas para anotar.",
+    "export": "Descargar plan para Lomito Train",
+    "exporting": "Preparando el archivo…",
+    "exported": "Descargado {{name}}",
+    "exportFailed": "No se pudo descargar el archivo. Inténtalo de nuevo.",
+    "step1": "Descarga el archivo con el botón de arriba.",
+    "step2": "En Lomito Train, entra en Ajustes y pulsa Importar datos.",
+    "step3": "Elige el archivo. Tus ejercicios y marcas actuales se conservan."
   }
 }

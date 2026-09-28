@@ -180,6 +180,13 @@ free-exercise-db). Pendiente: probar en una sesion nueva "crea el plan de Ana,
 principiante, hipertrofia, 3 dias full body, solo mancuernas" y comprobar que deja
 `check` en verde sin commitear.
 
+## Despues del MVP — Exportacion a Lomito Train (completada)
+
+El cliente descarga su plan y lo importa en Lomito Train, que lo fusiona con sus datos
+sin borrar nada. Formato, reglas y verificacion de extremo a extremo en
+[tracking-export.md](tracking-export.md). Requiere la version de Lomito Train con
+`planImport`: la anterior rechaza el archivo sin tocar nada.
+
 ## Deuda conocida
 
 | Deuda                                                                  | Fase que la cierra            |
@@ -191,10 +198,9 @@ principiante, hipertrofia, 3 dias full body, solo mancuernas" y comprobar que de
 ## Backlog
 
 1. PWA sin conexion: copiar `vite-plugin-pwa`, manifest e iconos de Lomito Train.
-2. Importar el plan en Lomito Train generando su copia de seguridad JSON.
-3. Boton de tema (requiere guardar la preferencia).
-4. Locale `en`.
-5. Imagenes o videos propios; WebP.
-6. Modo compacto de tarjeta.
-7. Vista de impresion.
-8. Imagen social propia; duracion estimada por rutina.
+2. Boton de tema (requiere guardar la preferencia).
+3. Locale `en`.
+4. Imagenes o videos propios; WebP.
+5. Modo compacto de tarjeta.
+6. Vista de impresion.
+7. Imagen social propia; duracion estimada por rutina.

@@ -23,5 +23,29 @@
       margin-top: $spacing-xs;
       text-decoration: none;
     }
+
+    // Siempre en el DOM, tambien vacia: si apareciera y desapareciera, el lector de
+    // pantalla no anunciaria el resultado de la descarga.
+    &__status {
+      min-height: 1.5em;
+      color: var(--success-text);
+      font-size: $font-size-sm;
+      overflow-wrap: anywhere;
+    }
+
+    &__steps {
+      @include flex-column;
+
+      gap: $spacing-xs;
+      margin: 0;
+      padding-left: 1.25em;
+      color: var(--text-secondary);
+      font-size: $font-size-sm;
+      text-align: left;
+    }
+
+    &__step {
+      padding-left: $spacing-xs;
+    }
   }
 }

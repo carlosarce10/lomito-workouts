@@ -16,4 +16,11 @@ export {
   SOURCE_PROVIDER_IDS,
   SOURCE_PROVIDERS,
 } from './sources.js';
-export { TRACKING_URL } from './tracking.js';
+export {
+  TRACKING_FILE,
+  TRACKING_GROUPS_MAX,
+  TRACKING_MUSCLE_GROUPS,
+  TRACKING_NAME_MAX,
+  TRACKING_ROUTINE_COLOR_IDS,
+  TRACKING_URL,
+} from './tracking.js';
