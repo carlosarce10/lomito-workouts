@@ -1,0 +1,59 @@
+{
+  "home": {
+    "intro": "Lomito Workouts es la herramienta con la que Lomito Dev entrega planes de entrenamiento personalizados: qué ejercicios hacer, cuántas series, en qué rango y cómo ejecutarlos.",
+    "hint": "Si tu entrenador te compartió un enlace, ábrelo desde ese enlace para ver tu plan."
+  },
+  "page": {
+    "title": "Plan de {{name}} · Lomito Workouts",
+    "back": "Inicio"
+  },
+  "profile": {
+    "title": "Plan de {{name}}",
+    "goal": "Objetivo",
+    "level": "Nivel",
+    "frequency": "Frecuencia",
+    "frequencyValue_one": "{{count}} día por semana",
+    "frequencyValue_many": "{{count}} días por semana",
+    "frequencyValue_other": "{{count}} días por semana",
+    "start": "Inicio: {{date}}",
+    "review": "Revisión: {{date}}"
+  },
+  "methodology": {
+    "title": "¿Cómo entrenar?"
+  },
+  "routine": {
+    "tabsLabel": "Rutinas del plan",
+    "ordinal": "Día {{n}}",
+    "title": "Día {{n}} · {{name}}"
+  },
+  "card": {
+    "muscles": "Músculos",
+    "imageStart": "{{name}}: posición inicial",
+    "imageEnd": "{{name}}: posición final",
+    "noImage": "Sin imagen",
+    "sets": "Series efectivas",
+    "reps": "Repeticiones",
+    "rir": "RIR",
+    "rest": "Descanso",
+    "range": "{{min}}–{{max}}",
+    "minutes": "{{value}} min",
+    "seconds": "{{value}} s",
+    "warmup_one": "{{count}} serie de aproximación de {{reps}} al 50–60 % de la carga",
+    "warmup_many": "{{count}} series de aproximación de {{reps}} al 50–60 % de la carga",
+    "warmup_other": "{{count}} series de aproximación de {{reps}} al 50–60 % de la carga",
+    "noWarmup": "Sin serie de aproximación",
+    "instructions": "Cómo hacerlo",
+    "mistakes": "Errores comunes"
+  },
+  "status": {
+    "loading": "Cargando tu plan…",
+    "errorTitle": "No se pudo abrir el plan",
+    "failed": "No se pudo cargar el plan. Revisa tu conexión e inténtalo de nuevo.",
+    "orphan": "El plan incluye un ejercicio que no existe en la biblioteca. Avisa a tu entrenador."
+  },
+  "tracking": {
+    "title": "Registra tu entrenamiento en Lomito Train",
+    "hint": "Crea allí una rutina por cada día de este plan y anota el peso y las repeticiones de cada serie.",
+    "action": "Abrir Lomito Train"
+  }
+}

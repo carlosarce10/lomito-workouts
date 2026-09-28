@@ -1,0 +1,17 @@
+{
+  "id": "cable-crossover",
+  "name": "Cruce de poleas",
+  "muscleIds": ["chest"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca las poleas por encima de la cabeza, toma una manija en cada mano y da un paso al frente con una pierna adelantada.",
+    "Con los codos ligeramente flexionados y fijos, junta las manos delante del pecho describiendo un arco, como si abrazaras un tronco.",
+    "Aprieta el pecho un segundo al final y vuelve controlando hasta sentir el estiramiento."
+  ],
+  "commonMistakes": [
+    "Flexionar y extender los codos: lo convierte en un press.",
+    "Encoger los hombros hacia las orejas.",
+    "Usar tanto peso que el torso se inclina hacia adelante para compensar."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Cable_Crossover" }
+}

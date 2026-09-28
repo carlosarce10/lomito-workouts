@@ -1,0 +1,17 @@
+{
+  "id": "leg-extension",
+  "name": "Extensión de cuádriceps",
+  "muscleIds": ["quads"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el respaldo para que las rodillas queden alineadas con el eje de giro de la máquina y el rodillo sobre los tobillos.",
+    "Extiende las piernas hasta casi bloquear las rodillas y aprieta el cuádriceps un segundo arriba.",
+    "Baja en 2-3 segundos hasta unos 90 grados, sin soltar el peso."
+  ],
+  "commonMistakes": [
+    "Levantar la cadera del asiento para ayudarte.",
+    "Dejar caer el peso en la bajada.",
+    "Rodillas por delante del eje de la máquina: molestia en la rótula."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Leg_Extensions" }
+}

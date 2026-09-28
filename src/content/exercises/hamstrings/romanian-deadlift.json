@@ -1,0 +1,17 @@
+{
+  "id": "romanian-deadlift",
+  "name": "Peso muerto rumano",
+  "muscleIds": ["hamstrings", "glutes", "back-lower"],
+  "equipmentId": "barbell",
+  "instructions": [
+    "De pie con la barra frente a los muslos, pies a la anchura de la cadera, rodillas apenas flexionadas y la espalda recta.",
+    "Lleva la cadera hacia atrás y baja la barra pegada a las piernas hasta sentir el estiramiento en los isquios, normalmente algo por debajo de las rodillas.",
+    "Sube empujando la cadera hacia adelante hasta quedar erguido, apretando el glúteo arriba, sin echarte hacia atrás."
+  ],
+  "commonMistakes": [
+    "Redondear la espalda al bajar.",
+    "Flexionar mucho las rodillas: se convierte en una sentadilla.",
+    "Dejar que la barra se aleje de las piernas."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Romanian_Deadlift" }
+}

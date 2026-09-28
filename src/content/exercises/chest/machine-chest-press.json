@@ -1,0 +1,17 @@
+{
+  "id": "machine-chest-press",
+  "name": "Press de pecho en máquina",
+  "muscleIds": ["chest", "triceps", "shoulders-front"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que las agarraderas queden a la altura del pecho, no de los hombros.",
+    "Apoya la espalda y la cabeza, junta los omóplatos y empuja hasta extender los brazos sin bloquear los codos.",
+    "Vuelve despacio hasta que las manos queden a la altura del pecho, sin dejar que el peso descanse en la pila."
+  ],
+  "commonMistakes": [
+    "Asiento demasiado bajo: las manos quedan a la altura de la cara y el hombro sufre.",
+    "Despegar la espalda del respaldo para empujar.",
+    "Soltar el peso de golpe en la bajada."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Leverage_Chest_Press" }
+}

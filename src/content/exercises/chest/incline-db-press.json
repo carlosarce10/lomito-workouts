@@ -1,0 +1,18 @@
+{
+  "id": "incline-db-press",
+  "name": "Press inclinado con mancuernas",
+  "muscleIds": ["chest-upper", "shoulders-front", "triceps"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "Ajusta el banco a 30-45 grados. Siéntate con la espalda apoyada, los pies firmes y las mancuernas a la altura del pecho, con los codos algo por debajo de los hombros.",
+    "Empuja las mancuernas hacia arriba y ligeramente hacia el centro hasta extender los brazos, sin bloquear los codos de golpe.",
+    "Baja en 2-3 segundos, controlando, hasta sentir el estiramiento en la parte alta del pecho.",
+    "Mantén los omóplatos juntos y apoyados en el banco durante toda la serie."
+  ],
+  "commonMistakes": [
+    "Inclinar el banco más de 45 grados: el trabajo pasa al hombro.",
+    "Rebotar abajo o bajar sin control.",
+    "Arquear la espalda baja para mover más peso."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Incline_Dumbbell_Press" }
+}

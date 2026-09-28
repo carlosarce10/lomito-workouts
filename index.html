@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <!-- El color de la barra del navegador sigue al tema del sistema. No hay conmutador
+         ni preferencia guardada, asi que basta una etiqueta por esquema. Los valores son
+         los theme-color de los dos mapas de src/styles/settings/_tokens.scss. -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eff6ff" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b1220" />
+    <meta name="description" content="Plan de entrenamiento personalizado de Lomito Workouts." />
+    <!-- Cada plan es un enlace privado: fuera de los buscadores. -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Vista previa del enlace en WhatsApp, Telegram, Slack o X. La imagen tiene que
+         ser una URL absoluta, asi que la base publica sale de VITE_SITE_URL en .env y
+         Vite la sustituye al construir. Ningun comentario de este archivo puede
+         contener una etiqueta HTML escrita: los rastreadores no parsean, buscan. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Lomito Workouts" />
+    <meta property="og:title" content="Lomito Workouts" />
+    <meta property="og:description" content="Plan de entrenamiento personalizado de Lomito Workouts." />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logotipo de Lomito Workouts" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lomito Workouts" />
+    <meta name="twitter:description" content="Plan de entrenamiento personalizado de Lomito Workouts." />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.png" />
+
+    <!-- Los iconos viven en public/: los lee el navegador por URL fija y Vite reescribe
+         la ruta con la base relativa al construir. -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Lomito Workouts</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

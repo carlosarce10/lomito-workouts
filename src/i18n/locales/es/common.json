@@ -1,0 +1,15 @@
+{
+  "app": {
+    "name": "Lomito Workouts",
+    "tagline": "Plan de entrenamiento",
+    "signature": "Lomito Workouts"
+  },
+  "action": {
+    "reload": "Recargar",
+    "retry": "Reintentar"
+  },
+  "error": {
+    "title": "No se pudo abrir Lomito Workouts",
+    "render": "Algo se rompió al dibujar la pantalla. Recarga para intentarlo de nuevo."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "db-split-squat",
+  "name": "Sentadilla búlgara con mancuernas",
+  "muscleIds": ["quads", "glutes"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "Apoya el empeine del pie trasero en un banco y da un paso largo al frente con el otro. Una mancuerna en cada mano, colgando a los lados.",
+    "Baja recto, flexionando la rodilla y la cadera de la pierna delantera, hasta que el muslo quede paralelo al suelo. La rodilla sigue la línea del pie.",
+    "Sube empujando con el talón delantero. Completa todas las repeticiones con una pierna y luego cambia."
+  ],
+  "commonMistakes": [
+    "Paso demasiado corto: la rodilla delantera se va muy por delante del pie.",
+    "Inclinar el torso hacia adelante en lugar de bajar recto.",
+    "Empujar con la pierna trasera para subir."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Split_Squat_with_Dumbbells"
+  }
+}

@@ -1,0 +1,19 @@
+# Artefactos de build
+dist
+dist-ssr
+coverage
+
+# Dependencias
+node_modules
+
+# Lockfiles
+package-lock.json
+
+# Assets estaticos servidos tal cual. Los JSON de clientes si se formatean: los
+# escribe una persona o la skill, y Prettier colapsa los arrays que caben en una linea.
+public/*
+!public/clients/
+
+# Sistema
+.DS_Store
+*.local

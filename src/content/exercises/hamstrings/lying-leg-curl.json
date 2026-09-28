@@ -1,0 +1,17 @@
+{
+  "id": "lying-leg-curl",
+  "name": "Curl femoral tumbado",
+  "muscleIds": ["hamstrings"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Túmbate boca abajo con el rodillo justo por encima de los tobillos y las rodillas alineadas con el eje de la máquina.",
+    "Flexiona las rodillas llevando los talones hacia el glúteo, apretando el isquio un segundo arriba.",
+    "Baja en 2-3 segundos hasta extender casi por completo las piernas."
+  ],
+  "commonMistakes": [
+    "Levantar la cadera del banco al subir.",
+    "Dejar caer el peso en la bajada.",
+    "Recorrido corto por exceso de peso."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Lying_Leg_Curls" }
+}

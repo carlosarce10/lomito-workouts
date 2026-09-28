@@ -1,0 +1,17 @@
+{
+  "id": "hip-thrust",
+  "name": "Hip thrust con barra",
+  "muscleIds": ["glutes", "hamstrings"],
+  "equipmentId": "barbell",
+  "instructions": [
+    "Apoya la parte alta de la espalda en un banco, la barra sobre la cadera con una almohadilla, y los pies a la anchura de la cadera.",
+    "Empuja la cadera hacia arriba hasta que el torso quede paralelo al suelo, con las rodillas a 90 grados y la mirada al frente.",
+    "Aprieta el glúteo un segundo arriba y baja controlando, sin apoyar del todo la barra en el suelo."
+  ],
+  "commonMistakes": [
+    "Arquear la espalda baja arriba en lugar de apretar el glúteo.",
+    "Pies demasiado lejos: el trabajo pasa a los isquios.",
+    "Subir la barbilla y mirar al techo."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Barbell_Hip_Thrust" }
+}

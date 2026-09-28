@@ -1,0 +1,16 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-muscle-badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+      display: inline-flex;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-routine-section {
+    @include flex-column;
+
+    gap: $spacing-md;
+
+    &__header {
+      @include flex-column;
+
+      gap: $spacing-sm;
+    }
+
+    &__title {
+      font-size: $font-size-xl;
+    }
+
+    &__notes {
+      @include glass-card($radius-sm);
+
+      padding: $spacing-sm $spacing-md;
+      border-left: 3px solid var(--accent);
+      color: var(--text-secondary);
+      font-size: $font-size-sm;
+    }
+
+    &__list {
+      @include flex-column;
+
+      gap: $spacing-md;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item {
+      min-width: 0;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-collapsible {
+    @include glass-card;
+
+    box-shadow:
+      var(--shadow-sm),
+      inset 0 1px 0 var(--glass-sheen);
+
+    &__summary {
+      @include flex-between;
+      @include touch-target;
+
+      gap: $spacing-sm;
+      padding: $spacing-sm $spacing-lg;
+      border-radius: $radius-md;
+      color: var(--text);
+      font-weight: $font-weight-semibold;
+      cursor: pointer;
+      list-style: none;
+      -webkit-tap-highlight-color: transparent;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &:hover {
+        color: var(--accent-text);
+      }
+    }
+
+    &__title {
+      flex: 1;
+      min-width: 0;
+    }
+
+    &__chevron {
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform $transition-fast;
+    }
+
+    &[open] .c-collapsible__chevron {
+      transform: rotate(180deg);
+    }
+
+    &__body {
+      @include flex-column;
+
+      gap: $spacing-md;
+      padding: $spacing-md $spacing-lg $spacing-lg;
+      border-top: 1px solid var(--border);
+    }
+  }
+}

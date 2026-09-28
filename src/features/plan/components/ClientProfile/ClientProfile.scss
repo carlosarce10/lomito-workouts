@@ -1,0 +1,58 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-client-profile {
+    @include flex-column;
+    @include glass-card;
+
+    gap: $spacing-md;
+    padding: $spacing-md $spacing-lg;
+    box-shadow:
+      var(--shadow-sm),
+      inset 0 1px 0 var(--glass-sheen);
+
+    &__name {
+      font-size: $font-size-xl;
+      overflow-wrap: anywhere;
+    }
+
+    // Fila que envuelve: tres columnas iguales partian "Principiante" por la mitad
+    // en 375 px. Cada dato mide lo que su texto y el ultimo baja de linea si no cabe.
+    &__stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-sm $spacing-lg;
+      margin: 0;
+    }
+
+    &__stat {
+      @include flex-column;
+
+      gap: 2px;
+      min-width: 0;
+    }
+
+    &__stat-label {
+      font-size: $font-size-xs;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    &__stat-value {
+      margin: 0;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      color: var(--accent-text);
+    }
+
+    &__dates {
+      font-size: $font-size-sm;
+      color: var(--text-muted);
+    }
+
+    &__notes {
+      color: var(--text-secondary);
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "defaults": {
+    "sets": 2,
+    "warmupSets": 1,
+    "rir": { "min": 1, "max": 2 },
+    "restSeconds": { "min": 120, "max": 180 }
+  },
+  "sections": [
+    {
+      "id": "warmup",
+      "title": "Serie de aproximación",
+      "body": [
+        "Antes de las series efectivas haz una serie de aproximación con el 50-60 % de la carga que vas a usar, con las mismas repeticiones.",
+        "Sirve para preparar el movimiento y practicar la técnica, no para cansarte."
+      ]
+    },
+    {
+      "id": "sets",
+      "title": "Series efectivas",
+      "body": [
+        "Dos series efectivas por ejercicio, salvo que la tarjeta indique otra cosa.",
+        "Cada serie termina al fallo o muy cerca: te quedan una o dos repeticiones en reserva."
+      ]
+    },
+    {
+      "id": "rir",
+      "title": "RIR: repeticiones en reserva",
+      "body": [
+        "RIR es cuántas repeticiones más podrías haber hecho con buena técnica antes de fallar.",
+        "RIR 3: podrías haber hecho 3 más. RIR 2: 2 más. RIR 1: 1 más. RIR 0: fallo.",
+        "Este plan trabaja a RIR 1-2: termina cada serie sabiendo que te quedaban una o dos."
+      ]
+    },
+    {
+      "id": "rest",
+      "title": "Descanso",
+      "body": [
+        "Entre 2 y 3 minutos entre series efectivas en los ejercicios principales, y algo menos en los de aislamiento. Cada tarjeta lo indica."
+      ]
+    },
+    {
+      "id": "progression",
+      "title": "Progresión",
+      "body": [
+        "No necesitas aumentar el peso cada semana. Primero intenta mejorar tus repeticiones dentro del rango.",
+        "Cuando completes el tope del rango en las dos series con buena técnica, sube la carga y vuelve al mínimo del rango."
+      ]
+    },
+    {
+      "id": "technique",
+      "title": "Técnica antes que carga",
+      "body": [
+        "La técnica y el control del movimiento tienen prioridad sobre levantar más peso. Si la técnica se rompe, la serie ha terminado."
+      ]
+    }
+  ],
+  "progressionExample": {
+    "title": "Ejemplo con un rango de 8-12",
+    "steps": [
+      "Sesión 1: 20 kg × 8 y 8",
+      "Sesión 2: 20 kg × 9 y 8",
+      "Sesión 3: 20 kg × 10 y 9",
+      "Sesión 4: 20 kg × 12 y 12, toca subir la carga",
+      "Sesión 5: 22 kg × 8 y 8"
+    ]
+  }
+}

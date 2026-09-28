@@ -1,0 +1,17 @@
+{
+  "id": "hack-squat",
+  "name": "Sentadilla hack",
+  "muscleIds": ["quads", "glutes"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Apoya la espalda y los hombros en la máquina, con los pies a la anchura de los hombros y ligeramente adelantados.",
+    "Baja en 2-3 segundos, dejando que las rodillas avancen, hasta que los muslos queden algo por debajo de la paralela.",
+    "Sube empujando con toda la planta del pie hasta extender las piernas sin bloquear las rodillas."
+  ],
+  "commonMistakes": [
+    "Pies demasiado altos en la plataforma: el trabajo pasa al glúteo y los isquios.",
+    "Despegar los talones al bajar.",
+    "Cortar el recorrido para cargar más discos."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Hack_Squat" }
+}

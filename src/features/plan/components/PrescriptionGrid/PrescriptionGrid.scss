@@ -1,0 +1,55 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-prescription-grid {
+    @include flex-column;
+
+    gap: $spacing-sm;
+
+    &__warmup {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-medium;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    // Dos por fila en el movil: cuatro celdas en 311 px no dejan sitio a la etiqueta.
+    &__cells {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-xs;
+      margin: 0;
+
+      @include respond-to(sm) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    &__cell {
+      @include flex-column;
+
+      gap: 2px;
+      min-width: 0;
+      padding: $spacing-xs $spacing-sm;
+      border: 1px solid var(--border);
+      border-radius: $radius-sm;
+      background: var(--surface);
+    }
+
+    &__label {
+      font-size: $font-size-xs;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    &__value {
+      margin: 0;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      white-space: nowrap;
+      color: var(--accent-text);
+    }
+  }
+}

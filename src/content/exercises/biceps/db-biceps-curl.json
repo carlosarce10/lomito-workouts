@@ -1,0 +1,17 @@
+{
+  "id": "db-biceps-curl",
+  "name": "Curl de bíceps con mancuernas",
+  "muscleIds": ["biceps"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "De pie, con una mancuerna en cada mano y las palmas al frente, los codos pegados al costado.",
+    "Flexiona los codos hasta subir las mancuernas cerca de los hombros, sin mover los codos hacia adelante.",
+    "Baja en 2-3 segundos hasta extender los brazos por completo."
+  ],
+  "commonMistakes": [
+    "Balancear el cuerpo para subir el peso.",
+    "Adelantar los codos: el hombro hace el trabajo.",
+    "No extender del todo los brazos abajo."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Dumbbell_Bicep_Curl" }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "seated-cable-row",
+  "name": "Remo sentado en polea",
+  "muscleIds": ["back-upper", "lats", "biceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Siéntate con las rodillas algo flexionadas, el torso vertical y el pecho alto. Toma la manija con los brazos extendidos.",
+    "Tira de la manija hacia el abdomen llevando los codos hacia atrás, y junta los omóplatos al final.",
+    "Vuelve controlando hasta extender los brazos, dejando que la espalda alta se estire sin redondear la baja."
+  ],
+  "commonMistakes": [
+    "Balancear el torso adelante y atrás en cada repetición.",
+    "Redondear la espalda baja al volver.",
+    "Tirar con los bíceps: los codos suben en lugar de ir hacia atrás."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Seated_Cable_Rows" }
+}

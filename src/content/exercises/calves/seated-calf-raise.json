@@ -1,0 +1,17 @@
+{
+  "id": "seated-calf-raise",
+  "name": "Elevación de talones sentado",
+  "muscleIds": ["calves"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Siéntate con la punta de los pies en el borde de la plataforma y las almohadillas sobre los muslos, cerca de las rodillas.",
+    "Sube los talones lo más alto que puedas y aguanta un segundo arriba.",
+    "Baja en 2-3 segundos hasta el estiramiento completo y mantén un segundo antes de repetir."
+  ],
+  "commonMistakes": [
+    "Rebotar abajo.",
+    "Recorrido corto por usar demasiado peso.",
+    "Levantar las almohadillas con las manos para ayudarse."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Seated_Calf_Raise" }
+}

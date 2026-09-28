@@ -1,0 +1,27 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-tracking-link {
+    @include flex-column;
+    @include glass-card-strong;
+
+    gap: $spacing-sm;
+    padding: $spacing-lg;
+    text-align: center;
+
+    &__title {
+      font-size: $font-size-lg;
+    }
+
+    &__hint {
+      color: var(--text-secondary);
+      font-size: $font-size-sm;
+    }
+
+    &__action {
+      width: 100%;
+      margin-top: $spacing-xs;
+      text-decoration: none;
+    }
+  }
+}

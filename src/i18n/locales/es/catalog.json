@@ -1,0 +1,38 @@
+{
+  "muscles": {
+    "chest": "Pecho",
+    "chest-upper": "Pecho superior",
+    "lats": "Dorsal",
+    "back-upper": "Espalda alta",
+    "back-lower": "Lumbar",
+    "shoulders-front": "Hombro frontal",
+    "shoulders-side": "Hombro lateral",
+    "shoulders-rear": "Hombro posterior",
+    "biceps": "Bíceps",
+    "triceps": "Tríceps",
+    "forearms": "Antebrazo",
+    "abs": "Abdomen",
+    "quads": "Cuádriceps",
+    "hamstrings": "Isquios",
+    "glutes": "Glúteo",
+    "calves": "Gemelos"
+  },
+  "equipment": {
+    "barbell": "Barra",
+    "dumbbell": "Mancuernas",
+    "cable": "Cable",
+    "machine": "Máquina",
+    "bodyweight": "Corporal",
+    "other": "Otro"
+  },
+  "levels": {
+    "beginner": "Principiante",
+    "intermediate": "Intermedio",
+    "advanced": "Avanzado"
+  },
+  "goals": {
+    "hypertrophy": "Hipertrofia",
+    "strength": "Fuerza",
+    "general": "Salud general"
+  }
+}

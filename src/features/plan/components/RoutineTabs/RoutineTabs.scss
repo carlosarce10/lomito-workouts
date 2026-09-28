@@ -1,0 +1,54 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-routine-tabs {
+    padding-bottom: $spacing-xs;
+
+    &__tab {
+      @include touch-target;
+      @include flex-column;
+
+      flex-shrink: 0;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 2px;
+      padding: $spacing-xs $spacing-md;
+      border: 1px solid var(--border);
+      border-radius: $radius-full;
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-family: $font-family;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      white-space: nowrap;
+      cursor: pointer;
+      transition:
+        background-color $transition-fast,
+        border-color $transition-fast,
+        color $transition-fast;
+      -webkit-tap-highlight-color: transparent;
+
+      &:hover {
+        border-color: var(--border-interactive);
+        color: var(--text);
+      }
+
+      &.is-active {
+        border-color: var(--accent);
+        background: var(--accent-subtle);
+        color: var(--accent-text);
+        font-weight: $font-weight-semibold;
+      }
+    }
+
+    &__ordinal {
+      font-size: $font-size-xs;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    &__name {
+      line-height: 1.1;
+    }
+  }
+}

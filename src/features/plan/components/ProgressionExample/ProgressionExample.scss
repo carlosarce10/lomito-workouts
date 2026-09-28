@@ -1,0 +1,45 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-progression-example {
+    @include flex-column;
+
+    gap: $spacing-sm;
+    margin: 0;
+
+    &__title {
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+    }
+
+    &__steps {
+      @include flex-column;
+
+      gap: $spacing-xs;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: sesion;
+    }
+
+    &__step {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      padding: $spacing-xs $spacing-md;
+      border: 1px solid var(--border);
+      border-radius: $radius-full;
+      background: var(--surface);
+      color: var(--text-secondary);
+      font-size: $font-size-sm;
+
+      // La ultima sesion es la que estrena la carga nueva: se destaca.
+      &:last-child {
+        border-color: var(--accent);
+        background: var(--accent-subtle);
+        color: var(--accent-text);
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}

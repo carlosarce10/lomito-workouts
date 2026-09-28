@@ -1,0 +1,20 @@
+{
+  "id": "back-extension",
+  "name": "Extensiones lumbares",
+  "muscleIds": ["back-lower", "glutes", "hamstrings"],
+  "equipmentId": "other",
+  "instructions": [
+    "Ajusta el banco para que la almohadilla quede justo por debajo de la cadera y los tobillos bien sujetos.",
+    "Con las manos cruzadas sobre el pecho, baja el torso flexionando la cadera, con la espalda recta, hasta unos 90 grados.",
+    "Sube hasta alinear el torso con las piernas, apretando el glúteo y la lumbar, sin pasar de la línea recta."
+  ],
+  "commonMistakes": [
+    "Hiperextender la espalda arriba, más allá de la línea del cuerpo.",
+    "Redondear la espalda al bajar.",
+    "Bajar de golpe."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Hyperextensions_Back_Extensions"
+  }
+}

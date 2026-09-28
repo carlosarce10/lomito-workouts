@@ -1,0 +1,31 @@
+@use '../settings/tokens' as tokens;
+
+// Capa 3 de ITCSS. Es el UNICO archivo del proyecto que emite custom properties.
+// Vite compila cada .scss co-locado por separado: si el bloque :root viviera en
+// settings se emitiria una vez por cada hoja que lo usa. Ver docs/styles.md.
+
+/// Emite las custom properties de un tema.
+@layer generic {
+  @mixin emit($name) {
+    @each $key, $value in tokens.theme($name) {
+      --#{$key}: #{$value};
+    }
+  }
+
+  :root {
+    @include emit(light);
+
+    color-scheme: light;
+  }
+
+  // El tema sigue al sistema. No hay conmutador ni preferencia guardada, asi que
+  // tampoco existe data-theme: un selector que nadie escribe seria codigo
+  // desconectado. Si algun dia entra el conmutador, se copia de Lomito Train.
+  @media (prefers-color-scheme: dark) {
+    :root {
+      @include emit(dark);
+
+      color-scheme: dark;
+    }
+  }
+}

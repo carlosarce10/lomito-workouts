@@ -1,0 +1,20 @@
+{
+  "id": "triceps-rope-pushdown",
+  "name": "Extensión de tríceps en polea con cuerda",
+  "muscleIds": ["triceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Toma la cuerda con las palmas enfrentadas, los codos pegados al costado y el torso ligeramente inclinado hacia adelante.",
+    "Extiende los brazos hacia abajo y separa las manos al final, apretando el tríceps un segundo.",
+    "Vuelve controlando hasta que los antebrazos superen la horizontal, sin que los codos se despeguen del cuerpo."
+  ],
+  "commonMistakes": [
+    "Abrir los codos hacia adelante: el pecho y el hombro hacen el trabajo.",
+    "Usar el peso del cuerpo para empujar la cuerda hacia abajo.",
+    "Cortar el recorrido arriba por usar demasiado peso."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Triceps_Pushdown_-_Rope_Attachment"
+  }
+}

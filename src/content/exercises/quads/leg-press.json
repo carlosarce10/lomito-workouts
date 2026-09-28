@@ -1,0 +1,17 @@
+{
+  "id": "leg-press",
+  "name": "Prensa de piernas",
+  "muscleIds": ["quads", "glutes"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Coloca los pies en la plataforma a la anchura de los hombros, a media altura, con la espalda baja y la cadera bien apoyadas.",
+    "Baja la plataforma en 2-3 segundos hasta que las rodillas formen unos 90 grados, o hasta donde la cadera se mantenga apoyada.",
+    "Empuja con toda la planta del pie hasta extender las piernas sin bloquear las rodillas."
+  ],
+  "commonMistakes": [
+    "Bajar tanto que la cadera se despega y la espalda baja se redondea.",
+    "Bloquear las rodillas con fuerza al final de cada repetición.",
+    "Empujar con la punta de los pies y levantar los talones."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Leg_Press" }
+}

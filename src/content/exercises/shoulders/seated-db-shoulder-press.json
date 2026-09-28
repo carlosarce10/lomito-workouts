@@ -1,0 +1,17 @@
+{
+  "id": "seated-db-shoulder-press",
+  "name": "Press de hombro sentado con mancuernas",
+  "muscleIds": ["shoulders-front", "triceps"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "Siéntate en un banco con respaldo alto. Lleva las mancuernas a la altura de las orejas, con las palmas al frente y los antebrazos verticales.",
+    "Empuja hacia arriba hasta extender los brazos, acercando ligeramente las mancuernas al final sin chocarlas.",
+    "Baja despacio hasta que los codos queden un poco por debajo de la altura de los hombros."
+  ],
+  "commonMistakes": [
+    "Arquear mucho la espalda baja: el press se convierte en un press inclinado.",
+    "Bajar solo hasta la mitad del recorrido.",
+    "Bloquear los codos con fuerza arriba."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Seated_Dumbbell_Press" }
+}

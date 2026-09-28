@@ -1,0 +1,17 @@
+{
+  "id": "db-lateral-raise",
+  "name": "Elevaciones laterales con mancuernas",
+  "muscleIds": ["shoulders-side"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "De pie, con una mancuerna en cada mano a los lados del cuerpo, el torso apenas inclinado hacia adelante y los codos ligeramente flexionados.",
+    "Sube los brazos hacia los lados hasta la altura de los hombros, guiando el movimiento con los codos, no con las manos.",
+    "Baja en 2-3 segundos, sin dejar caer el peso y sin descansar las mancuernas en las piernas entre repeticiones."
+  ],
+  "commonMistakes": [
+    "Balancear el cuerpo para subir el peso.",
+    "Subir las manos por encima de los codos, como si sirvieras agua: castiga el hombro.",
+    "Encoger los trapecios en cada repetición."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Side_Lateral_Raise" }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "face-pull",
+  "name": "Face pull en polea",
+  "muscleIds": ["shoulders-rear", "back-upper"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca la polea a la altura de la cara con la cuerda. Toma los extremos con las palmas enfrentadas y da un paso atrás.",
+    "Tira de la cuerda hacia la cara separando las manos, con los codos altos y hacia afuera, hasta que las manos queden junto a las orejas.",
+    "Aprieta la parte posterior del hombro un segundo y vuelve controlando."
+  ],
+  "commonMistakes": [
+    "Polea demasiado baja: el movimiento se convierte en un remo.",
+    "Codos caídos por debajo de los hombros.",
+    "Usar impulso con el torso."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Face_Pull" }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "machine-row",
+  "name": "Remo en máquina con apoyo en el pecho",
+  "muscleIds": ["back-upper", "lats", "biceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que el apoyo quede en la parte alta del pecho y las manijas a la altura de las costillas.",
+    "Tira llevando los codos hacia atrás, pegados al cuerpo, hasta juntar los omóplatos.",
+    "Vuelve en 2-3 segundos hasta extender los brazos y dejar que los omóplatos se separen."
+  ],
+  "commonMistakes": [
+    "Despegar el pecho del apoyo para tirar más.",
+    "Encoger los hombros hacia las orejas.",
+    "Cortar el recorrido al volver."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Leverage_Iso_Row" }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "standing-calf-raise",
+  "name": "Elevación de talones de pie",
+  "muscleIds": ["calves"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Coloca la punta de los pies en el borde del escalón, los hombros bajo las almohadillas y las piernas extendidas sin bloquear.",
+    "Sube lo más alto que puedas sobre la punta de los pies y aguanta un segundo arriba.",
+    "Baja en 2-3 segundos hasta sentir el estiramiento completo del gemelo, y mantén esa posición un segundo antes de subir."
+  ],
+  "commonMistakes": [
+    "Rebotar abajo usando el tendón en lugar del músculo.",
+    "Recorrido corto: ni sube del todo ni baja del todo.",
+    "Flexionar las rodillas para ayudarse."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Standing_Calf_Raises" }
+}

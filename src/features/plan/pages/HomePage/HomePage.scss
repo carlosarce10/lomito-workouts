@@ -1,0 +1,29 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-home-page {
+    @include flex-column;
+
+    gap: $spacing-lg;
+
+    &__intro {
+      @include flex-column;
+      @include glass-card;
+
+      gap: $spacing-sm;
+      padding: $spacing-md $spacing-lg;
+      box-shadow:
+        var(--shadow-sm),
+        inset 0 1px 0 var(--glass-sheen);
+    }
+
+    &__text {
+      color: var(--text);
+    }
+
+    &__hint {
+      color: var(--text-secondary);
+      font-size: $font-size-sm;
+    }
+  }
+}

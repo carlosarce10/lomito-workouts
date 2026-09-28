@@ -1,0 +1,17 @@
+{
+  "id": "lat-pulldown",
+  "name": "Jalón al pecho",
+  "muscleIds": ["lats", "biceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Toma la barra con un agarre algo más ancho que los hombros, siéntate con los muslos sujetos y el torso apenas inclinado hacia atrás.",
+    "Tira de la barra hacia la parte alta del pecho llevando los codos hacia abajo y atrás, como si los guardaras en los bolsillos.",
+    "Vuelve controlando hasta extender los brazos y dejar que los omóplatos suban, sin soltar el peso."
+  ],
+  "commonMistakes": [
+    "Echarse hacia atrás y usar el impulso del torso.",
+    "Llevar la barra detrás de la nuca.",
+    "Tirar solo con los brazos sin bajar los codos."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Wide-Grip_Lat_Pulldown" }
+}

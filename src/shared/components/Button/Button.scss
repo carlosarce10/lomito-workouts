@@ -1,0 +1,103 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-button {
+    @include flex-center;
+    gap: $spacing-xs;
+    border-radius: $radius-sm;
+    font-weight: $font-weight-semibold;
+    font-family: $font-family;
+    cursor: pointer;
+    transition:
+      background-color $transition-fast,
+      border-color $transition-fast,
+      color $transition-fast,
+      box-shadow $transition-fast,
+      transform $transition-fast;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+
+    // Sizes
+    &--sm {
+      padding: $spacing-xs $spacing-sm;
+      font-size: $font-size-sm;
+    }
+
+    &--md {
+      min-height: $touch-target;
+      padding: $spacing-sm $spacing-md;
+      font-size: $font-size-base;
+    }
+
+    &--lg {
+      padding: $spacing-md $spacing-lg;
+      font-size: $font-size-lg;
+    }
+
+    // Variants
+    // La accion principal es identidad, no peligro: va por --accent.
+    &--primary {
+      background: var(--accent);
+      color: var(--on-accent);
+      border: none;
+      box-shadow: 0 4px 14px color-mix(in srgb, var(--accent) 30%, transparent);
+
+      &:hover {
+        background: var(--accent-strong);
+      }
+
+      &:active {
+        transform: scale(0.97);
+        background: var(--accent-strong);
+        box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 25%, transparent);
+      }
+    }
+
+    // La variante destructiva conserva el rojo: aqui el color es el significado.
+    &--danger {
+      background: var(--danger);
+      color: var(--on-danger);
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 14px color-mix(in srgb, var(--danger) 25%, transparent);
+
+      &:active {
+        transform: scale(0.97);
+        opacity: 0.9;
+      }
+    }
+
+    &--ghost {
+      @include glass-card($radius-sm);
+      box-shadow: var(--shadow-sm);
+      color: var(--text-secondary);
+
+      &:active {
+        background: var(--surface-strong);
+        color: var(--text);
+      }
+    }
+
+    &--icon {
+      @include glass-card($radius-full);
+      @include touch-target;
+      box-shadow: var(--shadow-sm);
+      color: var(--text-secondary);
+      padding: $spacing-xs;
+
+      // Sobre vidrio el icono activo va por --accent-text: --accent solo da 4,14:1
+      // en oscuro y no llega a AA.
+      &:active {
+        background: var(--surface-strong);
+        color: var(--accent-text);
+      }
+    }
+
+    // Un boton deshabilitado tiene que parecerlo. No se usa pointer-events: none
+    // porque eso impide que el cursor comunique el estado: el clic ya lo bloquea
+    // el propio atributo disabled.
+    &:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+  }
+}

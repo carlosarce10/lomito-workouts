@@ -1,0 +1,22 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-error-screen {
+    @include flex-column;
+    @include glass-card-strong;
+
+    gap: $spacing-md;
+    max-width: 480px;
+    margin: $spacing-2xl auto;
+    padding: $spacing-lg;
+    text-align: center;
+
+    &__title {
+      font-size: $font-size-xl;
+    }
+
+    &__message {
+      color: var(--text-secondary);
+    }
+  }
+}

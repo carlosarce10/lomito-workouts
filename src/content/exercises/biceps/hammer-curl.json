@@ -1,0 +1,17 @@
+{
+  "id": "hammer-curl",
+  "name": "Curl martillo",
+  "muscleIds": ["biceps", "forearms"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "De pie, con una mancuerna en cada mano y las palmas mirando al cuerpo, los codos pegados al costado.",
+    "Flexiona los codos manteniendo las palmas enfrentadas hasta que las mancuernas queden cerca de los hombros.",
+    "Baja controlando hasta extender los brazos."
+  ],
+  "commonMistakes": [
+    "Girar las muñecas durante el recorrido.",
+    "Balancear el torso.",
+    "Bajar rápido y rebotar abajo."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Hammer_Curls" }
+}

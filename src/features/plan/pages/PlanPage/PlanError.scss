@@ -1,0 +1,20 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-plan-error {
+    @include flex-column;
+    @include glass-card-strong;
+
+    gap: $spacing-md;
+    padding: $spacing-lg;
+    text-align: center;
+
+    &__title {
+      font-size: $font-size-xl;
+    }
+
+    &__message {
+      color: var(--text-secondary);
+    }
+  }
+}
