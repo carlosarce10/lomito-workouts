@@ -154,6 +154,8 @@ cambian.
 
 ## Como anadir o cambiar un cliente
 
+Las preguntas que se le hacen al cliente antes estan en [intake.md](intake.md).
+
 1. Generar el slug (`nombre-xxxx`) y crear o abrir `public/clients/<slug>.json`.
 2. Componer las rutinas con ejercicios de la biblioteca; solo `reps` por ejercicio
    salvo excepciones a la metodologia.

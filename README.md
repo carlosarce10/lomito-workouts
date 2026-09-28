@@ -49,6 +49,7 @@ los JSON de contenido se valida con un script antes de cada build.
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Commits, atribucion y flujo de trabajo                                 |
 | [docs/plan.md](docs/plan.md)       | El plan por fases del MVP y sus decisiones                             |
 | [docs/roadmap.md](docs/roadmap.md) | Que fase esta cerrada y que queda                                      |
+| [docs/intake.md](docs/intake.md)   | Cuestionario para un cliente nuevo, antes de crear su plan             |
 
 Antes de escribir codigo se lee CLAUDE.md. Antes de escribir un commit se lee
 CONTRIBUTING.md.

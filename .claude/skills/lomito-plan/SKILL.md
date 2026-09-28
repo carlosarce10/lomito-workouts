@@ -21,10 +21,14 @@ mas. El seguimiento (pesos, marcas, historial) es de Lomito Train y no existe aq
 
 ## Datos que hacen falta
 
-Si faltan, preguntar antes de escribir: nombre de pila o apodo del cliente (nunca el
-nombre completo: el sitio es publico), objetivo (`goalId`), nivel (`levelId`),
-numero de rutinas por semana y su reparto, equipamiento disponible, molestias o
-limitaciones, fecha de inicio y de revision. Para modificar un plan: el slug.
+Las preguntas estan en `docs/intake.md`, que es el cuestionario que el entrenador
+envia al cliente. Si la peticion no trae las imprescindibles (nombre de pila o
+apodo, objetivo, nivel, dias por semana, lugar y equipamiento, lesiones o
+molestias), preguntarlas antes de escribir, con la misma redaccion. Las demas se
+preguntan solo si cambian la eleccion de ejercicios. Para modificar un plan: el slug.
+
+Peso corporal, edad y datos medicos no se escriben en el plan aunque el cliente los
+haya dado.
 
 ## Pasos
 
