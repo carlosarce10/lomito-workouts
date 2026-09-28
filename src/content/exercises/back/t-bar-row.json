@@ -1,0 +1,17 @@
+{
+  "id": "t-bar-row",
+  "name": "Remo T",
+  "muscleIds": ["back-upper", "lats", "biceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Túmbate boca abajo en el banco de la máquina con el pecho bien apoyado y toma las agarraderas con los brazos estirados.",
+    "Tira llevando los codos hacia atrás, cerca del cuerpo, hasta juntar los omóplatos.",
+    "Baja en 2-3 segundos hasta estirar los brazos, sin soltar el peso."
+  ],
+  "commonMistakes": [
+    "Separar el pecho del apoyo para tirar con la espalda baja.",
+    "Encoger los hombros hacia las orejas.",
+    "Dar tirones cortos en lugar de recorrer todo el movimiento."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Lying_T-Bar_Row" }
+}

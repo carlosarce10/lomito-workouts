@@ -1,0 +1,20 @@
+{
+  "id": "machine-incline-chest-press",
+  "name": "Press inclinado en máquina",
+  "muscleIds": ["chest-upper", "shoulders-front", "triceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que las agarraderas queden a la altura de la parte alta del pecho.",
+    "Apoya la espalda, junta los omóplatos y empuja hacia arriba y al frente hasta extender los brazos sin bloquear.",
+    "Vuelve en 2-3 segundos hasta sentir el estiramiento en el pecho, sin soltar el peso en la pila."
+  ],
+  "commonMistakes": [
+    "Despegar la espalda del respaldo para empujar.",
+    "Encoger los hombros: el trabajo pasa al hombro y se pierde el pecho.",
+    "Bajar de golpe."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Leverage_Incline_Chest_Press"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "pec-deck",
+  "name": "Pec deck",
+  "muscleIds": ["chest"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que las agarraderas queden a la altura del pecho y apoya toda la espalda en el respaldo.",
+    "Con los codos ligeramente flexionados, junta los brazos delante del pecho en un arco, como si abrazaras un tronco.",
+    "Aprieta el pecho un segundo y vuelve despacio hasta sentir el estiramiento, sin dejar que las placas choquen."
+  ],
+  "commonMistakes": [
+    "Despegar la espalda del respaldo para cerrar con el impulso.",
+    "Abrir demasiado atrás al volver: el hombro queda forzado.",
+    "Encoger los hombros hacia las orejas."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Butterfly" }
+}

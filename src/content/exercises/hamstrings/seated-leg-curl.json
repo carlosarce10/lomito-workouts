@@ -1,0 +1,18 @@
+{
+  "id": "seated-leg-curl",
+  "name": "Curl femoral sentado",
+  "muscleIds": ["hamstrings"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el respaldo para que la rodilla quede alineada con el eje de la máquina y el rodillo inferior apoye sobre el tobillo.",
+    "Baja el rodillo superior hasta sujetar bien los muslos y agárrate a las asas.",
+    "Flexiona las rodillas llevando los talones hacia atrás y abajo, hasta el máximo recorrido que controles.",
+    "Vuelve en 2-3 segundos hasta casi extender las piernas, sin dejar que el peso choque."
+  ],
+  "commonMistakes": [
+    "Rodilla desalineada con el eje: el movimiento carga la articulación en vez del músculo.",
+    "Despegar la cadera del asiento para ayudarte con el impulso.",
+    "Soltar la bajada y perder la mitad del trabajo."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Seated_Leg_Curl" }
+}

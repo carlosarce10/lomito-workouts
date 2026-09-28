@@ -1,0 +1,373 @@
+{
+  "name": "José Iván",
+  "goalId": "hypertrophy",
+  "levelId": "beginner",
+  "startDate": "2026-09-28",
+  "reviewDate": "2026-10-12",
+  "notes": "Bloque de acondicionamiento de dos semanas. Semana: Upper, Lower, descanso, Upper, Lower. Prioridad: aprender la técnica de cada ejercicio con cargas que controles, dejando 2-3 repeticiones en reserva.",
+  "routines": [
+    {
+      "name": "Upper A",
+      "notes": "Torso completo. Antes de empezar, cinco minutos de remo o elíptica suaves.",
+      "exercises": [
+        {
+          "exerciseId": "machine-chest-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "notes": "Ejercicio principal del día: el más estable para aprender a empujar."
+        },
+        {
+          "exerciseId": "lat-pulldown",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "machine-shoulder-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "seated-cable-row",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "triceps-rope-pushdown",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "db-biceps-curl",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower A",
+      "notes": "Pierna completa. Antes de empezar, cinco minutos de bici suaves.",
+      "exercises": [
+        {
+          "exerciseId": "leg-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "warmupSets": 2,
+          "notes": "Ejercicio principal del día. Baja hasta donde la zona lumbar siga pegada al respaldo."
+        },
+        {
+          "exerciseId": "lying-leg-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "leg-extension",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "standing-calf-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Upper B",
+      "notes": "Torso completo con otros ángulos que el Upper A.",
+      "exercises": [
+        {
+          "exerciseId": "machine-incline-chest-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "t-bar-row",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "pec-deck",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "hammer-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower B",
+      "notes": "Pierna completa, con curl femoral sentado y gemelo sentado en lugar de las variantes del Lower A.",
+      "exercises": [
+        {
+          "exerciseId": "leg-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "warmupSets": 2,
+          "notes": "Ejercicio principal del día. Baja hasta donde la zona lumbar siga pegada al respaldo."
+        },
+        {
+          "exerciseId": "seated-leg-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "leg-extension",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "seated-calf-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    }
+  ]
+}

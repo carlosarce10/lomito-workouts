@@ -1,0 +1,17 @@
+{
+  "id": "hip-abduction-machine",
+  "name": "Abductores en máquina",
+  "muscleIds": ["glutes"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Siéntate con la espalda apoyada en el respaldo y las almohadillas por fuera de las rodillas.",
+    "Separa las piernas empujando con la parte externa de los muslos hasta abrir todo lo que permita la cadera.",
+    "Aguanta un segundo abierto y vuelve despacio, sin dejar que las placas choquen."
+  ],
+  "commonMistakes": [
+    "Despegar la espalda del respaldo para ayudarte con el impulso.",
+    "Volver de golpe y dejar caer el peso.",
+    "Usar tanto peso que solo abres la mitad del recorrido."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Thigh_Abductor" }
+}

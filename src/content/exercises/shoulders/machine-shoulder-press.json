@@ -1,0 +1,17 @@
+{
+  "id": "machine-shoulder-press",
+  "name": "Press de hombro en máquina",
+  "muscleIds": ["shoulders-front", "triceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que las agarraderas queden a la altura de los hombros y apoya bien la espalda.",
+    "Empuja hacia arriba hasta extender los brazos, sin bloquear los codos de golpe.",
+    "Baja despacio hasta que las manos vuelvan a la altura de los hombros."
+  ],
+  "commonMistakes": [
+    "Arquear la espalda baja y despegarla del respaldo.",
+    "Asiento demasiado bajo: el recorrido empieza por debajo de los hombros y castiga la articulación.",
+    "Encoger los hombros hacia las orejas al empujar."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Leverage_Shoulder_Press" }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "reverse-machine-fly",
+  "name": "Pájaros en máquina",
+  "muscleIds": ["shoulders-rear", "back-upper"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Siéntate de frente al respaldo con el pecho apoyado y toma las agarraderas con los brazos estirados a la altura de los hombros.",
+    "Abre los brazos hacia atrás en un arco, con los codos apenas flexionados, hasta que queden en línea con el cuerpo.",
+    "Aprieta la parte posterior del hombro un segundo y vuelve despacio."
+  ],
+  "commonMistakes": [
+    "Separar el pecho del respaldo para tirar con la espalda baja.",
+    "Doblar los codos y convertirlo en un remo.",
+    "Juntar los omóplatos al final: el trabajo es del hombro, no de la espalda."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Reverse_Machine_Flyes" }
+}

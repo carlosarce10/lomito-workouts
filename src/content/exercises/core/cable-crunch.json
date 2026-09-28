@@ -1,0 +1,18 @@
+{
+  "id": "cable-crunch",
+  "name": "Crunch en polea alta",
+  "muscleIds": ["abs"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Engancha la cuerda en la polea alta y arrodíllate frente a la máquina, sujetando los extremos a los lados de la cabeza.",
+    "Con la cadera quieta, enrolla el tronco llevando los codos hacia los muslos.",
+    "Aprieta el abdomen un segundo abajo.",
+    "Vuelve en 2-3 segundos hasta estirar el abdomen, sin soltar la tensión."
+  ],
+  "commonMistakes": [
+    "Sentarte sobre los talones: el movimiento sale de la cadera, no del abdomen.",
+    "Tirar con los brazos en vez de enrollar la columna.",
+    "Cargar tanto peso que te levanta del suelo al volver."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Cable_Crunch" }
+}

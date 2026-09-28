@@ -1,0 +1,17 @@
+{
+  "id": "hip-adduction-machine",
+  "name": "Aductores en máquina",
+  "muscleIds": ["adductors"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Siéntate con la espalda apoyada en el respaldo y las almohadillas por dentro de las rodillas, con las piernas abiertas hasta donde estés cómodo.",
+    "Junta las piernas apretando con la cara interna de los muslos hasta que las almohadillas casi se toquen.",
+    "Aguanta un segundo cerrado y vuelve a abrir despacio, sin dejar que el peso tire de las piernas."
+  ],
+  "commonMistakes": [
+    "Empezar demasiado abierto: estira de más la ingle.",
+    "Despegar la espalda del respaldo para cerrar con impulso.",
+    "Abrir de golpe al volver."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Thigh_Adductor" }
+}
