@@ -39,6 +39,7 @@ export const TRACKING_MUSCLE_GROUPS = {
   quads: ['leg', 'lowerbody'],
   hamstrings: ['leg', 'lowerbody'],
   glutes: ['leg', 'lowerbody'],
+  adductors: ['leg', 'lowerbody'],
   calves: ['leg', 'lowerbody'],
 };
 

@@ -17,6 +17,7 @@ export const GROUPS = [
   { id: 'quads', color: '#34d399' },
   { id: 'hamstrings', color: '#2dd4bf' },
   { id: 'glutes', color: '#fb7185' },
+  { id: 'adductors', color: '#e879f9' },
   { id: 'calves', color: '#94a3b8' },
 ];
 
@@ -36,6 +37,7 @@ export const MUSCLES = [
   { id: 'quads', group: 'quads' },
   { id: 'hamstrings', group: 'hamstrings' },
   { id: 'glutes', group: 'glutes' },
+  { id: 'adductors', group: 'adductors' },
   { id: 'calves', group: 'calves' },
 ];
 

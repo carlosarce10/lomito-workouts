@@ -52,7 +52,7 @@ y la carpeta es el grupo de su primer musculo.
 | `source`         | no          | `{ provider, id }`; sin `source` la tarjeta muestra un icono           |
 
 Grupos y carpetas: `chest`, `back`, `shoulders`, `biceps`, `triceps`, `forearms`,
-`core`, `quads`, `hamstrings`, `glutes`, `calves`. El grupo de cada musculo esta en
+`core`, `quads`, `hamstrings`, `glutes`, `adductors`, `calves`. El grupo de cada musculo esta en
 `muscles.js` (`chest-upper` es del grupo `chest`, `lats` del grupo `back`).
 
 ## Un cliente
