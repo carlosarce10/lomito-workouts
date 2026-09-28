@@ -30,12 +30,34 @@ preguntan solo si cambian la eleccion de ejercicios. Para modificar un plan: el 
 Peso corporal, edad y datos medicos no se escriben en el plan aunque el cliente los
 haya dado.
 
+## Seleccion de ejercicios
+
+El nivel del cliente (`levelId`) decide que ejercicios pueden entrar en su plan. Un
+ejercicio que exige tecnica que el cliente todavia no tiene no es un buen ejercicio
+para el, por bien que trabaje el musculo.
+
+| Nivel          | Entra                                                                                                              | No entra                                                                                                                               |
+| -------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `beginner`     | Maquinas guiadas y poleas. Mancuernas solo en movimientos simples: curls, elevaciones laterales. Lumbares sin peso | Hip thrust, peso muerto y rumano, sentadilla con barra, sentadilla bulgara, zancadas, remo con barra, press militar, dominadas, fondos |
+| `intermediate` | Lo anterior, mas barra libre en los basicos, mancuernas en presses y remos, unilaterales, hip thrust, rumano       | Variantes olimpicas y ejercicios de potencia                                                                                           |
+| `advanced`     | Toda la biblioteca                                                                                                 |                                                                                                                                        |
+
+Reglas fijas, en cualquier nivel:
+
+- **Un solo patron de sentadilla o prensa por dia de pierna.** Prensa, sentadilla hack,
+  sentadilla, bulgara y zancada son el mismo patron: nunca dos en la misma rutina.
+  El resto del dia se completa con extension de cuadriceps, curl femoral, gluteo y
+  gemelo.
+- Si la biblioteca solo tiene una version tecnica de un ejercicio, se crea la version
+  guiada (en maquina o polea) en lugar de meter la tecnica.
+- En la respuesta se dice que ejercicios se descartaron por nivel y cual los sustituye.
+
 ## Pasos
 
 1. **Slug.** Para un cliente nuevo, `<nombre>-<cuatro caracteres al azar>`:
    `node -e "const a='abcdefghijklmnopqrstuvwxyz0123456789';console.log(Array.from(require('crypto').randomBytes(4),b=>a[b%36]).join(''))"`.
    Nunca se reutiliza ni se adivina. Un cliente existente conserva el suyo.
-2. **Rutinas.** Cada dia es una `routine` con `name` unico y sus `exercises`. Solo
+2. **Rutinas.** Aplicando la seleccion de ejercicios de arriba, cada dia es una `routine` con `name` unico y sus `exercises`. Solo
    `exerciseId` y `reps` son obligatorios por ejercicio; `sets`, `rir`, `restSeconds`
    y `warmupSets` se omiten salvo que se aparten de la metodologia. `notes` cuando
    el entrenador quiera decir algo de ese ejercicio. No existe `day`: el orden en la
