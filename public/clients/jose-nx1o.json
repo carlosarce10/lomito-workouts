@@ -8,7 +8,7 @@
   "routines": [
     {
       "name": "Upper A",
-      "notes": "Torso completo. Antes de empezar, cinco minutos de remo o elíptica suaves.",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
       "exercises": [
         {
           "exerciseId": "machine-chest-press",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Lower A",
-      "notes": "Pierna completa. Antes de empezar, cinco minutos de bici suaves.",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
       "exercises": [
         {
           "exerciseId": "leg-press",
@@ -185,7 +185,7 @@
     },
     {
       "name": "Upper B",
-      "notes": "Torso completo con otros ángulos que el Upper A.",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
       "exercises": [
         {
           "exerciseId": "machine-incline-chest-press",
@@ -277,7 +277,7 @@
     },
     {
       "name": "Lower B",
-      "notes": "Pierna completa, con curl femoral sentado y gemelo sentado en lugar de las variantes del Lower A.",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
       "exercises": [
         {
           "exerciseId": "leg-press",
