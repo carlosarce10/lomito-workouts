@@ -1,0 +1,376 @@
+{
+  "name": "Eliseo Servín",
+  "goalId": "hypertrophy",
+  "levelId": "beginner",
+  "startDate": "2026-09-29",
+  "reviewDate": "2026-10-13",
+  "notes": "Bloque de acondicionamiento de dos semanas antes del de hipertrofia. Semana: Upper, Lower, descanso, Upper, Lower. Prioridad: brazos y piernas. En pierna, la rodilla nunca pasa de 90 grados con carga.",
+  "routines": [
+    {
+      "name": "Upper A",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        {
+          "exerciseId": "barbell-bench-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "warmupSets": 2,
+          "notes": "Ejercicio principal del día: ya lo dominas. Estas dos semanas, con carga que controles."
+        },
+        {
+          "exerciseId": "lat-pulldown",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "seated-cable-row",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "machine-shoulder-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "triceps-rope-pushdown",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "db-biceps-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower A",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y extensiones de rodilla sin peso, 2 × 10.",
+      "exercises": [
+        {
+          "exerciseId": "leg-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "warmupSets": 2,
+          "notes": "Ejercicio principal del día. Baja solo hasta que las rodillas formen 90 grados, sin rebotar."
+        },
+        {
+          "exerciseId": "leg-extension",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0,
+          "notes": "Sube y baja en control, sin bloquear la rodilla de golpe."
+        },
+        {
+          "exerciseId": "lying-leg-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "standing-calf-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Upper B",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        {
+          "exerciseId": "machine-incline-chest-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "t-bar-row",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "reverse-machine-fly",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "hammer-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower B",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y extensiones de rodilla sin peso, 2 × 10.",
+      "exercises": [
+        {
+          "exerciseId": "leg-press",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "warmupSets": 2,
+          "notes": "Ejercicio principal del día. Baja solo hasta que las rodillas formen 90 grados, sin rebotar."
+        },
+        {
+          "exerciseId": "seated-leg-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          }
+        },
+        {
+          "exerciseId": "hip-abduction-machine",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "back-extension",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0,
+          "notes": "Sin peso: sube solo hasta alinear el torso con las piernas."
+        },
+        {
+          "exerciseId": "seated-calf-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "rir": {
+            "min": 2,
+            "max": 3
+          },
+          "restSeconds": {
+            "min": 60,
+            "max": 90
+          },
+          "warmupSets": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "id": "machine-triceps-extension",
+  "name": "Extensión de tríceps en máquina",
+  "muscleIds": ["triceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que los codos queden alineados con el eje de giro de la máquina y apóyalos en la almohadilla.",
+    "Extiende los brazos empujando las agarraderas hasta casi bloquear los codos y aprieta el tríceps un segundo.",
+    "Vuelve despacio hasta que los antebrazos superen los 90 grados, sin despegar los codos."
+  ],
+  "commonMistakes": [
+    "Levantar los codos de la almohadilla para empujar con el hombro.",
+    "Dejar volver el peso de golpe.",
+    "Asiento mal ajustado: el codo queda lejos del eje y molesta."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Machine_Triceps_Extension"
+  }
+}

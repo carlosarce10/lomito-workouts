@@ -15,10 +15,13 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `machine-row` | `Leverage_Iso_Row` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/ |
 | `seated-cable-row` | `Seated_Cable_Rows` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/ |
 | `t-bar-row` | `Lying_T-Bar_Row` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_T-Bar_Row/ |
+| `cable-biceps-curl` | `Standing_Biceps_Cable_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/ |
 | `db-biceps-curl` | `Dumbbell_Bicep_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/ |
 | `hammer-curl` | `Hammer_Curls` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/ |
+| `machine-preacher-curl` | `Machine_Preacher_Curls` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Preacher_Curls/ |
 | `seated-calf-raise` | `Seated_Calf_Raise` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/ |
 | `standing-calf-raise` | `Standing_Calf_Raises` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/ |
+| `barbell-bench-press` | `Barbell_Bench_Press_-_Medium_Grip` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/ |
 | `cable-crossover` | `Cable_Crossover` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/ |
 | `incline-db-press` | `Incline_Dumbbell_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/ |
 | `machine-chest-press` | `Leverage_Chest_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Chest_Press/ |
@@ -40,5 +43,7 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `reverse-machine-fly` | `Reverse_Machine_Flyes` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Reverse_Machine_Flyes/ |
 | `seated-db-shoulder-press` | `Seated_Dumbbell_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Press/ |
 | `cable-overhead-triceps-extension` | `Cable_Rope_Overhead_Triceps_Extension` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Rope_Overhead_Triceps_Extension/ |
+| `machine-triceps-extension` | `Machine_Triceps_Extension` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Triceps_Extension/ |
 | `triceps-rope-pushdown` | `Triceps_Pushdown_-_Rope_Attachment` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_Rope_Attachment/ |
+| `triceps-vbar-pushdown` | `Triceps_Pushdown_-_V-Bar_Attachment` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Triceps_Pushdown_-_V-Bar_Attachment/ |
 

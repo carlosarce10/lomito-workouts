@@ -1,0 +1,21 @@
+{
+  "id": "barbell-bench-press",
+  "name": "Press de banca con barra",
+  "muscleIds": ["chest", "triceps", "shoulders-front"],
+  "equipmentId": "barbell",
+  "instructions": [
+    "Túmbate en el banco con los ojos bajo la barra, los pies firmes en el suelo y los omóplatos juntos y apoyados.",
+    "Toma la barra algo más ancho que los hombros, sácala del soporte y colócala sobre el pecho con los brazos estirados.",
+    "Baja en 2-3 segundos hasta rozar la parte baja del pecho, con los codos a unos 45 grados del cuerpo.",
+    "Empuja hasta extender los brazos sin despegar la cadera ni los omóplatos del banco."
+  ],
+  "commonMistakes": [
+    "Rebotar la barra en el pecho.",
+    "Abrir los codos a 90 grados: castiga el hombro.",
+    "Levantar la cadera del banco para mover más peso."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Barbell_Bench_Press_-_Medium_Grip"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "machine-preacher-curl",
+  "name": "Curl predicador en máquina",
+  "muscleIds": ["biceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que la parte de atrás de los brazos quede apoyada entera en la almohadilla y las axilas en su borde.",
+    "Flexiona los codos llevando las agarraderas hacia los hombros y aprieta el bíceps un segundo arriba.",
+    "Baja despacio hasta casi estirar los brazos, sin dejar caer el peso al final."
+  ],
+  "commonMistakes": [
+    "Despegar los brazos de la almohadilla para ayudarte con el hombro.",
+    "Estirar de golpe abajo: es donde más sufre el codo.",
+    "Asiento demasiado alto o bajo: el brazo no apoya completo."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Machine_Preacher_Curls" }
+}

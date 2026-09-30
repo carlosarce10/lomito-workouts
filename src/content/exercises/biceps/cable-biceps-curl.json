@@ -1,0 +1,20 @@
+{
+  "id": "cable-biceps-curl",
+  "name": "Curl de bíceps en polea",
+  "muscleIds": ["biceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca la polea abajo con una barra recta, tómala con las palmas hacia arriba y da un paso atrás con los codos pegados al costado.",
+    "Flexiona los codos hasta subir la barra cerca de los hombros, sin mover los codos hacia adelante.",
+    "Baja en 2-3 segundos hasta estirar los brazos por completo; la polea mantiene la tensión abajo."
+  ],
+  "commonMistakes": [
+    "Balancear el torso para subir.",
+    "Adelantar los codos al final del recorrido.",
+    "Cortar la bajada a la mitad."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Standing_Biceps_Cable_Curl"
+  }
+}

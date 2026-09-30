@@ -1,0 +1,20 @@
+{
+  "id": "triceps-vbar-pushdown",
+  "name": "Extensión de tríceps en polea con barra V",
+  "muscleIds": ["triceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Toma la barra V con las palmas hacia abajo, los codos pegados al costado y el torso ligeramente inclinado hacia adelante.",
+    "Extiende los brazos hacia abajo hasta estirarlos por completo y aprieta el tríceps un segundo.",
+    "Vuelve controlando hasta que los antebrazos superen la horizontal, sin mover los codos."
+  ],
+  "commonMistakes": [
+    "Abrir los codos hacia afuera.",
+    "Echar el peso del cuerpo encima de la barra.",
+    "Subir las manos hasta la cara: los codos se despegan y trabaja el hombro."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Triceps_Pushdown_-_V-Bar_Attachment"
+  }
+}
