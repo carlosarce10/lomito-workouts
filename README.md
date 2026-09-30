@@ -76,7 +76,7 @@ Para probar el build en una subruta antes de publicar, igual que lo servira Page
 npm run build
 mkdir -p /tmp/lomito-sub/lomito-workouts && cp -R dist/. /tmp/lomito-sub/lomito-workouts/
 python3 -m http.server 5181 --directory /tmp/lomito-sub
-# abrir http://127.0.0.1:5181/lomito-workouts/#/juan-7k2p
+# abrir http://127.0.0.1:5181/lomito-workouts/#/<slug>
 ```
 
 ## Anadir o cambiar un plan

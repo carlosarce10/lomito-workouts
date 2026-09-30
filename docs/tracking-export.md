@@ -27,7 +27,7 @@ Lomito Train, el registro de lo hecho.
   "kind": "plan",
   "planVersion": 1,
   "exportedAt": "2026-09-28T18:00:00.000Z",
-  "title": "Plan de Juan",
+  "title": "Plan de Ana López",
   "data": {
     "exercises": [
       {

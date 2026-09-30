@@ -31,7 +31,7 @@ src/
   services/content/       library (glob), methodology, clients (fetch), images (rutas)
   shared/components/      Layout, Chip, Button, Collapsible
   styles/                 las siete capas de ITCSS, copiadas de Lomito Train
-public/clients/           juan-7k2p.json
+public/clients/           un JSON por cliente real; el de ejemplo se retiro
 public/exercises/         22 carpetas con 0.jpg y 1.jpg + ATTRIBUTION.md
 scripts/                  check-classes, check-i18n, check-content, fetch-exercise-images, find-exercise
 .github/workflows/        deploy.yml (GitHub Pages)
@@ -186,6 +186,13 @@ El cliente descarga su plan y lo importa en Lomito Train, que lo fusiona con sus
 sin borrar nada. Formato, reglas y verificacion de extremo a extremo en
 [tracking-export.md](tracking-export.md). Requiere la version de Lomito Train con
 `planImport`: la anterior rechaza el archivo sin tocar nada.
+
+## Cliente de ejemplo retirado
+
+El plan de demostracion `juan-7k2p` se retiro: incumplia la metodologia de
+programacion que se fijo despues (tres ejercicios de pecho en un dia, tres patrones de
+sentadilla en el de pierna, rangos de 12 a 15). Las verificaciones de las fases 1 a 4
+se hicieron con el y siguen siendo validas: el codigo no depende de ningun cliente.
 
 ## Deuda conocida
 
