@@ -1,3 +1,6 @@
+import { mdiWalk } from '@mdi/js';
+import Icon from '@mdi/react';
+
 import useTranslation from '@i18n/useTranslation';
 
 import MuscleBadgeList from '../MuscleBadgeList/MuscleBadgeList';
@@ -6,14 +9,14 @@ import RoutineExerciseCard from '../RoutineExerciseCard/RoutineExerciseCard';
 import './RoutineSection.scss';
 
 /**
- * Una rutina completa: titulo con su dia, musculos que trabaja, notas y la lista
- * de tarjetas de ejercicio.
+ * Una rutina completa: titulo con su dia, musculos que trabaja, notas (el
+ * calentamiento), la lista de tarjetas de ejercicio y, al final, el cardio.
  *
  * @param {object} props
  * @param {object} props.routine Rutina resuelta del plan.
  */
 export default function RoutineSection({ routine }) {
-  const { t } = useTranslation('plan');
+  const { t, formatNumber } = useTranslation('plan');
 
   return (
     <section className="c-routine-section">
@@ -31,6 +34,12 @@ export default function RoutineSection({ routine }) {
           </li>
         ))}
       </ol>
+      {routine.cardioMinutes > 0 ? (
+        <p className="c-routine-section__cardio">
+          <Icon className="c-routine-section__cardio-icon" path={mdiWalk} size={1} />
+          {t('routine.cardio', { minutes: formatNumber(routine.cardioMinutes, 'integer') })}
+        </p>
+      ) : null}
     </section>
   );
 }

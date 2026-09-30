@@ -36,6 +36,7 @@ export function resolvePlan({ client, library, methodology }) {
       ordinal: indice + 1,
       name: routine.name,
       notes: routine.notes ?? null,
+      cardioMinutes: routine.cardioMinutes ?? defaults.cardioMinutes,
       muscleIds: primaryMuscles(exercises),
       exercises,
     });

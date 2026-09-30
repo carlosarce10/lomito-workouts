@@ -24,7 +24,8 @@
   "routine": {
     "tabsLabel": "Rutinas del plan",
     "ordinal": "Día {{n}}",
-    "title": "Día {{n}} · {{name}}"
+    "title": "Día {{n}} · {{name}}",
+    "cardio": "Al terminar: {{minutes}} minutos de caminata en caminadora con la inclinación al máximo."
   },
   "card": {
     "muscles": "Músculos",

@@ -16,10 +16,14 @@ export const routineExerciseSchema = {
   notes: r.optional(r.text({ min: 1, max: LIMITS.text.max })),
 };
 
-/** Sesion de un dia. Su numero es la posicion en la lista; sus musculos se derivan. */
+/**
+ * Sesion de un dia. Su numero es la posicion en la lista; sus musculos se derivan.
+ * `cardioMinutes` es el cardio al terminar; sin el, el de la metodologia, y 0 lo quita.
+ */
 export const routineSchema = {
   name: r.text(LIMITS.name),
   notes: r.optional(r.text({ min: 1, max: LIMITS.notes.max })),
+  cardioMinutes: r.optional(r.number({ ...LIMITS.cardioMinutes, integer: true })),
   exercises: {
     __each: routineExerciseSchema,
     __min: LIMITS.exercisesPerRoutine.min,

@@ -16,6 +16,7 @@ export const LIMITS = {
   reps: { min: 1, max: 50 },
   rir: { min: 0, max: 5 },
   restSeconds: { min: 15, max: 600 },
+  cardioMinutes: { min: 0, max: 120 },
   methodologySections: { min: 1, max: 8 },
   methodologyBody: { min: 1, max: 4, itemMax: 400 },
   progressionSteps: { min: 2, max: 8 },

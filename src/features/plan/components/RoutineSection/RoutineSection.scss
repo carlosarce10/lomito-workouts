@@ -37,5 +37,24 @@
     &__item {
       min-width: 0;
     }
+
+    // Cierre del entrenamiento: va despues del ultimo ejercicio, no con las notas,
+    // que es el calentamiento y se lee antes de empezar.
+    &__cardio {
+      @include glass-card($radius-sm);
+
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      padding: $spacing-sm $spacing-md;
+      border-left: 3px solid var(--accent);
+      color: var(--text-secondary);
+      font-size: $font-size-sm;
+    }
+
+    &__cardio-icon {
+      flex-shrink: 0;
+      color: var(--accent-text);
+    }
   }
 }

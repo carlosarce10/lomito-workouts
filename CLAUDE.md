@@ -73,6 +73,7 @@ traduccion y ambitos de commit. La columna "codigo" manda.
 | Objetivo (catalogo)                                | `goal`, `goalId`           | Objetivo         |
 | Dias por semana, derivado de `routines.length`     | `frequency`                | Frecuencia       |
 | Series de aproximacion (entero)                    | `warmupSets`               | Aproximacion     |
+| Minutos de cardio al terminar la rutina            | `cardioMinutes`            | Cardio           |
 | Series efectivas (entero)                          | `sets`                     | Series efectivas |
 | Rango de repeticiones                              | `reps`                     | Repeticiones     |
 | Rango de repeticiones en reserva                   | `rir`                      | RIR              |

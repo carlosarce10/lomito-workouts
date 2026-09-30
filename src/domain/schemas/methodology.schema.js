@@ -11,6 +11,7 @@ export const methodologySchema = {
     warmupSets: r.number({ ...LIMITS.warmupSets, integer: true }),
     rir: r.range({ ...LIMITS.rir, integer: true }),
     restSeconds: r.range({ ...LIMITS.restSeconds, integer: true }),
+    cardioMinutes: r.number({ ...LIMITS.cardioMinutes, integer: true }),
   },
   sections: {
     __each: {

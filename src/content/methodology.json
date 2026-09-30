@@ -3,7 +3,8 @@
     "sets": 2,
     "warmupSets": 1,
     "rir": { "min": 1, "max": 2 },
-    "restSeconds": { "min": 120, "max": 180 }
+    "restSeconds": { "min": 120, "max": 180 },
+    "cardioMinutes": 30
   },
   "sections": [
     {

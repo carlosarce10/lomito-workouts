@@ -87,18 +87,19 @@ se reutiliza. `name` es solo nombre de pila o apodo: el sitio es publico.
 }
 ```
 
-| Campo                  | Obligatorio | Forma                                                   |
-| ---------------------- | ----------- | ------------------------------------------------------- |
-| `name`                 | si          | 1 a 60 caracteres                                       |
-| `goalId`               | si          | `hypertrophy`, `strength` o `general`                   |
-| `levelId`              | si          | `beginner`, `intermediate` o `advanced`                 |
-| `startDate`            | si          | `YYYY-MM-DD`                                            |
-| `reviewDate`           | no          | `YYYY-MM-DD`                                            |
-| `notes`                | no          | hasta 300 caracteres; nada de datos de salud detallados |
-| `routines`             | si          | 1 a 7. Su numero es la posicion: no hay campo `day`     |
-| `routines[].name`      | si          | 1 a 60 caracteres, unico dentro del cliente             |
-| `routines[].notes`     | no          | hasta 300 caracteres                                    |
-| `routines[].exercises` | si          | 1 a 12, sin `exerciseId` repetido                       |
+| Campo                      | Obligatorio | Forma                                                                 |
+| -------------------------- | ----------- | --------------------------------------------------------------------- |
+| `name`                     | si          | 1 a 60 caracteres                                                     |
+| `goalId`                   | si          | `hypertrophy`, `strength` o `general`                                 |
+| `levelId`                  | si          | `beginner`, `intermediate` o `advanced`                               |
+| `startDate`                | si          | `YYYY-MM-DD`                                                          |
+| `reviewDate`               | no          | `YYYY-MM-DD`                                                          |
+| `notes`                    | no          | hasta 300 caracteres; nada de datos de salud detallados               |
+| `routines`                 | si          | 1 a 7. Su numero es la posicion: no hay campo `day`                   |
+| `routines[].name`          | si          | 1 a 60 caracteres, unico dentro del cliente                           |
+| `routines[].notes`         | no          | hasta 300 caracteres; es el calentamiento, se lee antes de empezar    |
+| `routines[].cardioMinutes` | no          | cardio al terminar, 0 a 120; sin el, 30 de la metodologia; 0 lo quita |
+| `routines[].exercises`     | si          | 1 a 12, sin `exerciseId` repetido                                     |
 
 Cada ejercicio prescrito lleva `exerciseId` y `reps` (`{ min, max }`) obligatorios.
 `sets`, `rir`, `restSeconds` y `warmupSets` se omiten salvo que se aparten de la
