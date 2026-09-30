@@ -22,8 +22,7 @@ mas. El seguimiento (pesos, marcas, historial) es de Lomito Train y no existe aq
 ## Datos que hacen falta
 
 Las preguntas estan en `docs/intake.md`, que es el cuestionario que el entrenador
-envia al cliente. Si la peticion no trae las imprescindibles (nombre de pila o
-apodo, objetivo, nivel, dias por semana, lugar y equipamiento, lesiones o
+envia al cliente. Si la peticion no trae las imprescindibles (nombre y apellido, objetivo, nivel, dias por semana, lugar y equipamiento, lesiones o
 molestias), preguntarlas antes de escribir, con la misma redaccion. Las demas se
 preguntan solo si cambian la eleccion de ejercicios. Para modificar un plan: el slug.
 
@@ -53,13 +52,31 @@ por defecto de `methodology.json`: no se escribe `sets` ni `warmupSets` salvo un
 razon concreta (2 aproximaciones en el ejercicio principal de pierna, por ejemplo).
 
 **Repeticiones.** El maximo es 12 y lo habitual es de 6 a 10. Solo se pasa de 12 en
-los musculos que responden mejor a mas repeticiones, como el deltoides posterior.
+los musculos que responden mejor a mas repeticiones: deltoides posterior, deltoides
+lateral (elevaciones laterales), gemelos y abdomen.
 
-| Tipo de ejercicio                          | Rango habitual |
-| ------------------------------------------ | -------------- |
-| Principal o compuesto                      | 6-8 o 6-10     |
-| Accesorio o aislamiento                    | 8-10 o 8-12    |
-| Deltoides posterior y excepciones anotadas | hasta 15       |
+| Tipo de ejercicio                               | Rango habitual |
+| ----------------------------------------------- | -------------- |
+| Principal o compuesto                           | 6-8 o 6-10     |
+| Accesorio o aislamiento                         | 8-10 o 8-12    |
+| Deltoides posterior y lateral, gemelos, abdomen | hasta 15       |
+
+**Calentamiento y cardio.** El calentamiento va en `notes` de cada rutina, que se lee
+antes del primer ejercicio, con estos textos y ningun otro (nada de bici, remo ni
+eliptica antes de empezar):
+
+- Dia de tren superior: "Calentamiento: rotaciones externas e internas con liga para el
+  manguito rotador, aperturas con liga y circulos de hombro, 2 × 15."
+- Dia de tren inferior: "Calentamiento: balanceos de pierna, circulos de cadera, puente
+  de gluteo y sentadilla sin peso, 2 × 10." Con una lesion de rodilla, la sentadilla
+  sin peso se cambia por extensiones de rodilla sin peso.
+- El cardio no se escribe en `notes`: la interfaz lo pinta despues del ultimo
+  ejercicio ("Al terminar: 30 minutos de caminata en caminadora con la inclinacion al
+  maximo"). Los 30 minutos vienen de `methodology.json`; otro tiempo solo si el
+  entrenador lo indica, con `cardioMinutes` en la rutina, y `0` lo quita.
+
+Los textos van con acentos en el JSON. Una nota propia de la rutina, si hace falta, va
+despues del calentamiento, y todo cabe en los 300 caracteres de `notes`.
 
 **Un ejercicio por parte o funcion del musculo.** Cada ejercicio de un dia trabaja
 una parte distinta del grupo muscular. Nunca dos ejercicios que hacen literalmente la

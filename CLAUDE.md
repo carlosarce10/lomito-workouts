@@ -164,8 +164,8 @@ Invariantes que impone `lint:content` y ninguna escritura puede romper:
 3. `muscleIds`, `equipmentId`, `levelId`, `goalId` y `source.provider` existen en su
    catalogo.
 4. Los rangos cumplen `min <= max` y los limites de `limits.js`.
-5. El archivo de un cliente se llama `<nombre>-<4 caracteres>` y solo lleva nombre de
-   pila o apodo.
+5. El archivo de un cliente se llama `<nombre>-<4 caracteres>`; `name` lleva nombre y
+   apellido.
 6. Ningun campo de seguimiento: `weight`, `record`, `history`, `session`, `timer`,
    `log`, ni `day`, `category` o `program`.
 7. Un ejercicio con `source` tiene `public/exercises/<id>/0.jpg` y `1.jpg`.

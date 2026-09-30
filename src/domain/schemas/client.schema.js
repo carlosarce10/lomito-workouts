@@ -33,8 +33,7 @@ export const routineSchema = {
 
 /**
  * Forma de un cliente (`public/clients/<slug>.json`). El slug es el nombre del
- * archivo y lo comprueba lint:content. `name` es solo nombre de pila o apodo:
- * el sitio es publico.
+ * archivo y lo comprueba lint:content. `name` lleva nombre y apellido.
  */
 export const clientSchema = {
   name: r.text(LIMITS.name),

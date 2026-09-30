@@ -16,8 +16,7 @@ Sin estas respuestas la skill no puede escribir el plan y tiene que preguntar: 1
 
 **Datos básicos**
 
-1. ¿Cómo quieres que aparezca tu nombre en el plan? Basta con el nombre de pila o
-   un apodo. (`name`)
+1. ¿Cuál es tu nombre y apellido, tal como quieres que aparezcan en el plan? (`name`)
 2. ¿Qué día quieres empezar? (`startDate`)
 3. ¿Cuándo te gustaría que revisemos el plan? Lo habitual es a las 4–6 semanas.
    (`reviewDate`)
@@ -59,7 +58,7 @@ Sin estas respuestas la skill no puede escribir el plan y tiene que preguntar: 1
 **Aviso para el cliente**
 
 > Tu plan se abre con un enlace privado que solo tendrás tú. Cualquiera que tenga el
-> enlace puede verlo, así que en el plan solo aparecerán tu nombre de pila o apodo y
+> enlace puede verlo, así que en el plan solo aparecerán tu nombre, tu apellido y
 > observaciones breves, nunca datos médicos detallados.
 
 ## Lo que no se guarda

@@ -86,8 +86,9 @@ Restricciones tecnicas:
 - Sin TypeScript. La forma de los JSON la valida `npm run lint:content` antes de cada
   build; el runtime no valida.
 - Un slug no adivinable por cliente y `noindex` en el sitio. No es autenticacion:
-  quien tenga el enlace ve el plan, asi que un plan solo lleva nombre de pila o apodo
-  y ningun dato de salud detallado.
+  quien tenga el enlace ve el plan. El plan lleva el nombre y el apellido del cliente,
+  por decision del entrenador, y ningun dato de salud detallado. El repositorio es
+  publico: los JSON de clientes tambien se leen en GitHub.
 
 ## Brand Commitments
 

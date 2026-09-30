@@ -58,12 +58,13 @@ Grupos y carpetas: `chest`, `back`, `shoulders`, `biceps`, `triceps`, `forearms`
 ## Un cliente
 
 Archivo `public/clients/<slug>.json`. El slug es el nombre del archivo:
-`<nombre>-<cuatro caracteres al azar>`, por ejemplo `juan-7k2p`. Nunca se adivina ni
-se reutiliza. `name` es solo nombre de pila o apodo: el sitio es publico.
+`<nombre>-<cuatro caracteres al azar>`, por ejemplo `ana-3f9q`. Nunca se adivina ni
+se reutiliza. `name` lleva nombre y apellido. El slug protege el enlace, pero el
+repositorio es publico: los JSON de clientes se leen en GitHub.
 
 ```json
 {
-  "name": "Juan",
+  "name": "Ana López",
   "goalId": "hypertrophy",
   "levelId": "beginner",
   "startDate": "2026-09-28",
@@ -89,7 +90,7 @@ se reutiliza. `name` es solo nombre de pila o apodo: el sitio es publico.
 
 | Campo                      | Obligatorio | Forma                                                                 |
 | -------------------------- | ----------- | --------------------------------------------------------------------- |
-| `name`                     | si          | 1 a 60 caracteres                                                     |
+| `name`                     | si          | nombre y apellido, 1 a 60 caracteres                                  |
 | `goalId`                   | si          | `hypertrophy`, `strength` o `general`                                 |
 | `levelId`                  | si          | `beginner`, `intermediate` o `advanced`                               |
 | `startDate`                | si          | `YYYY-MM-DD`                                                          |
