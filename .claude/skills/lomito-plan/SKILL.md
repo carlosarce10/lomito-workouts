@@ -18,16 +18,22 @@ mas. El seguimiento (pesos, marcas, historial) es de Lomito Train y no existe aq
    `goals.js`; los limites en `src/domain/validation/limits.js`; los valores por
    defecto en `src/content/methodology.json`.
 3. Listar la biblioteca (`ls src/content/exercises/*/`) para reutilizar lo que existe.
+4. Para un plan nuevo, leer [sex-differences.md](sex-differences.md): las diferencias
+   entre hombres y mujeres que se tienen en cuenta al programar.
 
 ## Datos que hacen falta
 
 Las preguntas estan en `docs/intake.md`, que es el cuestionario que el entrenador
-envia al cliente. Si la peticion no trae las imprescindibles (nombre y apellido, objetivo, nivel, dias por semana, lugar y equipamiento, lesiones o
-molestias), preguntarlas antes de escribir, con la misma redaccion. Las demas se
-preguntan solo si cambian la eleccion de ejercicios. Para modificar un plan: el slug.
+envia al cliente. Si la peticion no trae las imprescindibles (nombre y apellido, sexo,
+objetivo, nivel, dias por semana, lugar y equipamiento, lesiones o molestias),
+preguntarlas antes de escribir, con la misma redaccion. Las demas se preguntan solo si
+cambian la eleccion de ejercicios. Para modificar un plan: el slug.
 
-Peso corporal, edad y datos medicos no se escriben en el plan aunque el cliente los
-haya dado.
+El sexo nunca se deduce del nombre: se pregunta. "Prefiere no decirlo" es una
+respuesta valida y el plan se escribe igual.
+
+Peso corporal, edad, sexo y datos medicos no se escriben en el plan aunque el cliente
+los haya dado.
 
 ## Metodologia de programacion
 
@@ -41,6 +47,20 @@ por que en la respuesta.
 para seguir progresando, asi que los dias disponibles son un maximo, no un objetivo.
 3 dias o 6 dias solo en un caso concreto, y ese caso se nombra en la respuesta.
 
+**Frecuencia por musculo.** Cada grupo se entrena 2 o 3 veces por semana y nunca en
+dos dias seguidos, abdomen incluido. Con el mismo volumen semanal, entrenarlo a diario
+no suma estimulo y le quita recuperacion; ademas, el abdomen ya trabaja como
+estabilizador en los ejercicios pesados. Un grupo prioritario sube de volumen con mas
+ejercicios en esas 2 o 3 sesiones, no con mas dias. Si ademas trabaja como secundario
+en los compuestos (el gluteo en prensa, hack, sentadilla o bisagras de cadera), sus
+aislados se concentran en 2 sesiones con al menos 72 h entre ellas: con el mismo
+volumen, 2 sesiones rinden como 3 y el musculo recupera mejor. Con 3 dias de pierna y
+el gluteo como prioridad, son 2 dias de parte posterior (gluteo y femoral) y 1 de
+parte anterior (cuadriceps y aductores). El dia anterior no lleva aislados de gluteo
+ni bisagras; su compuesto es una variante que carga el cuadriceps (prensa con los
+pies a media altura, hack), y sus series cuentan para el gluteo como las de cualquier
+compuesto.
+
 **Acondicionamiento.** Un principiante que nunca ha entrenado en gimnasio empieza con
 un bloque de 2 semanas de acondicionamiento fisico, de 3 a 4 dias, con RIR 2-3 para
 aprender la tecnica. El bloque de hipertrofia se escribe despues, al revisar el plan.
@@ -50,6 +70,8 @@ entrenador si hace falta.
 **Series.** 2 series efectivas y 1 de aproximacion por ejercicio, que son los valores
 por defecto de `methodology.json`: no se escribe `sets` ni `warmupSets` salvo una
 razon concreta (2 aproximaciones en el ejercicio principal de pierna, por ejemplo).
+Las 2 aproximaciones solo valen si ese ejercicio abre la sesion. Si llega despues de
+los aislados de su grupo, el musculo no empieza con tanta demanda y basta con 1.
 
 **Repeticiones.** El maximo es 12 y lo habitual es de 6 a 10. Solo se pasa de 12 en
 los musculos que responden mejor a mas repeticiones: deltoides posterior, deltoides
@@ -95,16 +117,42 @@ musculo sin sumar estimulo.
 **Volumen semanal por musculo.** Se cuentan las series efectivas de cada grupo
 muscular en toda la semana; las de aproximacion no cuentan. Con 2 series por
 ejercicio, las series semanales son 2 por cada vez que el grupo aparece como musculo
-principal de un ejercicio.
+principal de un ejercicio. En los grupos prioritarios cuentan tambien los compuestos
+donde aparecen como secundarios (ver "Grupos prioritarios").
 
 | Series por semana | Para que                                                   |
 | ----------------- | ---------------------------------------------------------- |
 | 4-6               | Mantenimiento: conservar masa                              |
 | 8-10              | Ganancia muscular: el punto de partida por defecto         |
-| 10-15             | Alto volumen: solo para los grupos que el cliente prioriza |
+| 10-16             | Alto volumen: solo para los grupos que el cliente prioriza |
 
-Los grupos prioritarios del cliente van a 10-15; el resto, a 8-10; lo que no es
-objetivo puede quedarse en mantenimiento. Nunca por encima de 15.
+El volumen se asigna segun los objetivos, las prioridades, la recuperacion y las
+preferencias de cada cliente, independientemente del sexo. Los grupos prioritarios
+del cliente van a 10-16; el resto, a 8-10; lo que no es objetivo, o lo que el cliente
+prefiere no desarrollar, puede quedarse en mantenimiento. Nunca por encima de 16.
+
+Mantenimiento es el minimo, no cero: biceps, triceps, gemelos y aductores llevan al
+menos 4 series directas aunque no sean prioridad. Solo los antebrazos y la zona
+lumbar se cubren de forma indirecta, con el agarre y las bisagras de cadera.
+
+**Grupos prioritarios.** Un grupo prioritario se trabaja con ejercicios aislados o
+monoarticulares, y el extra se lo dan los ejercicios compuestos que se anaden despues.
+Monoarticular es el que mueve una sola articulacion: abductores, patada de gluteo y
+hip thrust (solo mueve la cadera) para el gluteo; crunch o elevaciones para el
+abdomen. Compuesto es el que mueve varias: prensa, hack o sentadilla, que tambien
+cargan el gluteo. Dentro del bloque del grupo, los aislados van primero y los
+compuestos despues, para que el compuesto llegue con el musculo ya cansado. Las
+series de esos compuestos cuentan para el grupo prioritario aunque en el ejercicio
+sea secundario, y tambien para su musculo principal: una prensa suma 2 al cuadriceps
+y 2 al gluteo prioritario.
+
+**Orden de la sesion.** Los grupos musculares van en secuencia: se terminan todos los
+ejercicios de un grupo antes de pasar al siguiente. Nunca un ejercicio de pecho, uno
+de espalda y otra vez pecho. Abren la sesion los grupos prioritarios; el abdomen va
+siempre al final aunque sea prioridad, porque cansarlo antes de una carga pesada
+resta estabilidad. Despues de los prioritarios, los grupos siguen de mayor a menor
+volumen, y dentro de un grupo no prioritario los compuestos van antes que los
+aislados.
 
 ## Seleccion de ejercicios
 
@@ -124,9 +172,46 @@ Reglas fijas, en cualquier nivel:
   sentadilla, bulgara y zancada son el mismo patron: nunca dos en la misma rutina.
   El resto del dia se completa con extension de cuadriceps, curl femoral, gluteo y
   gemelo.
+- **La extension de cuadriceps esta en toda semana con pierna**, aunque el cuadriceps
+  no sea prioridad: es de los mejores ejercicios de cuadriceps y no se quita para
+  hacer sitio.
 - Si la biblioteca solo tiene una version tecnica de un ejercicio, se crea la version
   guiada (en maquina o polea) en lugar de meter la tecnica.
 - En la respuesta se dice que ejercicios se descartaron por nivel y cual los sustituye.
+
+## Sexo del cliente
+
+El sexo es contexto fisiologico, no una plantilla: individualizar primero y usar el
+sexo como contexto. El fundamento esta en [sex-differences.md](sex-differences.md).
+
+Lo que el sexo no cambia:
+
+- **La metodologia.** Frecuencia, series, rangos de repeticiones, RIR, descanso y
+  volumen semanal son los mismos para hombres y mujeres. Ninguna mujer pasa de 12
+  repeticiones por ser mujer ni ningun hombre baja de 6 por ser hombre.
+- **Las prioridades.** Los grupos que van a 10-16 series salen de la respuesta del
+  cliente (pregunta de grupos prioritarios de `docs/intake.md`), nunca del sexo. Sin
+  prioridad declarada, el reparto es equilibrado. No existe "mujer = gluteo" ni
+  "hombre = pecho y brazos".
+- **La seleccion por nivel.** Un ejercicio entra o sale por el nivel, las molestias y
+  las preferencias, nunca por el sexo.
+- **La carga.** El plan no prescribe pesos, y ninguna nota dice "peso ligero" ni "peso
+  pesado" en funcion del sexo.
+
+Lo que el sexo si aporta:
+
+- **Variante de sentadilla o prensa.** La pelvis ancha y el angulo Q mayor son mas
+  frecuentes en mujeres, no exclusivos. Si el cliente refiere molestia de rodilla o
+  cadera en un patron de sentadilla, se elige el que tolera (prensa, hack o bulgara,
+  segun el nivel) y se dice en la respuesta. Sin molestia referida, no cambia nada.
+- **Tolerancia a la fatiga.** Las mujeres suelen tolerar mejor el trabajo submaximo.
+  No cambia los valores por defecto; sirve como argumento para mantener el volumen de
+  la metodologia cuando se duda de si la clienta lo recuperara.
+- **Ciclo menstrual.** Solo si la clienta quiere tenerlo en cuenta, y fuera del plan:
+  es un dato de salud y no se escribe en `notes`.
+
+Los puntos que `sex-differences.md` deja pendientes de documentar no se convierten en
+reglas por sexo hasta que esten escritos aqui.
 
 ## Pasos
 
@@ -150,9 +235,10 @@ Reglas fijas, en cualquier nivel:
    en el JSON, nunca relajando el esquema.
 6. **Respuesta.** Una tabla con las series efectivas por semana de cada grupo muscular
    y si cae en mantenimiento, ganancia o alto volumen; los ejercicios descartados por
-   nivel o por lesion y su sustituto; los archivos creados o cambiados, la URL del plan
-   (`https://carlosarce10.github.io/lomito-workouts/#/<slug>`), y los ejercicios que
-   quedaron sin imagen. Proponer el mensaje de commit (Conventional Commits, ambito
+   nivel o por lesion y su sustituto; si el sexo cambio alguna decision, cual y por
+   que (lo normal es que no cambie ninguna); los archivos creados o cambiados, la URL
+   del plan (`https://carlosarce10.github.io/lomito-workouts/#/<slug>`), y los
+   ejercicios que quedaron sin imagen. Proponer el mensaje de commit (Conventional Commits, ambito
    `content`, en espanol sin acentos) y **no ejecutarlo**.
 
 ## Limites
