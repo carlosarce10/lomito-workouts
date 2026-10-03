@@ -28,6 +28,9 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `machine-incline-chest-press` | `Leverage_Incline_Chest_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/ |
 | `pec-deck` | `Butterfly` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Butterfly/ |
 | `cable-crunch` | `Cable_Crunch` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/ |
+| `pallof-press` | `Pallof_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/ |
+| `parallel-bar-knee-raise` | `Knee_Hip_Raise_On_Parallel_Bars` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Knee_Hip_Raise_On_Parallel_Bars/ |
+| `cable-glute-kickback` | `One-Legged_Cable_Kickback` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/ |
 | `hip-abduction-machine` | `Thigh_Abductor` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/ |
 | `hip-thrust` | `Barbell_Hip_Thrust` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/ |
 | `lying-leg-curl` | `Lying_Leg_Curls` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/ |

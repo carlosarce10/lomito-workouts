@@ -1,0 +1,18 @@
+{
+  "id": "pallof-press",
+  "name": "Press Pallof",
+  "muscleIds": ["abs"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Ajusta la polea a la altura del pecho y ponte de lado a la máquina, a un paso, con los pies a la anchura de los hombros.",
+    "Sujeta el agarre con las dos manos pegado al pecho: el cable tira de ti hacia la polea.",
+    "Empuja el agarre al frente hasta estirar los brazos sin dejar que el torso gire hacia la máquina.",
+    "Aguanta un segundo con los brazos estirados y vuelve al pecho en control. Completa un lado y cambia."
+  ],
+  "commonMistakes": [
+    "Dejar que los hombros o la cadera giren hacia la polea: el ejercicio consiste en evitar ese giro.",
+    "Ponerte tan cerca de la máquina que el cable apenas tira de ti.",
+    "Aguantar la respiración durante toda la serie."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Pallof_Press" }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "parallel-bar-knee-raise",
+  "name": "Elevación de rodillas en paralelas",
+  "muscleIds": ["abs"],
+  "equipmentId": "other",
+  "instructions": [
+    "Colócate en la estación de paralelas con los antebrazos sobre las almohadillas, la espalda pegada al respaldo y las piernas colgando.",
+    "Sujeta los agarres sin apretar: el peso del cuerpo descansa en los antebrazos, no en las muñecas.",
+    "Sube las rodillas hacia el pecho enrollando la pelvis, hasta que los muslos pasen de la horizontal.",
+    "Baja en 2-3 segundos hasta estirar las piernas, sin balancearte."
+  ],
+  "commonMistakes": [
+    "Balancear las piernas para subir con impulso.",
+    "Subir las rodillas sin enrollar la pelvis: trabaja el flexor de la cadera, no el abdomen.",
+    "Despegar la espalda del respaldo."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Knee_Hip_Raise_On_Parallel_Bars"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "name": "Kathya Lomita",
+  "goalId": "hypertrophy",
+  "levelId": "intermediate",
+  "startDate": "2026-10-05",
+  "reviewDate": "2026-11-09",
+  "notes": "Semana: Lower A, Upper A, Lower B, Upper B y Lower C, de lunes a viernes. Prioridad: glúteo y abdomen. Por las molestias de muñeca, el plan deja fuera la sentadilla con barra y el peso muerto rumano; en jalones, remos y presses usa agarre neutro cuando se pueda.",
+  "routines": [
+    {
+      "name": "Lower A",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "cardioMinutes": 20,
+      "exercises": [
+        {
+          "exerciseId": "hip-abduction-machine",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 }
+        },
+        {
+          "exerciseId": "hip-thrust",
+          "reps": { "min": 6, "max": 10 },
+          "notes": "Las manos solo estabilizan la barra: el peso lo sostiene la cadera."
+        },
+        {
+          "exerciseId": "leg-press",
+          "reps": { "min": 8, "max": 10 },
+          "notes": "Pies altos y separados en la plataforma: más glúteo y menos cuádriceps."
+        },
+        { "exerciseId": "lying-leg-curl", "reps": { "min": 8, "max": 12 } },
+        {
+          "exerciseId": "standing-calf-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "parallel-bar-knee-raise",
+          "reps": { "min": 10, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Upper A",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "cardioMinutes": 20,
+      "exercises": [
+        { "exerciseId": "lat-pulldown", "reps": { "min": 8, "max": 10 } },
+        { "exerciseId": "seated-cable-row", "reps": { "min": 8, "max": 10 } },
+        {
+          "exerciseId": "machine-incline-chest-press",
+          "reps": { "min": 8, "max": 10 }
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "reverse-machine-fly",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "hammer-curl",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "triceps-rope-pushdown",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower B",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "cardioMinutes": 20,
+      "exercises": [
+        {
+          "exerciseId": "leg-press",
+          "reps": { "min": 8, "max": 10 },
+          "warmupSets": 2,
+          "notes": "Pies a media altura y a la anchura de la cadera: más cuádriceps y menos glúteo."
+        },
+        {
+          "exerciseId": "leg-extension",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "seated-calf-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "pallof-press",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0,
+          "notes": "Repeticiones por lado."
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Upper B",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "cardioMinutes": 20,
+      "exercises": [
+        { "exerciseId": "lat-pulldown", "reps": { "min": 8, "max": 10 } },
+        { "exerciseId": "machine-row", "reps": { "min": 8, "max": 10 } },
+        {
+          "exerciseId": "machine-chest-press",
+          "reps": { "min": 8, "max": 10 }
+        },
+        {
+          "exerciseId": "machine-shoulder-press",
+          "reps": { "min": 8, "max": 10 }
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "machine-preacher-curl",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0,
+          "notes": "Si la muñeca está sensible, cámbialo por curl martillo."
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower C",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "cardioMinutes": 20,
+      "exercises": [
+        {
+          "exerciseId": "hip-abduction-machine",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 }
+        },
+        {
+          "exerciseId": "hip-thrust",
+          "reps": { "min": 6, "max": 10 },
+          "notes": "Las manos solo estabilizan la barra: el peso lo sostiene la cadera."
+        },
+        {
+          "exerciseId": "hack-squat",
+          "reps": { "min": 8, "max": 10 },
+          "notes": "Baja hasta que los muslos queden paralelos a la plataforma, sin despegar los talones."
+        },
+        { "exerciseId": "seated-leg-curl", "reps": { "min": 8, "max": 12 } },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "parallel-bar-knee-raise",
+          "reps": { "min": 10, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "pallof-press",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0,
+          "notes": "Repeticiones por lado."
+        }
+      ]
+    }
+  ]
+}

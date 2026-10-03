@@ -1,0 +1,21 @@
+{
+  "id": "cable-glute-kickback",
+  "name": "Patada de glúteo en polea",
+  "muscleIds": ["glutes", "hamstrings"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Engancha la tobillera a la polea baja y colócala en un tobillo. Ponte de frente a la máquina y sujétate al armazón.",
+    "Con el torso un poco inclinado y la rodilla de apoyo ligeramente flexionada, lleva la pierna hacia atrás extendiendo la cadera.",
+    "Aprieta el glúteo un segundo arriba, sin arquear la zona lumbar.",
+    "Vuelve en 2-3 segundos hasta que el pie quede a la altura del de apoyo. Completa un lado y cambia."
+  ],
+  "commonMistakes": [
+    "Arquear la espalda para subir más la pierna: el recorrido acaba donde la cadera deja de extenderse.",
+    "Balancear la pierna con impulso en lugar de controlarla.",
+    "Girar la cadera hacia fuera al subir."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "One-Legged_Cable_Kickback"
+  }
+}
