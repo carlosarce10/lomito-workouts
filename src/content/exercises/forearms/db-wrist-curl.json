@@ -1,0 +1,21 @@
+{
+  "id": "db-wrist-curl",
+  "name": "Curl de muñeca con mancuernas",
+  "muscleIds": ["forearms"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "Siéntate en el borde de un banco con una mancuerna en cada mano y apoya los antebrazos sobre los muslos, con las palmas hacia arriba y las muñecas fuera de las rodillas.",
+    "Deja que las mancuernas bajen flexionando la muñeca hasta notar el estiramiento del antebrazo.",
+    "Sube las mancuernas doblando solo la muñeca, sin mover los antebrazos.",
+    "Aprieta un segundo arriba y baja en 2-3 segundos."
+  ],
+  "commonMistakes": [
+    "Levantar los antebrazos de los muslos para ayudarte con el brazo.",
+    "Hacer recorridos cortos sin bajar hasta el estiramiento.",
+    "Usar tanto peso que la mancuerna se escapa de los dedos al bajar."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Seated_Dumbbell_Palms-Up_Wrist_Curl"
+  }
+}

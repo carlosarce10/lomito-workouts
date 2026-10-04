@@ -20,7 +20,7 @@ Sin estas respuestas la skill no puede escribir el plan y tiene que preguntar: 1
 2. ¿Cuál es tu sexo? Solo lo usa tu entrenador para ajustar el plan y no aparece en
    él. Puedes no responder. (criterio del entrenador, no se guarda)
 3. ¿Qué día quieres empezar? (`startDate`)
-4. ¿Cuándo te gustaría que revisemos el plan? Lo habitual es a las 4–6 semanas.
+4. ¿Cuándo te gustaría que revisemos el plan? Lo habitual es a los 2 meses.
    (`reviewDate`)
 
 **Objetivo y experiencia**

@@ -1,0 +1,208 @@
+{
+  "name": "Diego Calderón",
+  "goalId": "hypertrophy",
+  "levelId": "intermediate",
+  "startDate": "2026-10-05",
+  "reviewDate": "2026-11-30",
+  "notes": "Semana: Push, Pull, Leg, Upper y Lower, de lunes a viernes. En cada grupo, primero el ejercicio aislado y después el compuesto. La misma semana se repite dos meses: busca mejorar repeticiones y carga en cada ejercicio.",
+  "routines": [
+    {
+      "name": "Push",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        {
+          "exerciseId": "pec-deck",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 }
+        },
+        {
+          "exerciseId": "incline-db-press",
+          "reps": { "min": 6, "max": 10 }
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "reverse-machine-fly",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "seated-db-shoulder-press",
+          "reps": { "min": 6, "max": 10 }
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "triceps-rope-pushdown",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Pull",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        { "exerciseId": "lat-pulldown", "reps": { "min": 6, "max": 10 } },
+        { "exerciseId": "t-bar-row", "reps": { "min": 6, "max": 10 } },
+        {
+          "exerciseId": "db-shrug",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "incline-db-curl",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "hammer-curl",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-wrist-curl",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Leg",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "exercises": [
+        {
+          "exerciseId": "leg-extension",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 }
+        },
+        {
+          "exerciseId": "hack-squat",
+          "reps": { "min": 6, "max": 10 },
+          "notes": "Baja hasta que los muslos queden paralelos a la plataforma, sin despegar los talones."
+        },
+        {
+          "exerciseId": "lying-leg-curl",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 }
+        },
+        { "exerciseId": "romanian-deadlift", "reps": { "min": 6, "max": 10 } },
+        { "exerciseId": "hip-thrust", "reps": { "min": 6, "max": 10 } },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "standing-calf-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Upper",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        { "exerciseId": "lat-pulldown", "reps": { "min": 6, "max": 10 } },
+        { "exerciseId": "t-bar-row", "reps": { "min": 6, "max": 10 } },
+        {
+          "exerciseId": "pec-deck",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "incline-db-press",
+          "reps": { "min": 6, "max": 10 }
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "reverse-machine-fly",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "incline-db-curl",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "exercises": [
+        {
+          "exerciseId": "lying-leg-curl",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 }
+        },
+        { "exerciseId": "romanian-deadlift", "reps": { "min": 6, "max": 10 } },
+        {
+          "exerciseId": "leg-extension",
+          "reps": { "min": 8, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 }
+        },
+        {
+          "exerciseId": "hack-squat",
+          "reps": { "min": 6, "max": 10 },
+          "notes": "Baja hasta que los muslos queden paralelos a la plataforma, sin despegar los talones."
+        },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "reps": { "min": 10, "max": 12 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "standing-calf-raise",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-crunch",
+          "reps": { "min": 12, "max": 15 },
+          "restSeconds": { "min": 60, "max": 90 },
+          "warmupSets": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "cable-wrist-curl",
+  "name": "Curl de muñeca en polea",
+  "muscleIds": ["forearms"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca un banco frente a la polea baja con una barra recta y siéntate lo bastante lejos para que el cable quede tenso.",
+    "Toma la barra con las palmas hacia arriba y apoya los antebrazos sobre los muslos, con las muñecas por fuera de las rodillas.",
+    "Deja que la barra baje flexionando la muñeca hasta notar el estiramiento del antebrazo.",
+    "Sube la barra doblando solo la muñeca, aprieta un segundo arriba y baja en 2-3 segundos."
+  ],
+  "commonMistakes": [
+    "Levantar los antebrazos de los muslos para ayudarte con el brazo.",
+    "Sentarte tan cerca de la polea que el cable pierde la tensión abajo.",
+    "Hacer recorridos cortos sin bajar hasta el estiramiento."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Cable_Wrist_Curl" }
+}

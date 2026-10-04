@@ -1,0 +1,18 @@
+{
+  "id": "cable-straight-arm-pulldown",
+  "name": "Jalón con brazos rectos en polea",
+  "muscleIds": ["lats"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Engancha una barra recta o una cuerda en la polea alta y ponte de pie frente a la máquina, a un paso, con el torso un poco inclinado hacia delante.",
+    "Sujeta la barra con los brazos estirados a la altura de los ojos y los codos apenas flexionados.",
+    "Lleva la barra hacia los muslos describiendo un arco, tirando con los dorsales y sin doblar los codos.",
+    "Aprieta la espalda un segundo abajo y vuelve en 2-3 segundos hasta notar el estiramiento del dorsal."
+  ],
+  "commonMistakes": [
+    "Doblar los codos: el ejercicio se convierte en una extensión de tríceps.",
+    "Balancear el torso para mover más peso.",
+    "Subir de golpe y perder la tensión arriba."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Straight-Arm_Pulldown" }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "db-shrug",
+  "name": "Encogimientos con mancuernas",
+  "muscleIds": ["back-upper"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "De pie, con una mancuerna en cada mano a los lados del cuerpo, las palmas mirando hacia ti y los brazos estirados.",
+    "Sube los hombros hacia las orejas en línea recta, sin doblar los codos.",
+    "Aprieta el trapecio un segundo arriba.",
+    "Baja en 2-3 segundos hasta notar el estiramiento del trapecio."
+  ],
+  "commonMistakes": [
+    "Girar los hombros en círculo: no suma trabajo y carga la articulación.",
+    "Doblar los codos para ayudarte con los brazos.",
+    "Adelantar la cabeza al subir."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Dumbbell_Shrug" }
+}

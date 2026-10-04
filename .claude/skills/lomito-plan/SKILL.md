@@ -67,6 +67,11 @@ aprender la tecnica. El bloque de hipertrofia se escribe despues, al revisar el 
 Alguien que ya entreno y lo dejo no es "nunca ha hecho gym": se le pregunta al
 entrenador si hace falta.
 
+**Duracion del plan.** Si el entrenador no la indica, un plan dura 2 meses:
+`reviewDate` cae 8 semanas despues de `startDate`. En un mes no se terminan de
+reconocer ni de mejorar los patrones de los ejercicios. El bloque de
+acondicionamiento sigue durando 2 semanas.
+
 **Series.** 2 series efectivas y 1 de aproximacion por ejercicio, que son los valores
 por defecto de `methodology.json`: no se escribe `sets` ni `warmupSets` salvo una
 razon concreta (2 aproximaciones en el ejercicio principal de pierna, por ejemplo).
@@ -105,14 +110,26 @@ una parte distinta del grupo muscular. Nunca dos ejercicios que hacen literalmen
 misma funcion con otra maquina o herramienta: son ejercicios basura que fatigan el
 musculo sin sumar estimulo.
 
-| Grupo   | Bien                                                                         | Basura                                                  |
-| ------- | ---------------------------------------------------------------------------- | ------------------------------------------------------- |
-| Pecho   | Un press de pecho alto o medio y un aislamiento (pec deck, cristos)          | Press en maquina y press con mancuernas el mismo dia    |
-| Espalda | Un tiron vertical (jalon) y un remo                                          | Dos remos casi iguales en maquinas distintas            |
-| Hombro  | Un press, una elevacion lateral y un ejercicio de posterior                  | Dos elevaciones laterales con distinto material         |
-| Triceps | Una extension en polea (cabeza lateral) y una sobre la cabeza (cabeza larga) | Cuerda, barra V y maquina de extension el mismo dia     |
-| Biceps  | Un curl y un curl martillo (braquial)                                        | Curl con mancuernas, en polea y en maquina el mismo dia |
-| Pierna  | Una prensa o sentadilla, extension, curl femoral, gluteo, gemelo             | Dos prensas o sentadillas (regla fija de abajo)         |
+Se busca siempre que los ejercicios de un grupo cubran sus distintas partes: un dia
+con dos ejercicios del grupo trabaja dos partes, y a lo largo de la semana el grupo
+pasa por todas.
+
+| Grupo   | Bien                                                                                                                                              | Basura                                                  |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| Pecho   | Un press de pecho alto o medio y un aislamiento (pec deck, cristos)                                                                               | Press en maquina y press con mancuernas el mismo dia    |
+| Espalda | Al menos un tiron vertical (jalon) y uno horizontal (remo) en cada dia de espalda                                                                 | Dos remos casi iguales en maquinas distintas            |
+| Hombro  | Un press, una elevacion lateral y un ejercicio de posterior                                                                                       | Dos elevaciones laterales con distinto material         |
+| Triceps | Una sobre la cabeza (cabeza larga, con prioridad) y una en polea (cabeza lateral). Con un solo ejercicio, el de cabeza larga                      | Cuerda, barra V y maquina de extension el mismo dia     |
+| Biceps  | Un curl con el brazo por detras del torso (bayesian, inclinado) y uno por delante (predicador) o un martillo, que ademas da estimulo al antebrazo | Curl con mancuernas, en polea y en maquina el mismo dia |
+| Pierna  | Una prensa o sentadilla, extension, curl femoral, gluteo, gemelo                                                                                  | Dos prensas o sentadillas (regla fija de abajo)         |
+
+**Repetir para progresar.** La variedad no es un objetivo. Un grupo que se entrena dos
+dias puede repetir los mismos ejercicios (el press inclinado de Push se repite en
+Upper), y la semana se repite igual durante todo el plan. Lo que hace crecer el
+musculo es la sobrecarga progresiva: mejorar repeticiones y carga en los mismos
+ejercicios. No es obligatorio repetir: se cambia o se anade un compuesto distinto
+cuando enfoca un musculo que no recibe suficiente estimulo semanal. Repetir nunca
+deja una parte del grupo sin trabajar (tabla de arriba).
 
 **Volumen semanal por musculo.** Se cuentan las series efectivas de cada grupo
 muscular en toda la semana; las de aproximacion no cuentan. Con 2 series por
@@ -132,8 +149,12 @@ del cliente van a 10-16; el resto, a 8-10; lo que no es objetivo, o lo que el cl
 prefiere no desarrollar, puede quedarse en mantenimiento. Nunca por encima de 16.
 
 Mantenimiento es el minimo, no cero: biceps, triceps, gemelos y aductores llevan al
-menos 4 series directas aunque no sean prioridad. Solo los antebrazos y la zona
-lumbar se cubren de forma indirecta, con el agarre y las bisagras de cadera.
+menos 4 series directas aunque no sean prioridad. El antebrazo y el trapecio tambien
+llevan trabajo directo: un ejercicio de antebrazo (curl de muneca) despues del biceps,
+y encogimientos al final del bloque de espalda, porque trabajan otra parte y no
+preagotan el dorsal. El catalogo no tiene trapecio: los encogimientos cuentan como
+espalda alta (`back-upper`). Solo la zona lumbar se cubre de forma indirecta, con las
+bisagras de cadera.
 
 **Grupos prioritarios.** Un grupo prioritario se trabaja con ejercicios aislados o
 monoarticulares, y el extra se lo dan los ejercicios compuestos que se anaden despues.
@@ -151,8 +172,13 @@ ejercicios de un grupo antes de pasar al siguiente. Nunca un ejercicio de pecho,
 de espalda y otra vez pecho. Abren la sesion los grupos prioritarios; el abdomen va
 siempre al final aunque sea prioridad, porque cansarlo antes de una carga pesada
 resta estabilidad. Despues de los prioritarios, los grupos siguen de mayor a menor
-volumen, y dentro de un grupo no prioritario los compuestos van antes que los
-aislados.
+volumen.
+
+**Pre-agotamiento por defecto.** Si el entrenador no indica otro tipo de
+entrenamiento, dentro de cada grupo, prioritario o no, los aislados van antes que los
+compuestos: polea con brazos rectos antes del jalon y el remo, pec deck antes del
+press, elevaciones antes del press de hombro, extension antes de la hack o la prensa,
+curl femoral antes del rumano.
 
 ## Seleccion de ejercicios
 
@@ -175,6 +201,10 @@ Reglas fijas, en cualquier nivel:
 - **La extension de cuadriceps esta en toda semana con pierna**, aunque el cuadriceps
   no sea prioridad: es de los mejores ejercicios de cuadriceps y no se quita para
   hacer sitio.
+- **Abdomen: de entrada, crunch.** Es efectivo y sencillo de ejecutar, y si el
+  entrenador no pide trabajo de core, basta con el. No es un limite: el press Pallof,
+  las elevaciones de rodillas u otros ejercicios de core se pueden anadir cuando
+  sumen.
 - Si la biblioteca solo tiene una version tecnica de un ejercicio, se crea la version
   guiada (en maquina o polea) en lugar de meter la tecnica.
 - En la respuesta se dice que ejercicios se descartaron por nivel y cual los sustituye.
@@ -194,11 +224,15 @@ Lo que el sexo no cambia:
   prioridad declarada, el reparto es equilibrado. No existe "mujer = gluteo" ni
   "hombre = pecho y brazos".
 - **La seleccion por nivel.** Un ejercicio entra o sale por el nivel, las molestias y
-  las preferencias, nunca por el sexo.
+  las preferencias, no por el sexo. La unica excepcion son los abductores, abajo.
 - **La carga.** El plan no prescribe pesos, y ninguna nota dice "peso ligero" ni "peso
   pesado" en funcion del sexo.
 
 Lo que el sexo si aporta:
+
+- **Abductores y aductores en hombres.** Un plan de hombre no lleva abductores para el
+  gluteo salvo que hagan falta o el entrenador los pida. Los aductores si entran, para
+  que la pierna crezca a lo ancho.
 
 - **Variante de sentadilla o prensa.** La pelvis ancha y el angulo Q mayor son mas
   frecuentes en mujeres, no exclusivos. Si el cliente refiere molestia de rodilla o

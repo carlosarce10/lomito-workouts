@@ -11,6 +11,8 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | --- | --- | --- |
 | `hip-adduction-machine` | `Thigh_Adductor` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Adductor/ |
 | `back-extension` | `Hyperextensions_Back_Extensions` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hyperextensions_Back_Extensions/ |
+| `cable-straight-arm-pulldown` | `Straight-Arm_Pulldown` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Straight-Arm_Pulldown/ |
+| `db-shrug` | `Dumbbell_Shrug` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Shrug/ |
 | `lat-pulldown` | `Wide-Grip_Lat_Pulldown` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Wide-Grip_Lat_Pulldown/ |
 | `machine-row` | `Leverage_Iso_Row` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Iso_Row/ |
 | `seated-cable-row` | `Seated_Cable_Rows` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Cable_Rows/ |
@@ -18,11 +20,13 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `cable-biceps-curl` | `Standing_Biceps_Cable_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Biceps_Cable_Curl/ |
 | `db-biceps-curl` | `Dumbbell_Bicep_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dumbbell_Bicep_Curl/ |
 | `hammer-curl` | `Hammer_Curls` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hammer_Curls/ |
+| `incline-db-curl` | `Incline_Dumbbell_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Curl/ |
 | `machine-preacher-curl` | `Machine_Preacher_Curls` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Machine_Preacher_Curls/ |
 | `seated-calf-raise` | `Seated_Calf_Raise` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Calf_Raise/ |
 | `standing-calf-raise` | `Standing_Calf_Raises` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/ |
 | `barbell-bench-press` | `Barbell_Bench_Press_-_Medium_Grip` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/ |
 | `cable-crossover` | `Cable_Crossover` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/ |
+| `incline-barbell-bench-press` | `Barbell_Incline_Bench_Press_-_Medium_Grip` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/ |
 | `incline-db-press` | `Incline_Dumbbell_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/ |
 | `machine-chest-press` | `Leverage_Chest_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Chest_Press/ |
 | `machine-incline-chest-press` | `Leverage_Incline_Chest_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Incline_Chest_Press/ |
@@ -30,6 +34,8 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `cable-crunch` | `Cable_Crunch` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crunch/ |
 | `pallof-press` | `Pallof_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pallof_Press/ |
 | `parallel-bar-knee-raise` | `Knee_Hip_Raise_On_Parallel_Bars` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Knee_Hip_Raise_On_Parallel_Bars/ |
+| `cable-wrist-curl` | `Cable_Wrist_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Wrist_Curl/ |
+| `db-wrist-curl` | `Seated_Dumbbell_Palms-Up_Wrist_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Up_Wrist_Curl/ |
 | `cable-glute-kickback` | `One-Legged_Cable_Kickback` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/ |
 | `hip-abduction-machine` | `Thigh_Abductor` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/ |
 | `hip-thrust` | `Barbell_Hip_Thrust` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/ |

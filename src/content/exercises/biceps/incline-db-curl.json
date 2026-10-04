@@ -1,0 +1,18 @@
+{
+  "id": "incline-db-curl",
+  "name": "Curl inclinado con mancuernas",
+  "muscleIds": ["biceps"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "Ajusta el banco a 45-60 grados y siéntate con la espalda apoyada y una mancuerna en cada mano, los brazos colgando por detrás del torso.",
+    "Con las palmas hacia delante y los codos quietos, sube las mancuernas hasta la altura de los hombros.",
+    "Aprieta el bíceps un segundo arriba.",
+    "Baja en 2-3 segundos hasta estirar del todo los brazos, notando el estiramiento del bíceps."
+  ],
+  "commonMistakes": [
+    "Adelantar los codos al subir: el brazo deja de estar por detrás del torso y se pierde el estiramiento.",
+    "Despegar la espalda del banco para ayudarte con el impulso.",
+    "Cortar el recorrido abajo sin estirar el brazo."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Incline_Dumbbell_Curl" }
+}

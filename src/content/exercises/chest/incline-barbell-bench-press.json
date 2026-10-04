@@ -1,0 +1,21 @@
+{
+  "id": "incline-barbell-bench-press",
+  "name": "Press de banca inclinado con barra",
+  "muscleIds": ["chest-upper", "shoulders-front", "triceps"],
+  "equipmentId": "barbell",
+  "instructions": [
+    "Ajusta el banco a 30-45 grados y túmbate con los ojos bajo la barra, los pies firmes y los omóplatos juntos y apoyados.",
+    "Toma la barra algo más ancho que los hombros y sácala del soporte con los brazos estirados sobre la parte alta del pecho.",
+    "Baja en 2-3 segundos hasta rozar la parte alta del pecho, con los codos a unos 45 grados del cuerpo.",
+    "Empuja hasta extender los brazos sin despegar la cadera ni los omóplatos del banco."
+  ],
+  "commonMistakes": [
+    "Inclinar el banco más de 45 grados: el trabajo pasa al hombro.",
+    "Bajar la barra a la mitad del pecho: se pierde el ángulo del press inclinado.",
+    "Rebotar la barra en el pecho."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Barbell_Incline_Bench_Press_-_Medium_Grip"
+  }
+}
