@@ -2,8 +2,14 @@
   "defaults": {
     "sets": 2,
     "warmupSets": 1,
-    "rir": { "min": 1, "max": 2 },
-    "restSeconds": { "min": 120, "max": 180 },
+    "rir": {
+      "min": 1,
+      "max": 2
+    },
+    "restSeconds": {
+      "min": 120,
+      "max": 180
+    },
     "cardioMinutes": 30
   },
   "sections": [
@@ -36,7 +42,8 @@
       "id": "rest",
       "title": "Descanso",
       "body": [
-        "Entre 2 y 3 minutos entre series efectivas en los ejercicios principales, y algo menos en los de aislamiento. Cada tarjeta lo indica."
+        "Descansa como mínimo 2 minutos entre series, en todos los ejercicios, también en los de aislamiento: de 2 a 3 minutos.",
+        "Descansar menos te hace llegar cansado a la siguiente serie y hacer menos repeticiones, y son las repeticiones las que hacen crecer el músculo."
       ]
     },
     {

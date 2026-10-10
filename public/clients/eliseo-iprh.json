@@ -66,10 +66,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0
         },
         {
@@ -81,10 +77,6 @@
           "rir": {
             "min": 2,
             "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         }
@@ -117,10 +109,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0,
           "notes": "Sube y baja en control, sin bloquear la rodilla de golpe."
         },
@@ -145,10 +133,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0
         },
         {
@@ -161,10 +145,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0
         },
         {
@@ -176,10 +156,6 @@
           "rir": {
             "min": 2,
             "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         }
@@ -221,10 +197,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0
         },
         {
@@ -236,10 +208,6 @@
           "rir": {
             "min": 2,
             "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         },
@@ -253,10 +221,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0
         },
         {
@@ -268,10 +232,6 @@
           "rir": {
             "min": 2,
             "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         }
@@ -315,10 +275,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0
         },
         {
@@ -330,10 +286,6 @@
           "rir": {
             "min": 2,
             "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0,
           "notes": "Sin peso: sube solo hasta alinear el torso con las piernas."
@@ -348,10 +300,6 @@
             "min": 2,
             "max": 3
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
           "warmupSets": 0
         },
         {
@@ -363,10 +311,6 @@
           "rir": {
             "min": 2,
             "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         }
