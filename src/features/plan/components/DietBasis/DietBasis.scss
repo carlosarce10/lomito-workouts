@@ -1,0 +1,46 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-diet-basis {
+    &__rows {
+      @include flex-column;
+
+      gap: $spacing-xs;
+      margin: 0;
+    }
+
+    &__row {
+      @include flex-between;
+
+      gap: $spacing-md;
+      font-size: $font-size-sm;
+    }
+
+    &__label {
+      color: var(--text-secondary);
+    }
+
+    &__value {
+      margin: 0;
+      font-weight: $font-weight-semibold;
+      text-align: right;
+    }
+
+    &__item {
+      @include flex-column;
+
+      gap: $spacing-xs;
+    }
+
+    &__heading {
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+    }
+
+    &__text {
+      font-size: $font-size-sm;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+  }
+}

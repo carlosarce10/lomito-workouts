@@ -1,8 +1,11 @@
 # Lomito Workouts
 
 Planes de entrenamiento personalizados entregados por web movil. El cliente abre un
-enlace privado y ve su perfil, la metodologia y sus rutinas con tarjetas de ejercicio:
-imagen, musculos, series, repeticiones, RIR, descanso, como hacerlo y errores comunes.
+enlace privado con tres pestanas. Rutina: su perfil y sus rutinas con tarjetas de
+ejercicio (imagen, musculos, series, repeticiones, RIR, descanso, como hacerlo y errores
+comunes). Dieta: su recomendacion nutrimental en porciones de mano, un dia de ejemplo y
+platos con foto ajustados a el, reemplazos y suplementos. Informacion: como registrar en
+Lomito Train y como entrenar.
 
 Solo planifica y explica. El seguimiento del entrenamiento vive en
 [Lomito Train](https://lomito-train.netlify.app/) y no se duplica aqui.
@@ -31,6 +34,9 @@ poder abrirlo desde el movil durante el desarrollo.
 | `npm run lint:css`     | Stylelint                                               |
 | `npm run lint:classes` | Cruza las clases BEMIT del JSX contra el SCSS           |
 | `npm run lint:i18n`    | Claves de traduccion usadas, declaradas y plurales      |
+| `npm run lint:content` | Valida biblioteca, clientes y metodologia               |
+| `npm run diet`         | Calcula la recomendacion nutrimental de un cliente      |
+| `npm run photos`       | Descarga las fotos de platos y suplementos              |
 | `npm run format`       | Prettier en modo escritura                              |
 | `npm run check`        | Formato, lints y build. Puerta unica antes de commitear |
 
@@ -50,6 +56,7 @@ los JSON de contenido se valida con un script antes de cada build.
 | [docs/plan.md](docs/plan.md)                       | El plan por fases del MVP y sus decisiones                             |
 | [docs/roadmap.md](docs/roadmap.md)                 | Que fase esta cerrada y que queda                                      |
 | [docs/intake.md](docs/intake.md)                   | Cuestionario para un cliente nuevo, antes de crear su plan             |
+| [docs/diet.md](docs/diet.md)                       | Formula de la recomendacion nutrimental: calorias, proteina y anadidos |
 | [docs/tracking-export.md](docs/tracking-export.md) | Formato del plan que importa Lomito Train                              |
 
 Antes de escribir codigo se lee CLAUDE.md. Antes de escribir un commit se lee

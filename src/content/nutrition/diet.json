@@ -1,0 +1,39 @@
+{
+  "tips": [
+    "Arma cada comida con tu plato de abajo: proteína, carbohidratos, grasa y verdura.",
+    "Cumple los rangos la mayoría de los días; no hace falta ser exacto.",
+    "Cambia cualquier alimento por otro de su mismo grupo con la lista de reemplazos.",
+    "Toma agua a lo largo del día y un poco más los días de entrenamiento.",
+    "Si tienes una condición médica, embarazo o lactancia, consulta antes a un profesional."
+  ],
+  "sections": [
+    {
+      "id": "guide",
+      "title": "Una guía, no una dieta estricta",
+      "body": [
+        "Estos números son una estimación con tu peso, estatura, edad y actividad. Funcionan bien para la mayoría, pero tu cuerpo puede gastar algo más o algo menos."
+      ]
+    },
+    {
+      "id": "portions",
+      "title": "Por qué con la mano",
+      "body": [
+        "Tu mano crece contigo y siempre la llevas encima. Una palma de proteína son unos 25 g, un puño de carbohidratos unos 25 g y un pulgar de grasa unos 10 g. Si quieres más precisión, usa los gramos de cada plato."
+      ]
+    },
+    {
+      "id": "review",
+      "title": "Ajustar con el tiempo",
+      "body": [
+        "Pésate varias mañanas por semana y fíjate en el promedio semanal, no en un día suelto. Si en 2 a 4 semanas no va hacia tu objetivo, se ajusta poco a poco con tu entrenador."
+      ]
+    },
+    {
+      "id": "limits",
+      "title": "Para quién vale",
+      "body": [
+        "Es una orientación para adultos sanos que entrenan. No sustituye una valoración con un profesional de nutrición, y los suplementos se consultan antes si hay enfermedad renal o medicación."
+      ]
+    }
+  ]
+}

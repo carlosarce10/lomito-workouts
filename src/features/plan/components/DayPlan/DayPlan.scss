@@ -1,0 +1,85 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-day-plan {
+    @include flex-column;
+
+    gap: $spacing-sm;
+
+    &__title {
+      font-size: $font-size-lg;
+    }
+
+    &__lead {
+      font-size: $font-size-sm;
+      color: var(--text-secondary);
+    }
+
+    &__slots {
+      @include flex-column;
+
+      gap: $spacing-lg;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__slot {
+      @include flex-column;
+
+      gap: $spacing-sm;
+    }
+
+    &__slot-header {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+    }
+
+    // El numero marca el orden del dia, como un paso.
+    &__step {
+      @include flex-center;
+
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: $radius-full;
+      background: var(--accent);
+      color: var(--on-accent);
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+    }
+
+    &__slot-title {
+      flex: 1;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+    }
+
+    &__swipe {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      font-size: $font-size-xs;
+      color: var(--text-muted);
+    }
+
+    // El carrusel sangra hasta el borde de la pantalla para que se vea la siguiente.
+    &__carousel {
+      gap: $spacing-sm;
+      margin: 0 calc(-1 * #{$spacing-md});
+      padding: 0 $spacing-md $spacing-xs;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 0 $spacing-md;
+    }
+
+    &__total {
+      padding: $spacing-sm $spacing-md;
+      border-radius: $radius-sm;
+      background: var(--accent-subtle);
+      color: var(--accent-text);
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}

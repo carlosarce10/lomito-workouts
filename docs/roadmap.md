@@ -187,6 +187,25 @@ sin borrar nada. Formato, reglas y verificacion de extremo a extremo en
 [tracking-export.md](tracking-export.md). Requiere la version de Lomito Train con
 `planImport`: la anterior rechaza el archivo sin tocar nada.
 
+## Despues del MVP — Recomendacion nutrimental y pestanas (completada)
+
+`computeDiet` calcula calorias, proteina, grasas, carbohidratos, fibra y agua con las
+reglas de [diet.md](diet.md); `npm run diet` lo ejecuta con peso en kilos o libras y
+estatura en centimetros o pies, e imprime el bloque `diet` que se pega en el cliente.
+Las entradas no entran en el repositorio y `lint:content` prohibe sus claves.
+
+El plan pasa a tener barra inferior como Lomito Train, con tres pestanas que son rutas:
+Rutina (`/#/<slug>`), Dieta (`/#/<slug>/diet`, solo si hay `diet`) e Informacion
+(`/#/<slug>/info`, con Lomito Train y la metodologia). La Dieta muestra la meta del dia,
+el plato de cada comida en porciones de mano, el dia en orden (desayuno, uno o dos
+snacks entre comidas, comida y cena) con un carrusel de opciones con foto por momento,
+ajustadas a los gramos del cliente, reemplazos por grupo, creatina y proteina en polvo,
+y plegado de donde salen los numeros. Contenido en `src/content/nutrition/`,
+fotos en `public/nutrition/` por `npm run photos`. Verificado a 375 px con el primer
+cliente real: con las opciones sugeridas su dia suma 2570 kcal para un objetivo de 2400
+a 2600.
+Pendiente: el paso en la skill `lomito-plan`.
+
 ## Cliente de ejemplo retirado
 
 El plan de demostracion `juan-7k2p` se retiro: incumplia la metodologia de
@@ -201,6 +220,7 @@ se hicieron con el y siguen siendo validas: el codigo no depende de ningun clien
 | La imagen social es la de Lomito Train (mismo logotipo, otro nombre)   | Backlog                       |
 | Las estadisticas del perfil ocupan dos filas en 375 px                 | Cosmetico, backlog            |
 | Los textos de los 22 ejercicios son borrador: los revisa el entrenador | Antes del primer cliente real |
+| El bloque `diet` de un cliente no se muestra aun en el plan            | Interfaz de la recomendacion  |
 
 ## Backlog
 

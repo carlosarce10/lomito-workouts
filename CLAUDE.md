@@ -6,13 +6,15 @@ El porque y el para quien no estan aqui: estan en [PRODUCT.md](PRODUCT.md).
 ## 1. Que es Lomito Workouts
 
 Entrega de planes de entrenamiento personalizados por web movil. El cliente abre un
-enlace privado y ve su perfil, la metodologia y sus rutinas con tarjetas de ejercicio.
+enlace privado con tres pestanas: Rutina (perfil y rutinas con tarjetas de ejercicio),
+Dieta (recomendacion nutrimental con porciones de mano, platos con foto, reemplazos y
+suplementos, si el plan la trae) e Informacion (Lomito Train y como entrenar).
 Solo planifica y explica: el seguimiento (pesos, repeticiones, historial) vive en
 Lomito Train y no se duplica aqui.
 
 Sin backend, sin base de datos, sin cuentas y sin localStorage. El contenido es JSON
-dentro del repositorio: la biblioteca de ejercicios y la metodologia en `src/content/`,
-un archivo por cliente en `public/clients/`. Se publica como sitio estatico.
+dentro del repositorio: la biblioteca de ejercicios, la metodologia y la nutricion en
+`src/content/`, un archivo por cliente en `public/clients/`. Se publica como sitio estatico.
 
 Es un clon adaptado de Lomito Train (`../lomito-train`): mismo sistema de estilos,
 mismos componentes base, mismo tooling y mismas convenciones. Ante una duda que este
@@ -20,19 +22,21 @@ archivo no cubra, manda el CLAUDE.md de Lomito Train.
 
 ## 2. Comandos
 
-| Comando                | Que hace                                                               |
-| ---------------------- | ---------------------------------------------------------------------- |
-| `npm run dev`          | Servidor de desarrollo en el puerto 5173, accesible desde la red local |
-| `npm run build`        | Build de produccion en `dist/`                                         |
-| `npm run preview`      | Sirve el build de produccion                                           |
-| `npm run lint`         | ESLint sobre todo el repositorio                                       |
-| `npm run lint:css`     | Stylelint sobre `src/**/*.scss`                                        |
-| `npm run lint:classes` | Cruza las clases BEMIT del JSX contra los selectores del SCSS          |
-| `npm run lint:i18n`    | Claves de traduccion usadas, declaradas y plurales completos           |
-| `npm run lint:content` | Valida biblioteca, clientes, metodologia e imagenes (desde la fase 1)  |
-| `npm run images`       | Descarga las imagenes de la biblioteca a `public/exercises/` (fase 3)  |
-| `npm run format`       | Prettier en modo escritura                                             |
-| `npm run check`        | Formato, lints, contenido y build. **Puerta unica antes de commitear** |
+| Comando                | Que hace                                                                      |
+| ---------------------- | ----------------------------------------------------------------------------- |
+| `npm run dev`          | Servidor de desarrollo en el puerto 5173, accesible desde la red local        |
+| `npm run build`        | Build de produccion en `dist/`                                                |
+| `npm run preview`      | Sirve el build de produccion                                                  |
+| `npm run lint`         | ESLint sobre todo el repositorio                                              |
+| `npm run lint:css`     | Stylelint sobre `src/**/*.scss`                                               |
+| `npm run lint:classes` | Cruza las clases BEMIT del JSX contra los selectores del SCSS                 |
+| `npm run lint:i18n`    | Claves de traduccion usadas, declaradas y plurales completos                  |
+| `npm run lint:content` | Valida biblioteca, clientes, metodologia e imagenes (desde la fase 1)         |
+| `npm run images`       | Descarga las imagenes de la biblioteca a `public/exercises/` (fase 3)         |
+| `npm run diet`         | Calcula la recomendacion nutrimental de un cliente e imprime su bloque `diet` |
+| `npm run photos`       | Descarga las fotos de platos y suplementos a `public/nutrition/`              |
+| `npm run format`       | Prettier en modo escritura                                                    |
+| `npm run check`        | Formato, lints, contenido y build. **Puerta unica antes de commitear**        |
 
 `npm run check` tiene que pasar en verde antes de cada commit. El hook de pre-commit
 solo revisa los archivos preparados; `check` revisa el proyecto entero.
@@ -57,46 +61,74 @@ versiones exactas estan en `package.json` y no se copian aqui.
 Una sola palabra por concepto, la misma en codigo, carpetas, clases CSS, claves de
 traduccion y ambitos de commit. La columna "codigo" manda.
 
-| Concepto                                           | Codigo                     | Etiqueta es      |
-| -------------------------------------------------- | -------------------------- | ---------------- |
-| Persona que recibe el plan                         | `client`                   | Cliente          |
-| Identificador de URL del cliente (= archivo)       | `slug`                     |                  |
-| Lo que ve el cliente: perfil, rutinas, metodologia | `plan`                     | Plan             |
-| Sesion de un dia, grupo de ejercicios              | `routine`                  | Rutina, "Dia N"  |
-| Posicion de la rutina, derivada del indice         | `ordinal`                  | Dia N            |
-| Ejercicio prescrito dentro de una rutina           | `routineExercise`          |                  |
-| Entrada de la biblioteca                           | `exercise`                 | Ejercicio        |
-| Biblioteca reutilizable de ejercicios              | `library`                  | Biblioteca       |
-| Musculo (catalogo, con `group` = carpeta)          | `muscle`, `muscleIds`      | Musculo          |
-| Equipamiento (catalogo, el de Lomito Train)        | `equipment`, `equipmentId` | Equipamiento     |
-| Nivel (catalogo)                                   | `level`, `levelId`         | Nivel            |
-| Objetivo (catalogo)                                | `goal`, `goalId`           | Objetivo         |
-| Dias por semana, derivado de `routines.length`     | `frequency`                | Frecuencia       |
-| Series de aproximacion (entero)                    | `warmupSets`               | Aproximacion     |
-| Minutos de cardio al terminar la rutina            | `cardioMinutes`            | Cardio           |
-| Series efectivas (entero)                          | `sets`                     | Series efectivas |
-| Rango de repeticiones                              | `reps`                     | Repeticiones     |
-| Rango de repeticiones en reserva                   | `rir`                      | RIR              |
-| Rango de descanso en segundos                      | `restSeconds`              | Descanso         |
-| Objeto `{ min, max }`                              | `range`                    | "8-12"           |
-| Pasos de ejecucion                                 | `instructions`             | Como hacerlo     |
-| Errores frecuentes                                 | `commonMistakes`           | Errores comunes  |
-| Nota del entrenador                                | `notes`                    | Observaciones    |
-| Fechas del plan                                    | `startDate`, `reviewDate`  | Inicio, Revision |
-| Texto educativo y valores por defecto              | `methodology`              | Como entrenar    |
-| Origen de las imagenes de un ejercicio             | `source`                   | Fuente           |
-| Enlace a Lomito Train                              | `tracking`                 | Seguimiento      |
+| Concepto                                              | Codigo                                       | Etiqueta es                              |
+| ----------------------------------------------------- | -------------------------------------------- | ---------------------------------------- |
+| Persona que recibe el plan                            | `client`                                     | Cliente                                  |
+| Identificador de URL del cliente (= archivo)          | `slug`                                       |                                          |
+| Lo que ve el cliente: perfil, rutinas, metodologia    | `plan`                                       | Plan                                     |
+| Sesion de un dia, grupo de ejercicios                 | `routine`                                    | Rutina, "Dia N"                          |
+| Posicion de la rutina, derivada del indice            | `ordinal`                                    | Dia N                                    |
+| Ejercicio prescrito dentro de una rutina              | `routineExercise`                            |                                          |
+| Ejercicio que sustituye a otro si falta la maquina    | `alternativeId`                              | Alternativa                              |
+| Entrada de la biblioteca                              | `exercise`                                   | Ejercicio                                |
+| Biblioteca reutilizable de ejercicios                 | `library`                                    | Biblioteca                               |
+| Musculo (catalogo, con `group` = carpeta)             | `muscle`, `muscleIds`                        | Musculo                                  |
+| Equipamiento (catalogo, el de Lomito Train)           | `equipment`, `equipmentId`                   | Equipamiento                             |
+| Nivel (catalogo)                                      | `level`, `levelId`                           | Nivel                                    |
+| Objetivo (catalogo)                                   | `goal`, `goalId`                             | Objetivo                                 |
+| Dias por semana, derivado de `routines.length`        | `frequency`                                  | Frecuencia                               |
+| Series de aproximacion (entero)                       | `warmupSets`                                 | Aproximacion                             |
+| Minutos de cardio al terminar la rutina               | `cardioMinutes`                              | Cardio                                   |
+| Series efectivas (entero)                             | `sets`                                       | Series efectivas                         |
+| Rango de repeticiones                                 | `reps`                                       | Repeticiones                             |
+| Rango de repeticiones en reserva                      | `rir`                                        | RIR                                      |
+| Rango de descanso en segundos                         | `restSeconds`                                | Descanso                                 |
+| Objeto `{ min, max }`                                 | `range`                                      | "8-12"                                   |
+| Pasos de ejecucion                                    | `instructions`                               | Como hacerlo                             |
+| Errores frecuentes                                    | `commonMistakes`                             | Errores comunes                          |
+| Nota del entrenador                                   | `notes`                                      | Observaciones                            |
+| Fechas del plan                                       | `startDate`, `reviewDate`                    | Inicio, Revision                         |
+| Texto educativo y valores por defecto                 | `methodology`                                | Como entrenar                            |
+| Origen de las imagenes de un ejercicio                | `source`                                     | Fuente                                   |
+| Enlace a Lomito Train                                 | `tracking`                                   | Seguimiento                              |
+| Recomendacion nutrimental del cliente                 | `diet`                                       | Recomendacion nutrimental                |
+| Objetivo de la dieta (catalogo, distinto de `goalId`) | `dietGoalId`                                 | Deficit, Mantener, Recomponer, Superavit |
+| Factor de actividad diaria (entrada, catalogo)        | `activityId`, `activityFactor`               | Actividad                                |
+| Gasto energetico en reposo                            | `restingCalories`                            | Gasto en reposo                          |
+| Calorias de mantenimiento                             | `maintenanceCalories`                        | Mantenimiento                            |
+| Calorias objetivo                                     | `targetCalories`                             | Calorias objetivo                        |
+| Ajuste sobre el mantenimiento, en % con signo         | `adjustmentPercent`                          | Ajuste                                   |
+| Proteina diaria en gramos y por kilo                  | `protein`, `proteinPerKg`                    | Proteina                                 |
+| Grasas en gramos y en % de las calorias               | `fat`, `fatPercent`                          | Grasas                                   |
+| Carbohidratos en gramos                               | `carbs`                                      | Carbohidratos                            |
+| Fibra en gramos y agua en mililitros                  | `fiber`, `water`                             | Fibra, Agua                              |
+| Comidas al dia                                        | `mealsPerDay`                                | Comidas al dia                           |
+| Pestana del plan (catalogo en AppShell)               | `routines`, `diet`, `info`                   | Rutina, Dieta, Informacion               |
+| Alimento con su porcion de mano y medida casera       | `food`                                       | Alimento                                 |
+| Grupo de alimentos (catalogo)                         | `foodGroupId`                                | Proteina, Carbohidratos, Grasa, Verdura  |
+| Porcion de mano: palma, puno, pulgar                  | `portion`                                    | Palma, Puno, Pulgar                      |
+| Plato o snack sugerido, con foto                      | `plate`                                      | Plato                                    |
+| Momento del dia (catalogo)                            | `mealId`, `mealIds`                          | Desayuno, Comida, Cena, Snack            |
+| Suplemento recomendado                                | `supplement`                                 | Suplemento                               |
+| Alimentos, platos, suplementos y consejos             | `nutrition`                                  | Dieta                                    |
+| Fecha del calculo                                     | `calculatedAt`                               | Calculado el                             |
+| Sistema de unidades con que el cliente lee el plan    | `unitSystemId`                               |                                          |
+| Entradas del calculo, nunca en un JSON                | `bodyMass` (kg), `height` (cm), `age`, `sex` |                                          |
 
 Palabras prohibidas y su sustituto:
 
-| Prohibido                                                                                | Se usa                            |
-| ---------------------------------------------------------------------------------------- | --------------------------------- |
-| `day`, `workoutDay`, `dayNumber`                                                         | `routine`; el numero es `ordinal` |
-| `program`                                                                                | `client.routines`                 |
-| `category`, `muscleGroup`                                                                | `muscleIds`                       |
-| `rest` a secas                                                                           | `restSeconds`                     |
-| `serie` en identificadores                                                               | `set`                             |
-| `weight`, `record`, `session`, `history`, `timer`, `log`, `settings`, `theme`, `storage` | No existen en el producto         |
+| Prohibido                                                                      | Se usa                                                           |
+| ------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| `day`, `workoutDay`, `dayNumber`                                               | `routine`; el numero es `ordinal`                                |
+| `program`                                                                      | `client.routines`                                                |
+| `category`, `muscleGroup`                                                      | `muscleIds`                                                      |
+| `rest` a secas                                                                 | `restSeconds`                                                    |
+| `serie` en identificadores                                                     | `set`                                                            |
+| `record`, `session`, `history`, `timer`, `log`, `settings`, `theme`, `storage` | No existen en el producto                                        |
+| `weight`                                                                       | `bodyMass`, solo como entrada de `npm run diet`                  |
+| `calories`, `kcal` a secas                                                     | `restingCalories`, `maintenanceCalories` o `targetCalories`      |
+| `menu`, `servings`                                                             | `plate`: un plato sugerido, no un menu cerrado                   |
+| `lb`, `pounds`, `oz`, `inch` como clave                                        | Todo se guarda en metrico; `unitSystemId` decide como se muestra |
 
 Excepcion: el archivo de exportacion usa los campos de Lomito Train
 (`muscleGroupIds`, `colorId`), porque son de otra aplicacion. Ver
@@ -107,24 +139,27 @@ primera linea de codigo.
 
 ## 5. Donde va cada cosa
 
-| Voy a anadir                                          | Va en                                                               |
-| ----------------------------------------------------- | ------------------------------------------------------------------- |
-| Una pantalla                                          | `src/features/plan/pages/`                                          |
-| Un componente que conoce el dominio                   | `src/features/plan/components/`                                     |
-| Un componente generico (boton, chip, plegable)        | `src/shared/components/`                                            |
-| Una regla de negocio (resolver el plan)               | `src/domain/model/`                                                 |
-| Una lista fija de valores                             | `src/domain/catalogs/`                                              |
-| La forma de un JSON y sus limites                     | `src/domain/schemas/` y `src/domain/validation/limits.js`           |
-| Un ejercicio de la biblioteca                         | `src/content/exercises/<grupo>/<id>.json`                           |
-| Un cliente                                            | `public/clients/<slug>.json`                                        |
-| El texto de la metodologia y sus valores por defecto  | `src/content/methodology.json`                                      |
-| Texto de interfaz                                     | `src/i18n/locales/es/<namespace>.json`                              |
-| Un color, un radio, una sombra, un espaciado          | `src/styles/settings/`                                              |
-| El acceso al contenido (glob, fetch, rutas de imagen) | `src/services/content/`                                             |
-| Una imagen de ejercicio                               | `public/exercises/<id>/`. La escribe `npm run images`, nunca a mano |
-| Un icono, favicon o imagen social                     | `public/`, por URL fija                                             |
-| Una imagen que consume un componente                  | `src/assets/`, importada para que Vite le ponga hash                |
-| La URL publica del sitio                              | `.env`, en `VITE_SITE_URL`. La consume `index.html` para Open Graph |
+| Voy a anadir                                          | Va en                                                                        |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------- |
+| Una pantalla                                          | `src/features/plan/pages/`                                                   |
+| Un componente que conoce el dominio                   | `src/features/plan/components/`                                              |
+| Un componente generico (boton, chip, plegable)        | `src/shared/components/`                                                     |
+| Una regla de negocio (resolver el plan)               | `src/domain/model/`                                                          |
+| Una lista fija de valores                             | `src/domain/catalogs/`                                                       |
+| Un calculo que no corre en el navegador               | Funcion pura en `src/domain/model/` y un script en `scripts/` que la ejecuta |
+| La forma de un JSON y sus limites                     | `src/domain/schemas/` y `src/domain/validation/limits.js`                    |
+| Un ejercicio de la biblioteca                         | `src/content/exercises/<grupo>/<id>.json`                                    |
+| Un cliente                                            | `public/clients/<slug>.json`                                                 |
+| El texto de la metodologia y sus valores por defecto  | `src/content/methodology.json`                                               |
+| Texto de interfaz                                     | `src/i18n/locales/es/<namespace>.json`                                       |
+| Un color, un radio, una sombra, un espaciado          | `src/styles/settings/`                                                       |
+| El acceso al contenido (glob, fetch, rutas de imagen) | `src/services/content/`                                                      |
+| Una imagen de ejercicio                               | `public/exercises/<id>/`. La escribe `npm run images`, nunca a mano          |
+| Un alimento, plato, suplemento o consejo de dieta     | `src/content/nutrition/<foods,plates,supplements,diet>.json`                 |
+| Una foto de plato o suplemento                        | `public/nutrition/<id>.jpg`. La escribe `npm run photos`, nunca a mano       |
+| Un icono, favicon o imagen social                     | `public/`, por URL fija                                                      |
+| Una imagen que consume un componente                  | `src/assets/`, importada para que Vite le ponga hash                         |
+| La URL publica del sitio                              | `.env`, en `VITE_SITE_URL`. La consume `index.html` para Open Graph          |
 
 Anatomia obligatoria de la feature: `index.js` como unica API publica, mas `pages/`,
 `components/` y `hooks/`. Dentro de una feature no hay `constants/`, `services/`,
@@ -151,8 +186,9 @@ En `src/domain/` los imports relativos llevan extension `.js`. Los scripts de No
 
 ## 7. Modelo de contenido
 
-Tres fuentes, todas JSON: la biblioteca (`src/content/exercises/<grupo>/<id>.json`,
-entra al bundle), la metodologia (`src/content/methodology.json`) y los clientes
+Cuatro fuentes, todas JSON: la biblioteca (`src/content/exercises/<grupo>/<id>.json`,
+entra al bundle), la metodologia (`src/content/methodology.json`), la nutricion
+(`src/content/nutrition/`: alimentos, platos, suplementos y consejos) y los clientes
 (`public/clients/<slug>.json`, se sirven tal cual y se cargan con `fetch`).
 
 Invariantes que impone `lint:content` y ninguna escritura puede romper:
@@ -169,6 +205,11 @@ Invariantes que impone `lint:content` y ninguna escritura puede romper:
 6. Ningun campo de seguimiento: `weight`, `record`, `history`, `session`, `timer`,
    `log`, ni `day`, `category` o `program`.
 7. Un ejercicio con `source` tiene `public/exercises/<id>/0.jpg` y `1.jpg`.
+8. `diet`, si existe, solo lleva resultados en metrico escritos por `npm run diet`.
+   `bodyMass`, `height`, `age`, `sex` y la actividad son claves prohibidas en todo
+   JSON: las entradas del calculo no entran en el repositorio. Ver [docs/diet.md](docs/diet.md).
+9. Todo `foodId` de un plato existe en `foods.json`; los ids de platos y suplementos no
+   se repiten; uno con `source` tiene `public/nutrition/<id>.jpg`.
 
 El runtime no valida forma. `resolvePlan` solo resuelve referencias y aplica los
 valores por defecto de la metodologia; un `exerciseId` huerfano devuelve

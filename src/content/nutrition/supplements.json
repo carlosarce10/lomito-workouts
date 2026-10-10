@@ -1,0 +1,28 @@
+[
+  {
+    "id": "creatine",
+    "name": "Creatina monohidratada",
+    "dose": "3 a 5 g todos los días",
+    "body": [
+      "Es el suplemento con más evidencia para ganar fuerza y músculo. Tómala a la hora que quieras, con agua o en tu batido, también los días sin entrenar.",
+      "No necesita fase de carga ni descansos. Puede subir 1 a 2 kg de agua dentro del músculo: no es grasa."
+    ],
+    "source": {
+      "provider": "openverse",
+      "id": "1e57b128-36b7-4467-80df-17adc70e4577"
+    }
+  },
+  {
+    "id": "protein-powder",
+    "name": "Proteína en polvo",
+    "dose": "1 scoop, unos 25 g de proteína, cuando no llegues",
+    "body": [
+      "No es obligatoria: es comida práctica. Úsala solo si con tus comidas no llegas a tu proteína del día.",
+      "Whey o aislada si toleras la lactosa; vegetal si no. Busca unos 20 a 25 g de proteína por scoop y poca azúcar."
+    ],
+    "source": {
+      "provider": "openverse",
+      "id": "895028b7-f236-48ad-a289-51d2c55975e5"
+    }
+  }
+]

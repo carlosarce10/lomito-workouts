@@ -1,0 +1,39 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-food-group-icon {
+    @include flex-center;
+
+    flex-shrink: 0;
+    border-radius: $radius-full;
+    color: var(--group-color);
+    background: color-mix(in srgb, var(--group-color) 16%, transparent);
+
+    &--md {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--sm {
+      width: 26px;
+      height: 26px;
+    }
+
+    // Cada grupo toma su token de rol, distinto en claro y en oscuro.
+    &--protein {
+      --group-color: var(--food-protein);
+    }
+
+    &--carbs {
+      --group-color: var(--food-carbs);
+    }
+
+    &--fat {
+      --group-color: var(--food-fat);
+    }
+
+    &--vegetables {
+      --group-color: var(--food-vegetables);
+    }
+  }
+}

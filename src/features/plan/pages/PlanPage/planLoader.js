@@ -1,10 +1,12 @@
 import { redirect } from 'react-router';
 
+import { buildNutritionPlan } from '@domain/model/nutritionPlan';
 import { resolvePlan } from '@domain/model/resolvePlan';
 import { isClientSlug } from '@domain/validation/slugs';
 import { loadClient } from '@services/content/clients';
 import { LIBRARY } from '@services/content/library';
 import { METHODOLOGY } from '@services/content/methodology';
+import { FOODS, PLATES } from '@services/content/nutrition';
 
 /**
  * Carga y resuelve el plan de la ruta antes de pintarla.
@@ -14,7 +16,10 @@ import { METHODOLOGY } from '@services/content/methodology';
  * otros. Un fallo de red o un contenido roto lanza, y errorElement lo muestra.
  *
  * @param {{ params: { clientSlug: string } }} args
- * @returns {Promise<object>} El plan resuelto.
+ * Si el plan trae recomendacion nutrimental, tambien calcula sus porciones y platos:
+ * un alimento que falta es contenido roto y se trata igual que un ejercicio huerfano.
+ *
+ * @returns {Promise<object>} El plan resuelto, con `nutrition` o null.
  */
 export async function planLoader({ params }) {
   if (!isClientSlug(params.clientSlug)) throw redirect('/');
@@ -27,5 +32,9 @@ export async function planLoader({ params }) {
 
   const plan = resolvePlan({ client: cliente.value, library: LIBRARY, methodology: METHODOLOGY });
   if (!plan.ok) throw new Error(plan.error);
-  return plan.value;
+  if (!plan.value.diet) return { ...plan.value, nutrition: null };
+
+  const nutrition = buildNutritionPlan({ diet: plan.value.diet, foods: FOODS, plates: PLATES });
+  if (!nutrition.ok) throw new Error(nutrition.error);
+  return { ...plan.value, nutrition: nutrition.value };
 }

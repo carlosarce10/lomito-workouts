@@ -1,0 +1,9 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-plan-routines-page {
+    @include flex-column;
+
+    gap: $spacing-lg;
+  }
+}

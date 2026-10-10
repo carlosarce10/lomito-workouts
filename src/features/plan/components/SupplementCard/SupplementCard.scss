@@ -1,0 +1,47 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-supplement-card {
+    @include glass-card;
+
+    display: flex;
+    gap: $spacing-md;
+    padding: $spacing-md;
+
+    &__photo {
+      flex-shrink: 0;
+      width: 72px;
+      height: 72px;
+      border-radius: $radius-sm;
+      object-fit: cover;
+    }
+
+    &__body {
+      @include flex-column;
+
+      gap: $spacing-xs;
+      min-width: 0;
+    }
+
+    &__name {
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+    }
+
+    &__dose {
+      align-self: flex-start;
+      padding: 2px $spacing-sm;
+      border-radius: $radius-full;
+      background: var(--accent-subtle);
+      color: var(--accent-text);
+      font-size: $font-size-sm;
+      font-weight: $font-weight-semibold;
+    }
+
+    &__text {
+      font-size: $font-size-sm;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+  }
+}

@@ -16,6 +16,9 @@
     @include emit(light);
 
     color-scheme: light;
+    // Alto de la barra de navegacion del plan, sin el area segura. Lo usan la barra
+    // y el hueco que el layout deja debajo del contenido.
+    --nav-height: 64px;
   }
 
   // El tema sigue al sistema. No hay conmutador ni preferencia guardada, asi que

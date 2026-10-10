@@ -1,124 +1,76 @@
-import {
-  mdiDumbbell,
-  mdiHelpCircle,
-  mdiHook,
-  mdiImageOff,
-  mdiRun,
-  mdiWeight,
-  mdiWeightLifter,
-} from '@mdi/js';
-import Icon from '@mdi/react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
-import { getEquipmentIcon, IMAGE_FRAMES } from '@domain/catalogs';
-import { exerciseImageUrl } from '@services/content/images';
-import Collapsible from '@shared/components/Collapsible/Collapsible';
 import useTranslation from '@i18n/useTranslation';
 
-import MuscleBadgeList from '../MuscleBadgeList/MuscleBadgeList';
+import ExerciseOption from '../ExerciseOption/ExerciseOption';
 import PrescriptionGrid from '../PrescriptionGrid/PrescriptionGrid';
 
 import './RoutineExerciseCard.scss';
 
-// El catalogo guarda el nombre del icono; la ruta SVG es cosa de la presentacion.
-const ICONS = {
-  'weight-lifter': mdiWeightLifter,
-  dumbbell: mdiDumbbell,
-  hook: mdiHook,
-  weight: mdiWeight,
-  run: mdiRun,
-  'help-circle': mdiHelpCircle,
-};
-
 /**
- * Tarjeta de un ejercicio dentro de una rutina: nombre, equipamiento, los dos
- * fotogramas, musculos, prescripcion, notas del entrenador y, plegados, los pasos
- * y los errores comunes.
+ * Tarjeta de un ejercicio dentro de una rutina. Si trae alternativa (por si el
+ * gimnasio no tiene la maquina), el ejercicio y su sustituto son dos tarjetas
+ * completas, cada una con su prescripcion, en un carrusel a todo el ancho: se
+ * cambia de una a otra deslizando o con el selector de arriba.
  *
  * @param {object} props
  * @param {object} props.item Ejercicio de la rutina, salido de resolvePlan.
  * @param {number} props.ordinal Posicion dentro de la rutina, desde 1.
  */
 export default function RoutineExerciseCard({ item, ordinal }) {
-  const { t, tn, formatNumber } = useTranslation('plan');
-  const [sinImagen, setSinImagen] = useState(false);
-  const { exercise } = item;
-  const equipamiento = tn('catalog', `equipment.${exercise.equipmentId}`);
-  const conImagen = Boolean(exercise.source) && !sinImagen;
+  const { t } = useTranslation('plan');
+  const pista = useRef(null);
+  const [activa, setActiva] = useState(0);
+  const { exercise, alternative } = item;
+
+  const principal = (
+    <article className="c-routine-exercise-card__panel">
+      <ExerciseOption exercise={exercise} ordinal={ordinal} />
+      <PrescriptionGrid item={item} />
+      {item.notes ? <p className="c-routine-exercise-card__notes">{item.notes}</p> : null}
+    </article>
+  );
+  if (!alternative) return <div className="c-routine-exercise-card">{principal}</div>;
+
+  /** Lleva el carrusel a la tarjeta indicada. */
+  const ir = (indice) => {
+    const destino = pista.current?.children[indice];
+    if (!destino) return;
+    const suave = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    pista.current.scrollTo({ left: destino.offsetLeft, behavior: suave ? 'smooth' : 'auto' });
+  };
+  /** La tarjeta visible es la mas cercana al borde izquierdo de la pista. */
+  const alDeslizar = () => {
+    const { scrollLeft, clientWidth } = pista.current;
+    setActiva(Math.round(scrollLeft / clientWidth));
+  };
+  const opciones = [t('card.main'), t('card.alternative')];
 
   return (
-    <article className="c-routine-exercise-card">
-      <header className="c-routine-exercise-card__header">
-        <span className="c-routine-exercise-card__ordinal" aria-hidden="true">
-          {formatNumber(ordinal, 'integer')}
-        </span>
-        <h3 className="c-routine-exercise-card__name">{exercise.name}</h3>
-        <span
-          className="c-routine-exercise-card__equipment"
-          role="img"
-          aria-label={equipamiento}
-          title={equipamiento}
-        >
-          <Icon path={ICONS[getEquipmentIcon(exercise.equipmentId)] ?? mdiHelpCircle} size={0.8} />
-        </span>
-      </header>
-
-      {conImagen ? (
-        <div className="c-routine-exercise-card__frames">
-          {IMAGE_FRAMES.map((frame, index) => (
-            <img
-              key={frame}
-              className="c-routine-exercise-card__frame"
-              src={exerciseImageUrl(exercise.id, frame)}
-              alt={
-                index === 0
-                  ? t('card.imageStart', { name: exercise.name })
-                  : t('card.imageEnd', { name: exercise.name })
-              }
-              width="850"
-              height="567"
-              loading="lazy"
-              decoding="async"
-              onError={() => setSinImagen(true)}
-            />
-          ))}
-        </div>
-      ) : (
-        <div
-          className="c-routine-exercise-card__placeholder"
-          role="img"
-          aria-label={t('card.noImage')}
-        >
-          <Icon path={mdiImageOff} size={1.5} />
-        </div>
-      )}
-
-      <MuscleBadgeList muscleIds={exercise.muscleIds} />
-      <PrescriptionGrid item={item} />
-
-      {item.notes ? <p className="c-routine-exercise-card__notes">{item.notes}</p> : null}
-
-      <Collapsible className="c-routine-exercise-card__details" title={t('card.instructions')}>
-        <ol className="c-routine-exercise-card__steps">
-          {exercise.instructions.map((paso) => (
-            <li key={paso} className="c-routine-exercise-card__step">
-              {paso}
-            </li>
-          ))}
-        </ol>
-      </Collapsible>
-
-      {exercise.commonMistakes.length > 0 ? (
-        <Collapsible className="c-routine-exercise-card__details" title={t('card.mistakes')}>
-          <ul className="c-routine-exercise-card__steps c-routine-exercise-card__steps--mistakes">
-            {exercise.commonMistakes.map((error) => (
-              <li key={error} className="c-routine-exercise-card__step">
-                {error}
-              </li>
-            ))}
-          </ul>
-        </Collapsible>
-      ) : null}
-    </article>
+    <div className="c-routine-exercise-card">
+      <div className="c-routine-exercise-card__switch" role="group" aria-label={t('card.options')}>
+        {opciones.map((etiqueta, indice) => (
+          <button
+            key={etiqueta}
+            type="button"
+            className={`c-routine-exercise-card__switch-button${activa === indice ? ' is-active' : ''}`}
+            aria-pressed={activa === indice}
+            onClick={() => ir(indice)}
+          >
+            {etiqueta}
+          </button>
+        ))}
+      </div>
+      <div className="c-routine-exercise-card__track" ref={pista} onScroll={alDeslizar}>
+        {principal}
+        <article className="c-routine-exercise-card__panel">
+          <p className="c-routine-exercise-card__hint">
+            {t('card.alternativeHint', { name: exercise.name })}
+          </p>
+          <ExerciseOption exercise={alternative} ordinal={ordinal} />
+          <PrescriptionGrid item={item} />
+        </article>
+      </div>
+    </div>
   );
 }

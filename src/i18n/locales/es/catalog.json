@@ -35,5 +35,17 @@
     "hypertrophy": "Hipertrofia",
     "strength": "Fuerza",
     "general": "Salud general"
+  },
+  "dietGoals": {
+    "deficit": "Bajar grasa",
+    "maintenance": "Mantener",
+    "recomposition": "Recomponer",
+    "surplus": "Ganar músculo"
+  },
+  "foodGroups": {
+    "protein": "Proteína",
+    "carbs": "Carbohidratos",
+    "fat": "Grasa",
+    "vegetables": "Verdura"
   }
 }

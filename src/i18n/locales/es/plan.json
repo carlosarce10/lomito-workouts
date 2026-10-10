@@ -7,6 +7,12 @@
     "title": "Plan de {{name}} · Lomito Workouts",
     "back": "Inicio"
   },
+  "nav": {
+    "label": "Secciones del plan",
+    "routines": "Rutina",
+    "diet": "Dieta",
+    "info": "Información"
+  },
   "profile": {
     "title": "Plan de {{name}}",
     "goal": "Objetivo",
@@ -20,6 +26,89 @@
   },
   "methodology": {
     "title": "¿Cómo entrenar?"
+  },
+  "diet": {
+    "title": "Tu alimentación",
+    "intro": "Una guía para comer bien sin complicarte. No hace falta ser exacto: acércate a estos números la mayoría de los días.",
+    "goal": "Objetivo: {{goal}}",
+    "daily": "Tu meta de calorías al día",
+    "kcal": "{{value}} kcal",
+    "grams": "{{value}} g",
+    "ounces": "{{value}} oz",
+    "fiber": "Fibra: {{value}} g",
+    "water": "Agua: {{liters}} L",
+    "waterImperial": "Agua: {{liters}} L ({{ounces}} oz)",
+    "calculatedAt": "Calculado el {{date}}",
+    "plateTitle": "Tu plato en cada comida",
+    "plateLead_one": "Arma así tu comida principal.",
+    "plateLead_many": "Arma así cada una de tus {{count}} comidas principales.",
+    "plateLead_other": "Arma así cada una de tus {{count}} comidas principales.",
+    "portion": {
+      "protein_one": "{{value}} palma de proteína",
+      "protein_many": "{{value}} palmas de proteína",
+      "protein_other": "{{value}} palmas de proteína",
+      "carbs_one": "{{value}} puño de carbohidratos",
+      "carbs_many": "{{value}} puños de carbohidratos",
+      "carbs_other": "{{value}} puños de carbohidratos",
+      "fat_one": "{{value}} pulgar de grasa",
+      "fat_many": "{{value}} pulgares de grasa",
+      "fat_other": "{{value}} pulgares de grasa"
+    },
+    "hand": {
+      "protein_one": "palma de proteína",
+      "protein_many": "palmas de proteína",
+      "protein_other": "palmas de proteína",
+      "carbs_one": "puño de carbohidratos",
+      "carbs_many": "puños de carbohidratos",
+      "carbs_other": "puños de carbohidratos",
+      "fat_one": "pulgar de grasa",
+      "fat_many": "pulgares de grasa",
+      "fat_other": "pulgares de grasa",
+      "vegetables": "puños de verdura, libre"
+    },
+    "handHint": "Una palma son unos 25 g de proteína, un puño unos 25 g de carbohidratos y un pulgar unos 10 g de grasa.",
+    "tipsTitle": "Para que sea fácil",
+    "dayTitle": "Tu día",
+    "dayLead": "En orden, de la mañana a la noche. Desliza cada momento para ver más opciones: todas tienen las cantidades ajustadas a ti.",
+    "dayTotals": "Con la opción sugerida de cada momento, tu día suma unas {{calories}} kcal: {{protein}} g de proteína ({{source}} g de carne, pescado, huevo o lácteo), {{carbs}} g de carbohidratos y {{fat}} g de grasa.",
+    "plateTotals": "≈ {{calories}} kcal · {{protein}} g proteína · {{carbs}} g carbos · {{fat}} g grasa",
+    "free": "{{value}}, libre",
+    "swapsTitle": "Reemplazos",
+    "swapsLead": "Cambia cualquier alimento por otro de su mismo grupo: cada línea vale lo mismo.",
+    "swap": {
+      "protein": "Proteína: 1 palma equivale a",
+      "carbs": "Carbohidratos: 1 puño equivale a",
+      "fat": "Grasa: 1 pulgar equivale a",
+      "vegetables": "Verdura: 1 puño, libre"
+    },
+    "supplementsTitle": "Suplementos",
+    "basis": "Cómo se calcularon tus números",
+    "basisRow": {
+      "resting": "Gasto en reposo",
+      "factor": "Factor de actividad",
+      "maintenance": "Mantenimiento",
+      "adjustment": "Ajuste según tu objetivo",
+      "target": "Calorías objetivo"
+    },
+    "percent": "{{value}} %",
+    "percentRange": "{{min}} a {{max}} %",
+    "snackLine_one": "Y un snack al día, entre la comida y la cena, con {{items}}.",
+    "snackLine_many": "Y {{count}} snacks al día, entre comidas, cada uno con {{items}}.",
+    "snackLine_other": "Y {{count}} snacks al día, entre comidas, cada uno con {{items}}.",
+    "slot": {
+      "breakfast": "Desayuno",
+      "morningSnack": "Snack de media mañana",
+      "lunch": "Comida",
+      "afternoonSnack": "Snack de la tarde",
+      "dinner": "Cena"
+    },
+    "options_one": "{{count}} opción",
+    "options_many": "{{count}} opciones",
+    "options_other": "{{count}} opciones",
+    "suggested": "Sugerida",
+    "breakfastNote_one": "En el desayuno basta con {{value}} palma de proteína: es más ligero.",
+    "breakfastNote_many": "En el desayuno basta con {{value}} palmas de proteína: es más ligero.",
+    "breakfastNote_other": "En el desayuno basta con {{value}} palmas de proteína: es más ligero."
   },
   "routine": {
     "tabsLabel": "Rutinas del plan",
@@ -44,13 +133,18 @@
     "warmup_other": "{{count}} series de aproximación de {{reps}} al 50–60 % de la carga",
     "noWarmup": "Sin serie de aproximación",
     "instructions": "Cómo hacerlo",
-    "mistakes": "Errores comunes"
+    "mistakes": "Errores comunes",
+    "alternative": "Alternativa",
+    "alternativeHint": "Si en tu gimnasio no hay {{name}}, haz este. Misma prescripción.",
+    "main": "Principal",
+    "options": "Opciones del ejercicio"
   },
   "status": {
     "loading": "Cargando tu plan…",
     "errorTitle": "No se pudo abrir el plan",
     "failed": "No se pudo cargar el plan. Revisa tu conexión e inténtalo de nuevo.",
-    "orphan": "El plan incluye un ejercicio que no existe en la biblioteca. Avisa a tu entrenador."
+    "orphan": "El plan incluye un ejercicio que no existe en la biblioteca. Avisa a tu entrenador.",
+    "orphanFood": "El plan incluye un alimento que no existe. Avisa a tu entrenador."
   },
   "tracking": {
     "title": "Registra tu entrenamiento en Lomito Train",

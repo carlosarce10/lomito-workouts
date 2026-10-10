@@ -82,6 +82,12 @@ $themes: (
     'warning-text': $amber-800,
     'on-warning': #fff,
     'focus': $blue-700,
+    // Grupos de alimentos de la recomendacion nutrimental: tinta de icono y de
+    // etiqueta. En claro, tonos 700 para pasar AA sobre las superficies de vidrio.
+    'food-protein': #c2410c,
+    'food-carbs': #0369a1,
+    'food-fat': #7c3aed,
+    'food-vegetables': #15803d,
     // Cuanto del color de un grupo muscular sobrevive en su tinta. El resto es el
     // color de texto del tema. Sin esta mezcla los cinco badges fallan AA en claro:
     // el peor daba 2,67:1. Con 40% el peor pasa a 5,16:1. Ver docs/styles.md.
@@ -136,6 +142,11 @@ $themes: (
     'warning-text': $amber-300,
     'on-warning': $slate-950,
     'focus': $blue-300,
+    // En oscuro, tonos 300: los 700 no se leen sobre el fondo pizarra.
+    'food-protein': #fdba74,
+    'food-carbs': #7dd3fc,
+    'food-fat': #c4b5fd,
+    'food-vegetables': #86efac,
     // En oscuro hace falta mezclar mas hacia el texto: el peor badge sin mezclar da
     // 2,90:1 sobre el peor punto del fondo. Con 50% pasa a 4,77:1.
     'group-ink-mix': 50%,

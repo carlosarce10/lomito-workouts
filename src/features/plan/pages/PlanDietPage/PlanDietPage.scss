@@ -1,0 +1,59 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-plan-diet-page {
+    @include flex-column;
+
+    gap: $spacing-lg;
+
+    &__header {
+      @include flex-column;
+
+      gap: $spacing-xs;
+    }
+
+    &__title {
+      font-size: $font-size-xl;
+    }
+
+    &__lead {
+      color: var(--text-secondary);
+    }
+
+    &__section {
+      @include flex-column;
+
+      gap: $spacing-sm;
+    }
+
+    &__section-title {
+      font-size: $font-size-lg;
+    }
+
+    &__section-lead {
+      font-size: $font-size-sm;
+      color: var(--text-secondary);
+    }
+
+    &__tips {
+      @include flex-column;
+
+      gap: $spacing-sm;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__tip {
+      display: flex;
+      align-items: flex-start;
+      gap: $spacing-sm;
+      font-size: $font-size-sm;
+    }
+
+    &__tip-icon {
+      flex-shrink: 0;
+      color: var(--food-vegetables);
+    }
+  }
+}

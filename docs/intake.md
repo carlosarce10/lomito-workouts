@@ -10,7 +10,8 @@ esos campos esta en [content.md](content.md).
 ## Imprescindibles
 
 Sin estas respuestas la skill no puede escribir el plan y tiene que preguntar: 1, 2,
-5, 6, 8, 11 y 14. En la 2, "prefiere no decirlo" cuenta como respuesta.
+5, 6, 8, 11 y 14. En la 2, "prefiere no decirlo" cuenta como respuesta. Si el plan
+lleva recomendación nutrimental, también 18 a 22.
 
 ## Cuestionario
 
@@ -57,6 +58,23 @@ Sin estas respuestas la skill no puede escribir el plan y tiene que preguntar: 1
 17. ¿Ya usas Lomito Train para registrar tus entrenamientos? Si no, te explico cómo
     empezar. (enlace de seguimiento)
 
+**Alimentación** (solo si el plan lleva recomendación nutrimental; es una orientación,
+no una dieta estricta)
+
+18. ¿Cuántos años tienes? (entrada de `npm run diet`)
+19. ¿Cuánto pesas ahora? Si lo sabes, el promedio de las últimas 2 o 3 semanas. Puedes
+    darlo en kilos o en libras. (entrada de `npm run diet`)
+20. ¿Cuánto mides? En centímetros o en pies y pulgadas. (entrada de `npm run diet`)
+21. Fuera del gimnasio, ¿cómo es tu día? Sentado casi todo el día; algo de caminata;
+    movimiento moderado; trabajo físicamente activo; trabajo físico exigente.
+    (entrada de `npm run diet`)
+22. ¿Qué buscas con la alimentación: bajar grasa, mantenerte, recomponer (ganar músculo sin subir de peso) o ganar
+    músculo? (`diet.dietGoalId`)
+23. ¿Cuántas comidas sueles hacer al día? (`diet.mealsPerDay`)
+24. ¿Tienes alguna alergia, restricción o alimento que no comas? (criterio del
+    entrenador, no se guarda)
+25. ¿En qué país vives? Decide si tu plan muestra kilos o libras. (`unitSystemId`)
+
 **Aviso para el cliente**
 
 > Tu plan se abre con un enlace privado que solo tendrás tú. Cualquiera que tenga el
@@ -65,11 +83,13 @@ Sin estas respuestas la skill no puede escribir el plan y tiene que preguntar: 1
 
 ## Lo que no se guarda
 
-Peso corporal, edad, sexo y datos medicos no entran en el plan. El sitio es publico y
-el slug es la unica proteccion. El sexo si se pasa a la skill, que lo usa como
-contexto al programar y no lo escribe en ningun campo. Peso, edad y datos medicos
-sirven para el criterio del entrenador, pero no se pasan a la skill ni se escriben en
-`notes`.
+Peso corporal, estatura, edad, sexo, alergias y datos medicos no entran en el plan. El
+sitio es publico y el slug es la unica proteccion. El sexo si se pasa a la skill, que
+lo usa como contexto al programar y no lo escribe en ningun campo. Peso, estatura,
+edad, sexo y actividad se usan una sola vez como argumentos de `npm run diet`; en el
+JSON entra unicamente el bloque `diet` que imprime el script (calorias y gramos, como
+rangos), que no revela las entradas con precision. Alergias y datos medicos sirven para
+el criterio del entrenador y no se escriben en `notes`. Ver [diet.md](diet.md).
 
 ## De las respuestas a la skill
 

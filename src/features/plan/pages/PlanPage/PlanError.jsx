@@ -6,14 +6,15 @@ import useTranslation from '@i18n/useTranslation';
 import './PlanError.scss';
 
 /**
- * Lo que se ve cuando el loader falla: sin red, o un plan con un ejercicio que no
- * existe en la biblioteca. Reintentar recarga la pagina, que es lo que vuelve a
+ * Lo que se ve cuando el loader falla: sin red, o un plan con un ejercicio o un
+ * alimento que no existe. Reintentar recarga la pagina, que es lo que vuelve a
  * ejecutar el loader.
  */
 export default function PlanError() {
   const error = useRouteError();
   const { t, tn } = useTranslation('plan');
-  const motivo = error?.message === 'orphanExercise' ? 'orphan' : 'failed';
+  const MOTIVOS = { orphanExercise: 'orphan', orphanFood: 'orphanFood' };
+  const motivo = MOTIVOS[error?.message] ?? 'failed';
 
   return (
     <section className="c-plan-error" role="alert">

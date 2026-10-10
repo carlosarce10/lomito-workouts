@@ -1,0 +1,97 @@
+@use 'styles/foundation' as *;
+
+@layer components {
+  .c-plate-card {
+    @include flex-column;
+    @include glass-card;
+
+    overflow: hidden;
+
+    // En el carrusel ocupa casi todo el ancho y asoma la siguiente opcion.
+    &--compact {
+      flex: 0 0 min(300px, 84%);
+      scroll-snap-align: start;
+    }
+
+    &__photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: var(--surface);
+    }
+
+    &--compact &__photo {
+      aspect-ratio: 16 / 10;
+    }
+
+    &__body {
+      @include flex-column;
+
+      flex: 1;
+      gap: $spacing-sm;
+      padding: $spacing-sm $spacing-md $spacing-md;
+    }
+
+    &__badge {
+      align-self: flex-start;
+      padding: 2px $spacing-sm;
+      border-radius: $radius-full;
+      background: var(--accent-subtle);
+      color: var(--accent-text);
+      font-size: $font-size-xs;
+      font-weight: $font-weight-semibold;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+
+    &__name {
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+    }
+
+    &__items {
+      @include flex-column;
+
+      gap: $spacing-xs;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: $spacing-sm;
+      font-size: $font-size-sm;
+    }
+
+    &__food {
+      flex: 1;
+      min-width: 0;
+    }
+
+    &__amount {
+      @include flex-column;
+
+      align-items: flex-end;
+      font-weight: $font-weight-semibold;
+      text-align: right;
+    }
+
+    &__grams {
+      font-size: $font-size-xs;
+      font-weight: $font-weight-regular;
+      color: var(--text-muted);
+    }
+
+    &__totals {
+      margin-top: auto;
+      padding-top: $spacing-xs;
+      border-top: 1px solid var(--border);
+      font-size: $font-size-xs;
+      color: var(--text-secondary);
+    }
+  }
+}

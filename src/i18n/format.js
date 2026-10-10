@@ -17,6 +17,8 @@ const obtener = (clave, fabrica) => {
 /** Presets cerrados. No se pasan opciones sueltas desde los componentes. */
 const NUMEROS = {
   integer: { maximumFractionDigits: 0 },
+  decimal: { minimumFractionDigits: 1, maximumFractionDigits: 1 },
+  signed: { maximumFractionDigits: 0, signDisplay: 'exceptZero' },
 };
 
 const FECHAS = {
@@ -27,7 +29,7 @@ const FECHAS = {
  * Formatea un numero con un preset.
  *
  * @param {number} value Valor.
- * @param {'integer'} preset Preset.
+ * @param {'integer'|'decimal'|'signed'} preset Preset.
  * @param {string} language Idioma activo.
  * @returns {string}
  */

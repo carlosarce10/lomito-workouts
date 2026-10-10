@@ -1,0 +1,529 @@
+[
+  {
+    "id": "chicken-breast",
+    "name": "Pechuga de pollo",
+    "foodGroupId": "protein",
+    "grams": 100,
+    "measure": {
+      "amount": 100,
+      "unit": "g",
+      "unitPlural": "g",
+      "step": 10
+    },
+    "macros": {
+      "protein": 31,
+      "carbs": 0,
+      "fat": 4
+    }
+  },
+  {
+    "id": "white-fish",
+    "name": "Pescado blanco (tilapia)",
+    "foodGroupId": "protein",
+    "grams": 100,
+    "measure": {
+      "amount": 100,
+      "unit": "g",
+      "unitPlural": "g",
+      "step": 10
+    },
+    "macros": {
+      "protein": 26,
+      "carbs": 0,
+      "fat": 2.7
+    }
+  },
+  {
+    "id": "beef-sirloin",
+    "name": "Bistec de res magra",
+    "foodGroupId": "protein",
+    "grams": 100,
+    "measure": {
+      "amount": 100,
+      "unit": "g",
+      "unitPlural": "g",
+      "step": 10
+    },
+    "macros": {
+      "protein": 29,
+      "carbs": 0,
+      "fat": 7
+    }
+  },
+  {
+    "id": "salmon",
+    "name": "Salmón",
+    "foodGroupId": "protein",
+    "grams": 100,
+    "measure": {
+      "amount": 100,
+      "unit": "g",
+      "unitPlural": "g",
+      "step": 10
+    },
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fat": 12
+    }
+  },
+  {
+    "id": "tuna",
+    "name": "Atún en agua",
+    "foodGroupId": "protein",
+    "grams": 100,
+    "measure": {
+      "amount": 1,
+      "unit": "lata",
+      "unitPlural": "latas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 25,
+      "carbs": 0,
+      "fat": 1
+    }
+  },
+  {
+    "id": "eggs",
+    "name": "Huevo entero",
+    "foodGroupId": "protein",
+    "grams": 200,
+    "measure": {
+      "amount": 4,
+      "unit": "pieza",
+      "unitPlural": "piezas",
+      "step": 1
+    },
+    "macros": {
+      "protein": 25,
+      "carbs": 2,
+      "fat": 20
+    }
+  },
+  {
+    "id": "egg-whites",
+    "name": "Claras de huevo",
+    "foodGroupId": "protein",
+    "grams": 240,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 26,
+      "carbs": 2,
+      "fat": 0
+    }
+  },
+  {
+    "id": "greek-yogurt",
+    "name": "Yogur griego natural",
+    "foodGroupId": "protein",
+    "grams": 225,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 23,
+      "carbs": 9,
+      "fat": 1
+    }
+  },
+  {
+    "id": "cottage-cheese",
+    "name": "Requesón o cottage",
+    "foodGroupId": "protein",
+    "grams": 225,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 25,
+      "carbs": 8,
+      "fat": 5
+    }
+  },
+  {
+    "id": "turkey-breast",
+    "name": "Pechuga de pavo en rebanadas",
+    "foodGroupId": "protein",
+    "grams": 120,
+    "measure": {
+      "amount": 6,
+      "unit": "rebanada",
+      "unitPlural": "rebanadas",
+      "step": 1
+    },
+    "macros": {
+      "protein": 22,
+      "carbs": 4,
+      "fat": 2
+    }
+  },
+  {
+    "id": "protein-powder",
+    "name": "Proteína en polvo",
+    "foodGroupId": "protein",
+    "grams": 30,
+    "measure": {
+      "amount": 1,
+      "unit": "scoop",
+      "unitPlural": "scoops",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 24,
+      "carbs": 3,
+      "fat": 2
+    }
+  },
+  {
+    "id": "rice",
+    "name": "Arroz cocido",
+    "foodGroupId": "carbs",
+    "grams": 80,
+    "measure": {
+      "amount": 0.5,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 2,
+      "carbs": 22,
+      "fat": 0
+    }
+  },
+  {
+    "id": "corn-tortilla",
+    "name": "Tortilla de maíz",
+    "foodGroupId": "carbs",
+    "grams": 50,
+    "measure": {
+      "amount": 2,
+      "unit": "pieza",
+      "unitPlural": "piezas",
+      "step": 1
+    },
+    "macros": {
+      "protein": 3,
+      "carbs": 23,
+      "fat": 1
+    }
+  },
+  {
+    "id": "potato",
+    "name": "Papa",
+    "foodGroupId": "carbs",
+    "grams": 150,
+    "measure": {
+      "amount": 1,
+      "unit": "pieza mediana",
+      "unitPlural": "piezas medianas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 3,
+      "carbs": 26,
+      "fat": 0
+    }
+  },
+  {
+    "id": "sweet-potato",
+    "name": "Camote",
+    "foodGroupId": "carbs",
+    "grams": 130,
+    "measure": {
+      "amount": 1,
+      "unit": "pieza chica",
+      "unitPlural": "piezas chicas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 2,
+      "carbs": 26,
+      "fat": 0
+    }
+  },
+  {
+    "id": "oats",
+    "name": "Avena",
+    "foodGroupId": "carbs",
+    "grams": 40,
+    "measure": {
+      "amount": 0.5,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 5,
+      "carbs": 27,
+      "fat": 3
+    }
+  },
+  {
+    "id": "pasta",
+    "name": "Pasta cocida",
+    "foodGroupId": "carbs",
+    "grams": 70,
+    "measure": {
+      "amount": 0.5,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 4,
+      "carbs": 21,
+      "fat": 1
+    }
+  },
+  {
+    "id": "bread",
+    "name": "Pan integral",
+    "foodGroupId": "carbs",
+    "grams": 56,
+    "measure": {
+      "amount": 2,
+      "unit": "rebanada",
+      "unitPlural": "rebanadas",
+      "step": 1
+    },
+    "macros": {
+      "protein": 8,
+      "carbs": 24,
+      "fat": 2
+    }
+  },
+  {
+    "id": "beans",
+    "name": "Frijoles cocidos",
+    "foodGroupId": "carbs",
+    "grams": 90,
+    "measure": {
+      "amount": 0.5,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 7,
+      "carbs": 20,
+      "fat": 0
+    }
+  },
+  {
+    "id": "banana",
+    "name": "Plátano",
+    "foodGroupId": "carbs",
+    "grams": 120,
+    "measure": {
+      "amount": 1,
+      "unit": "pieza",
+      "unitPlural": "piezas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 1,
+      "carbs": 27,
+      "fat": 0
+    }
+  },
+  {
+    "id": "apple",
+    "name": "Manzana",
+    "foodGroupId": "carbs",
+    "grams": 180,
+    "measure": {
+      "amount": 1,
+      "unit": "pieza",
+      "unitPlural": "piezas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 0,
+      "carbs": 25,
+      "fat": 0
+    }
+  },
+  {
+    "id": "berries",
+    "name": "Frutos rojos",
+    "foodGroupId": "carbs",
+    "grams": 150,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 1,
+      "carbs": 20,
+      "fat": 0
+    }
+  },
+  {
+    "id": "granola",
+    "name": "Granola",
+    "foodGroupId": "carbs",
+    "grams": 30,
+    "measure": {
+      "amount": 0.25,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 3,
+      "carbs": 20,
+      "fat": 5
+    }
+  },
+  {
+    "id": "avocado",
+    "name": "Aguacate",
+    "foodGroupId": "fat",
+    "grams": 70,
+    "measure": {
+      "amount": 0.5,
+      "unit": "pieza",
+      "unitPlural": "piezas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 1.4,
+      "carbs": 6,
+      "fat": 10.3
+    }
+  },
+  {
+    "id": "olive-oil",
+    "name": "Aceite de oliva",
+    "foodGroupId": "fat",
+    "grams": 10,
+    "measure": {
+      "amount": 2,
+      "unit": "cucharadita",
+      "unitPlural": "cucharaditas",
+      "step": 1
+    },
+    "macros": {
+      "protein": 0,
+      "carbs": 0,
+      "fat": 10
+    }
+  },
+  {
+    "id": "peanut-butter",
+    "name": "Crema de cacahuate",
+    "foodGroupId": "fat",
+    "grams": 16,
+    "measure": {
+      "amount": 1,
+      "unit": "cucharada",
+      "unitPlural": "cucharadas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 4,
+      "carbs": 3,
+      "fat": 8
+    }
+  },
+  {
+    "id": "almonds",
+    "name": "Almendras o nueces",
+    "foodGroupId": "fat",
+    "grams": 15,
+    "measure": {
+      "amount": 12,
+      "unit": "pieza",
+      "unitPlural": "piezas",
+      "step": 2
+    },
+    "macros": {
+      "protein": 3,
+      "carbs": 3,
+      "fat": 8
+    }
+  },
+  {
+    "id": "broccoli",
+    "name": "Brócoli",
+    "foodGroupId": "vegetables",
+    "grams": 90,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 2,
+      "carbs": 6,
+      "fat": 0
+    }
+  },
+  {
+    "id": "salad",
+    "name": "Ensalada verde",
+    "foodGroupId": "vegetables",
+    "grams": 60,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 1,
+      "carbs": 3,
+      "fat": 0
+    }
+  },
+  {
+    "id": "pico-de-gallo",
+    "name": "Pico de gallo",
+    "foodGroupId": "vegetables",
+    "grams": 90,
+    "measure": {
+      "amount": 0.5,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 1,
+      "carbs": 4,
+      "fat": 0
+    }
+  },
+  {
+    "id": "mixed-vegetables",
+    "name": "Verduras asadas",
+    "foodGroupId": "vegetables",
+    "grams": 120,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 2,
+      "carbs": 8,
+      "fat": 0
+    }
+  }
+]

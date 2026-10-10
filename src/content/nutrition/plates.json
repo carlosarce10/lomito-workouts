@@ -1,0 +1,139 @@
+[
+  {
+    "id": "eggs-beans-tortillas",
+    "name": "Huevos con frijoles y tortillas",
+    "mealIds": ["breakfast"],
+    "foodIds": [
+      "eggs",
+      "egg-whites",
+      "corn-tortilla",
+      "beans",
+      "avocado",
+      "pico-de-gallo"
+    ],
+    "source": {
+      "provider": "openverse",
+      "id": "8f70b079-1091-4d06-8f14-96b0c2bc22f0"
+    }
+  },
+  {
+    "id": "oatmeal-banana",
+    "name": "Avena con plátano y proteína",
+    "mealIds": ["breakfast", "snack"],
+    "foodIds": ["protein-powder", "oats", "banana", "peanut-butter"],
+    "source": {
+      "provider": "openverse",
+      "id": "873cdb2c-14de-490a-b761-472f6a15986e"
+    }
+  },
+  {
+    "id": "yogurt-berries-granola",
+    "name": "Yogur griego con frutos rojos y granola",
+    "mealIds": ["breakfast", "snack"],
+    "foodIds": ["greek-yogurt", "berries", "granola", "almonds"],
+    "source": {
+      "provider": "openverse",
+      "id": "b43b0bd5-3946-4218-bd3c-5d78f0b92fc1"
+    }
+  },
+  {
+    "id": "chicken-rice-broccoli",
+    "name": "Pollo con arroz y brócoli",
+    "mealIds": ["lunch", "dinner"],
+    "foodIds": ["chicken-breast", "rice", "olive-oil", "broccoli"],
+    "source": {
+      "provider": "openverse",
+      "id": "d13ef983-017c-4b06-a95c-4d7d2de0a102"
+    }
+  },
+  {
+    "id": "steak-potatoes-salad",
+    "name": "Bistec con papas y ensalada",
+    "mealIds": ["lunch", "dinner"],
+    "foodIds": ["beef-sirloin", "potato", "avocado", "salad"],
+    "source": {
+      "provider": "openverse",
+      "id": "702ff670-4b84-4a7e-87c2-5d18c2c2a065"
+    }
+  },
+  {
+    "id": "fish-tacos",
+    "name": "Tacos de pescado",
+    "mealIds": ["lunch", "dinner"],
+    "foodIds": ["white-fish", "corn-tortilla", "avocado", "pico-de-gallo"],
+    "source": {
+      "provider": "openverse",
+      "id": "cb07a010-ded0-4da9-82be-61efccebecc9"
+    }
+  },
+  {
+    "id": "salmon-sweet-potato",
+    "name": "Salmón con camote y verduras",
+    "mealIds": ["lunch", "dinner"],
+    "foodIds": ["salmon", "sweet-potato", "olive-oil", "mixed-vegetables"],
+    "source": {
+      "provider": "openverse",
+      "id": "395d3579-9579-437b-ae89-604cc414e775"
+    }
+  },
+  {
+    "id": "tuna-pasta",
+    "name": "Pasta con atún y verduras",
+    "mealIds": ["lunch", "dinner"],
+    "foodIds": ["tuna", "pasta", "olive-oil", "mixed-vegetables"],
+    "source": {
+      "provider": "openverse",
+      "id": "4401291d-4846-4798-ab7c-f2c478da6c6c"
+    }
+  },
+  {
+    "id": "beef-rice-beans-bowl",
+    "name": "Bowl de res con arroz y frijoles",
+    "mealIds": ["lunch", "dinner"],
+    "foodIds": ["beef-sirloin", "rice", "beans", "avocado", "pico-de-gallo"],
+    "source": {
+      "provider": "openverse",
+      "id": "225a7967-cf39-4f18-8f53-2afea4726f05"
+    }
+  },
+  {
+    "id": "protein-shake",
+    "name": "Batido de proteína con plátano",
+    "mealIds": ["snack"],
+    "foodIds": ["protein-powder", "banana", "peanut-butter"],
+    "source": {
+      "provider": "openverse",
+      "id": "ef89a7d3-d99c-4780-a6bd-33137afb074b"
+    }
+  },
+  {
+    "id": "turkey-sandwich",
+    "name": "Sándwich de pavo",
+    "mealIds": ["snack"],
+    "foodIds": ["turkey-breast", "bread", "avocado", "salad"],
+    "source": {
+      "provider": "openverse",
+      "id": "d99f4bdc-84eb-4517-a4f3-087eb1b7fc69"
+    }
+  },
+  {
+    "id": "cottage-cheese-fruit",
+    "name": "Requesón con fruta y nueces",
+    "mealIds": ["snack"],
+    "foodIds": ["cottage-cheese", "berries", "almonds"],
+    "source": {
+      "provider": "openverse",
+      "id": "d1fe19cc-333e-460a-b8c0-2cd147637ab7"
+    }
+  },
+  {
+    "id": "apple-peanut-butter",
+    "name": "Manzana con crema de cacahuate",
+    "mealIds": ["snack"],
+    "foodIds": ["apple", "peanut-butter"],
+    "source": {
+      "provider": "openverse",
+      "id": "7efe4c44-ac1a-4cd4-bb10-fe90ef06a7cb"
+    }
+  }
+]
