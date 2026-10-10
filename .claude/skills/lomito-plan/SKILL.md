@@ -78,6 +78,11 @@ razon concreta (2 aproximaciones en el ejercicio principal de pierna, por ejempl
 Las 2 aproximaciones solo valen si ese ejercicio abre la sesion. Si llega despues de
 los aislados de su grupo, el musculo no empieza con tanta demanda y basta con 1.
 
+**Descanso.** Estrictamente un minimo de 2 minutos entre series en todos los
+ejercicios, tambien en los aislados: de 2 a 3 minutos, que es el valor por defecto de
+`methodology.json`. No se escribe `restSeconds` salvo para alargarlo (un compuesto
+pesado, por ejemplo); nunca por debajo de 120, y `lint:content` lo rechaza.
+
 **Repeticiones.** El maximo es 12 y lo habitual es de 6 a 10. Solo se pasa de 12 en
 los musculos que responden mejor a mas repeticiones: deltoides posterior, deltoides
 lateral (elevaciones laterales), gemelos y abdomen.
@@ -118,7 +123,7 @@ pasa por todas.
 | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
 | Pecho   | Un press de pecho alto o medio y un aislamiento (pec deck, cristos)                                                                               | Press en maquina y press con mancuernas el mismo dia    |
 | Espalda | Al menos un tiron vertical (jalon) y uno horizontal (remo) en cada dia de espalda                                                                 | Dos remos casi iguales en maquinas distintas            |
-| Hombro  | Un press, una elevacion lateral y un ejercicio de posterior                                                                                       | Dos elevaciones laterales con distinto material         |
+| Hombro  | Un press, una elevacion lateral y un ejercicio de posterior. El posterior (pec deck invertido) va en el dia de tiron (Pull), no en el de empuje   | Dos elevaciones laterales con distinto material         |
 | Triceps | Una sobre la cabeza (cabeza larga, con prioridad) y una en polea (cabeza lateral). Con un solo ejercicio, el de cabeza larga                      | Cuerda, barra V y maquina de extension el mismo dia     |
 | Biceps  | Un curl con el brazo por detras del torso (bayesian, inclinado) y uno por delante (predicador) o un martillo, que ademas da estimulo al antebrazo | Curl con mancuernas, en polea y en maquina el mismo dia |
 | Pierna  | Una prensa o sentadilla, extension, curl femoral, gluteo, gemelo                                                                                  | Dos prensas o sentadillas (regla fija de abajo)         |
@@ -149,11 +154,13 @@ del cliente van a 10-16; el resto, a 8-10; lo que no es objetivo, o lo que el cl
 prefiere no desarrollar, puede quedarse en mantenimiento. Nunca por encima de 16.
 
 Mantenimiento es el minimo, no cero: biceps, triceps, gemelos y aductores llevan al
-menos 4 series directas aunque no sean prioridad. El antebrazo y el trapecio tambien
-llevan trabajo directo: un ejercicio de antebrazo (curl de muneca) despues del biceps,
-y encogimientos al final del bloque de espalda, porque trabajan otra parte y no
-preagotan el dorsal. El catalogo no tiene trapecio: los encogimientos cuentan como
-espalda alta (`back-upper`). Solo la zona lumbar se cubre de forma indirecta, con las
+menos 4 series directas aunque no sean prioridad. El antebrazo lleva trabajo directo:
+un curl de muneca despues del biceps, con mancuerna o barra y el antebrazo apoyado
+(`db-wrist-curl`, `barbell-wrist-curl`). Por defecto, de flexores (palmas arriba),
+que es el musculo mas grande; de extensores solo si el entrenador lo pide. El curl de
+muneca en polea no se usa: no le gusta al entrenador. Los encogimientos (trapecio) no
+entran por defecto, solo si el entrenador los pide; si entran, van al final del bloque
+de espalda y cuentan como espalda alta (`back-upper`). La zona lumbar se cubre con las
 bisagras de cadera.
 
 **Grupos prioritarios.** Un grupo prioritario se trabaja con ejercicios aislados o
@@ -169,7 +176,11 @@ y 2 al gluteo prioritario.
 
 **Orden de la sesion.** Los grupos musculares van en secuencia: se terminan todos los
 ejercicios de un grupo antes de pasar al siguiente. Nunca un ejercicio de pecho, uno
-de espalda y otra vez pecho. Abren la sesion los grupos prioritarios; el abdomen va
+de espalda y otra vez pecho. Excepcion: en un dia de tren superior (Upper) sin grupo
+prioritario, espalda y pecho se intercalan: uno de espalda, uno de pecho, otro de
+espalda, otro de pecho. Mientras uno trabaja, el antagonista descansa. Dentro de cada
+grupo se respeta el pre-agotamiento (pec deck antes del press). Con un grupo
+prioritario, ese grupo abre la sesion en bloque, como siempre. Abren la sesion los grupos prioritarios; el abdomen va
 siempre al final aunque sea prioridad, porque cansarlo antes de una carga pesada
 resta estabilidad. Despues de los prioritarios, los grupos siguen de mayor a menor
 volumen.
@@ -186,11 +197,11 @@ El nivel del cliente (`levelId`) decide que ejercicios pueden entrar en su plan.
 ejercicio que exige tecnica que el cliente todavia no tiene no es un buen ejercicio
 para el, por bien que trabaje el musculo.
 
-| Nivel          | Entra                                                                                                              | No entra                                                                                                                               |
-| -------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `beginner`     | Maquinas guiadas y poleas. Mancuernas solo en movimientos simples: curls, elevaciones laterales. Lumbares sin peso | Hip thrust, peso muerto y rumano, sentadilla con barra, sentadilla bulgara, zancadas, remo con barra, press militar, dominadas, fondos |
-| `intermediate` | Lo anterior, mas barra libre en los basicos, mancuernas en presses y remos, unilaterales, hip thrust, rumano       | Variantes olimpicas y ejercicios de potencia                                                                                           |
-| `advanced`     | Toda la biblioteca                                                                                                 |                                                                                                                                        |
+| Nivel          | Entra                                                                                                                                                                                         | No entra                                                                                                                               |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `beginner`     | Maquinas guiadas y poleas; para remo, el remo en maquina con apoyo en el pecho antes que el de polea. Mancuernas solo en movimientos simples: curls, elevaciones laterales. Lumbares sin peso | Hip thrust, peso muerto y rumano, sentadilla con barra, sentadilla bulgara, zancadas, remo con barra, press militar, dominadas, fondos |
+| `intermediate` | Lo anterior, mas barra libre en los basicos, mancuernas en presses y remos, unilaterales, hip thrust, rumano                                                                                  | Variantes olimpicas y ejercicios de potencia                                                                                           |
+| `advanced`     | Toda la biblioteca                                                                                                                                                                            |                                                                                                                                        |
 
 Reglas fijas, en cualquier nivel:
 
@@ -202,7 +213,9 @@ Reglas fijas, en cualquier nivel:
   no sea prioridad: es de los mejores ejercicios de cuadriceps y no se quita para
   hacer sitio.
 - **Abdomen: de entrada, crunch.** Es efectivo y sencillo de ejecutar, y si el
-  entrenador no pide trabajo de core, basta con el. No es un limite: el press Pallof,
+  entrenador no pide trabajo de core, basta con el. En principiantes, crunch en maquina
+  (`machine-crunch`) o en el suelo sin peso (`floor-crunch`); nunca el crunch en polea
+  alta, que exige controlar la cadera. No es un limite: el press Pallof,
   las elevaciones de rodillas u otros ejercicios de core se pueden anadir cuando
   sumen.
 - Si la biblioteca solo tiene una version tecnica de un ejercicio, se crea la version
@@ -257,6 +270,13 @@ reglas por sexo hasta que esten escritos aqui.
    y `warmupSets` se omiten salvo que se aparten de la metodologia. `notes` cuando
    el entrenador quiera decir algo de ese ejercicio. No existe `day`: el orden en la
    lista es el dia.
+   Cada ejercicio lleva `alternativeId`: el que lo sustituye si el gimnasio no tiene
+   la maquina. Mismo movimiento y mismo enfasis muscular (pec deck por cruce de poleas,
+   press en maquina por press en multipower, prensa por hack), permitido para el nivel
+   del cliente y que no este ya en esa rutina. Usa la misma prescripcion: no lleva reps
+   propias. `lint:content` exige que comparta el musculo principal. Si no existe un
+   sustituto real del mismo movimiento, el ejercicio va sin alternativa: la extension
+   de cuadriceps nunca la lleva. La alternativa tiene foto siempre que se pueda.
 3. **Ejercicios nuevos** solo si no hay uno equivalente en la biblioteca. Se crean
    en `src/content/exercises/<grupo de muscleIds[0]>/<id>.json` con `id` en ingles y
    kebab-case, `name`, `instructions` (3 a 5 pasos) y `commonMistakes` (2 a 3) en
