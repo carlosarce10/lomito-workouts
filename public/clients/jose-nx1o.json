@@ -2,368 +2,382 @@
   "name": "José Iván",
   "goalId": "hypertrophy",
   "levelId": "beginner",
-  "startDate": "2026-09-28",
-  "reviewDate": "2026-10-12",
-  "notes": "Bloque de acondicionamiento de dos semanas. Semana: Upper, Lower, descanso, Upper, Lower. Prioridad: aprender la técnica de cada ejercicio con cargas que controles, dejando 2-3 repeticiones en reserva.",
+  "unitSystemId": "imperial",
+  "startDate": "2026-10-12",
+  "reviewDate": "2026-12-07",
+  "notes": "Semana: Push, Pull, Leg, Upper y Lower, de lunes a viernes. En cada grupo, primero el ejercicio aislado y después el compuesto. La misma semana se repite dos meses: busca mejorar repeticiones y carga en cada ejercicio.",
+  "diet": {
+    "dietGoalId": "recomposition",
+    "activityFactor": {
+      "min": 1.5,
+      "max": 1.5
+    },
+    "adjustmentPercent": {
+      "min": -5,
+      "max": 5
+    },
+    "restingCalories": {
+      "min": 1700,
+      "max": 1700
+    },
+    "maintenanceCalories": {
+      "min": 2500,
+      "max": 2500
+    },
+    "targetCalories": {
+      "min": 2400,
+      "max": 2600
+    },
+    "proteinPerKg": {
+      "min": 1.8,
+      "max": 2.2
+    },
+    "protein": {
+      "min": 140,
+      "max": 170
+    },
+    "fatPercent": {
+      "min": 25,
+      "max": 30
+    },
+    "fat": {
+      "min": 65,
+      "max": 85
+    },
+    "carbs": {
+      "min": 275,
+      "max": 325
+    },
+    "fiber": {
+      "min": 35,
+      "max": 35
+    },
+    "water": {
+      "min": 2300,
+      "max": 2700
+    },
+    "mealsPerDay": 3,
+    "calculatedAt": "2026-10-10"
+  },
   "routines": [
     {
-      "name": "Upper A",
+      "name": "Push",
       "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
       "exercises": [
         {
-          "exerciseId": "machine-chest-press",
+          "exerciseId": "pec-deck",
+          "alternativeId": "cable-crossover",
           "reps": {
-            "min": 10,
+            "min": 8,
             "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "notes": "Ejercicio principal del día: el más estable para aprender a empujar."
-        },
-        {
-          "exerciseId": "lat-pulldown",
-          "reps": {
-            "min": 10,
-            "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
           }
         },
         {
-          "exerciseId": "machine-shoulder-press",
+          "exerciseId": "machine-incline-chest-press",
+          "alternativeId": "smith-incline-press",
           "reps": {
-            "min": 10,
-            "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
+            "min": 6,
+            "max": 10
           }
         },
         {
-          "exerciseId": "seated-cable-row",
-          "reps": {
-            "min": 10,
-            "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          }
-        },
-        {
-          "exerciseId": "triceps-rope-pushdown",
+          "exerciseId": "db-lateral-raise",
+          "alternativeId": "cable-lateral-raise",
           "reps": {
             "min": 12,
             "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         },
         {
-          "exerciseId": "db-biceps-curl",
+          "exerciseId": "machine-shoulder-press",
+          "alternativeId": "smith-shoulder-press",
           "reps": {
-            "min": 12,
-            "max": 15
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "alternativeId": "db-overhead-triceps-extension",
+          "reps": {
+            "min": 8,
+            "max": 12
           },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "triceps-rope-pushdown",
+          "alternativeId": "triceps-vbar-pushdown",
+          "reps": {
+            "min": 8,
+            "max": 12
           },
           "warmupSets": 0
         }
       ]
     },
     {
-      "name": "Lower A",
-      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "name": "Pull",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
       "exercises": [
         {
-          "exerciseId": "leg-press",
+          "exerciseId": "lat-pulldown",
+          "alternativeId": "one-arm-cable-pulldown",
           "reps": {
-            "min": 10,
-            "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "warmupSets": 2,
-          "notes": "Ejercicio principal del día. Baja hasta donde la zona lumbar siga pegada al respaldo."
-        },
-        {
-          "exerciseId": "lying-leg-curl",
-          "reps": {
-            "min": 10,
-            "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
+            "min": 6,
+            "max": 10
           }
         },
         {
-          "exerciseId": "leg-extension",
+          "exerciseId": "machine-row",
+          "alternativeId": "seated-cable-row",
+          "reps": {
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "reverse-machine-fly",
+          "alternativeId": "cable-rear-delt-fly",
           "reps": {
             "min": 12,
             "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         },
         {
-          "exerciseId": "hip-adduction-machine",
+          "exerciseId": "incline-db-curl",
+          "alternativeId": "bayesian-cable-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "machine-preacher-curl",
+          "alternativeId": "db-preacher-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "db-wrist-curl",
+          "alternativeId": "barbell-wrist-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "machine-crunch",
+          "alternativeId": "floor-crunch",
           "reps": {
             "min": 12,
             "max": 15
           },
-          "rir": {
-            "min": 2,
-            "max": 3
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Leg",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "exercises": [
+        {
+          "exerciseId": "leg-extension",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "leg-press",
+          "alternativeId": "hack-squat",
+          "reps": {
+            "min": 6,
+            "max": 10
           },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
+          "notes": "Baja hasta donde la zona lumbar siga pegada al respaldo."
+        },
+        {
+          "exerciseId": "lying-leg-curl",
+          "alternativeId": "seated-leg-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "back-extension",
+          "alternativeId": "cable-pull-through",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "warmupSets": 0,
+          "notes": "Sin peso: sube hasta alinear el cuerpo con las piernas, sin arquear la espalda."
+        },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "alternativeId": "cable-hip-adduction",
+          "reps": {
+            "min": 10,
+            "max": 12
           },
           "warmupSets": 0
         },
         {
           "exerciseId": "standing-calf-raise",
+          "alternativeId": "leg-press-calf-raise",
           "reps": {
             "min": 12,
             "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
-          "warmupSets": 0
-        },
-        {
-          "exerciseId": "cable-crunch",
-          "reps": {
-            "min": 12,
-            "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         }
       ]
     },
     {
-      "name": "Upper B",
+      "name": "Upper",
       "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
       "exercises": [
         {
-          "exerciseId": "machine-incline-chest-press",
+          "exerciseId": "lat-pulldown",
+          "alternativeId": "one-arm-cable-pulldown",
           "reps": {
-            "min": 10,
-            "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
+            "min": 6,
+            "max": 10
           }
         },
         {
-          "exerciseId": "t-bar-row",
+          "exerciseId": "pec-deck",
+          "alternativeId": "cable-crossover",
           "reps": {
-            "min": 10,
+            "min": 8,
             "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
+          }
+        },
+        {
+          "exerciseId": "machine-row",
+          "alternativeId": "seated-cable-row",
+          "reps": {
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "machine-chest-press",
+          "alternativeId": "smith-bench-press",
+          "reps": {
+            "min": 6,
+            "max": 10
           }
         },
         {
           "exerciseId": "db-lateral-raise",
+          "alternativeId": "cable-lateral-raise",
           "reps": {
             "min": 12,
             "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         },
         {
           "exerciseId": "reverse-machine-fly",
+          "alternativeId": "cable-rear-delt-fly",
           "reps": {
             "min": 12,
             "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
-          "warmupSets": 0
-        },
-        {
-          "exerciseId": "cable-overhead-triceps-extension",
-          "reps": {
-            "min": 12,
-            "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         },
         {
           "exerciseId": "hammer-curl",
+          "alternativeId": "rope-hammer-curl",
           "reps": {
-            "min": 10,
+            "min": 8,
             "max": 12
           },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "alternativeId": "db-overhead-triceps-extension",
+          "reps": {
+            "min": 8,
+            "max": 12
           },
           "warmupSets": 0
         }
       ]
     },
     {
-      "name": "Lower B",
+      "name": "Lower",
       "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
       "exercises": [
         {
-          "exerciseId": "leg-press",
+          "exerciseId": "seated-leg-curl",
+          "alternativeId": "lying-leg-curl",
           "reps": {
-            "min": 10,
+            "min": 8,
             "max": 12
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "warmupSets": 2,
-          "notes": "Ejercicio principal del día. Baja hasta donde la zona lumbar siga pegada al respaldo."
+          }
         },
         {
-          "exerciseId": "seated-leg-curl",
+          "exerciseId": "back-extension",
+          "alternativeId": "cable-pull-through",
           "reps": {
             "min": 10,
             "max": 12
           },
-          "rir": {
-            "min": 2,
-            "max": 3
-          }
+          "warmupSets": 0,
+          "notes": "Sin peso: sube hasta alinear el cuerpo con las piernas, sin arquear la espalda."
         },
         {
           "exerciseId": "leg-extension",
           "reps": {
-            "min": 12,
-            "max": 15
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "leg-press",
+          "alternativeId": "hack-squat",
+          "reps": {
+            "min": 6,
+            "max": 10
           },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
-          },
-          "warmupSets": 0
+          "notes": "Baja hasta donde la zona lumbar siga pegada al respaldo."
         },
         {
           "exerciseId": "hip-adduction-machine",
+          "alternativeId": "cable-hip-adduction",
           "reps": {
-            "min": 12,
-            "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
+            "min": 10,
+            "max": 12
           },
           "warmupSets": 0
         },
         {
           "exerciseId": "seated-calf-raise",
+          "alternativeId": "barbell-seated-calf-raise",
           "reps": {
             "min": 12,
             "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         },
         {
-          "exerciseId": "cable-crunch",
+          "exerciseId": "machine-crunch",
+          "alternativeId": "floor-crunch",
           "reps": {
             "min": 12,
             "max": 15
-          },
-          "rir": {
-            "min": 2,
-            "max": 3
-          },
-          "restSeconds": {
-            "min": 60,
-            "max": 90
           },
           "warmupSets": 0
         }
