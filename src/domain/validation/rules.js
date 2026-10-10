@@ -53,6 +53,20 @@ export const listOf =
     return null;
   };
 
+/** Lista de identificadores en kebab-case, sin duplicados (referencias a otro contenido). */
+export const slugList =
+  ({ min = 0, max = Infinity } = {}) =>
+  (value) => {
+    if (!Array.isArray(value)) return { code: 'notAList' };
+    if (value.length < min) return { code: 'tooFewItems', params: { min } };
+    if (value.length > max) return { code: 'tooManyItems', params: { max } };
+    if (new Set(value).size !== value.length) return { code: 'duplicateItems' };
+    if (value.some((item) => typeof item !== 'string' || !SLUG_PATTERN.test(item))) {
+      return { code: 'invalidSlug' };
+    }
+    return null;
+  };
+
 /** Marca de tiempo ISO valida. */
 export const isoDate = () => (value) =>
   typeof value === 'string' && !Number.isNaN(Date.parse(value)) ? null : { code: 'invalidDate' };

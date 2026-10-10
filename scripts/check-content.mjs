@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Comprueba el contenido: biblioteca de ejercicios, metodologia, clientes e imagenes.
+ * Comprueba el contenido: biblioteca de ejercicios, metodologia, nutricion (consejos,
+ * alimentos, platos, suplementos y sus fotos), clientes e imagenes.
  *
  * No hay TypeScript ni validacion en tiempo de ejecucion: este script es la unica
  * puerta que cruza un JSON antes de entrar al build, y por eso corre dentro de
@@ -14,6 +15,8 @@
  *  - un id de ejercicio repetido
  *  - un cliente cuyo archivo no tiene forma de slug de cliente
  *  - un exerciseId que no existe en la biblioteca, o repetido dentro de una rutina
+ *  - una alternativa que no existe, que es el mismo ejercicio, que ya esta en la rutina
+ *    o que no comparte el musculo principal del ejercicio al que sustituye
  *  - dos rutinas con el mismo nombre en un cliente
  *  - un campo de seguimiento o una palabra prohibida del vocabulario
  *  - una imagen que falta para un ejercicio con source (aviso hasta la fase 3)
@@ -24,20 +27,35 @@ import { basename, dirname, join } from 'node:path';
 
 import { getMuscleGroup, GROUP_IDS, IMAGE_FRAMES } from '../src/domain/catalogs/index.js';
 import { clientSchema } from '../src/domain/schemas/client.schema.js';
+import { dietContentSchema } from '../src/domain/schemas/diet.schema.js';
+import {
+  foodsSchema,
+  platesSchema,
+  supplementsSchema,
+} from '../src/domain/schemas/nutrition.schema.js';
 import { exerciseSchema } from '../src/domain/schemas/exercise.schema.js';
 import { methodologySchema } from '../src/domain/schemas/methodology.schema.js';
 import { isClientSlug } from '../src/domain/validation/slugs.js';
 import { validate } from '../src/domain/validation/validate.js';
 
+import { describir } from './messages.mjs';
+
 const BIBLIOTECA = join('src', 'content', 'exercises');
 const METODOLOGIA = join('src', 'content', 'methodology.json');
+const NUTRICION = join('src', 'content', 'nutrition');
+const DIETA = join(NUTRICION, 'diet.json');
+const ALIMENTOS = join(NUTRICION, 'foods.json');
+const PLATOS = join(NUTRICION, 'plates.json');
+const SUPLEMENTOS = join(NUTRICION, 'supplements.json');
+const FOTOS = join('public', 'nutrition');
 const CLIENTES = join('public', 'clients');
 const IMAGENES = join('public', 'exercises');
 
 // Desde la fase 3 una imagen que falta es un error: npm run images la descarga.
 const IMAGES_REQUIRED = true;
 
-// Nada de seguimiento (eso es Lomito Train) y ninguna palabra prohibida del vocabulario.
+// Nada de seguimiento (eso es Lomito Train), ninguna palabra prohibida del vocabulario y
+// ninguna entrada de la recomendacion nutrimental: en el JSON solo entran resultados metricos.
 const PROHIBIDOS = [
   'weight',
   'record',
@@ -48,38 +66,20 @@ const PROHIBIDOS = [
   'day',
   'category',
   'program',
+  'bodyMass',
+  'height',
+  'age',
+  'sex',
+  'activityId',
+  'activityIds',
+  'menu',
+  'lb',
+  'pounds',
+  'oz',
 ];
-
-const MENSAJES = {
-  required: 'es obligatorio',
-  tooShort: 'es demasiado corto (minimo {min})',
-  tooLong: 'es demasiado largo (maximo {max})',
-  notANumber: 'no es un numero',
-  notInteger: 'no es un entero',
-  tooSmall: 'es menor que {min}',
-  tooLarge: 'es mayor que {max}',
-  tooPrecise: 'tiene mas de {decimals} decimales',
-  notInCatalog: 'no esta en el catalogo',
-  notAList: 'no es una lista',
-  tooFewItems: 'tiene menos de {min} elementos',
-  tooManyItems: 'tiene mas de {max} elementos',
-  duplicateItems: 'tiene elementos repetidos',
-  notAnObject: 'no es un objeto',
-  notARange: 'no es un rango { min, max }',
-  invalidRange: 'tiene min mayor que max',
-  invalidSlug: 'no es un identificador en kebab-case',
-  invalidDate: 'no es una fecha YYYY-MM-DD',
-  invalidSourceId: 'no es un id de proveedor valido',
-};
 
 const errores = [];
 const avisos = [];
-
-/** Convierte un problema del dominio en una linea legible. */
-const describir = (archivo, { path, code, params = {} }) => {
-  const mensaje = (MENSAJES[code] ?? code).replace(/\{(\w+)\}/g, (_, k) => params[k]);
-  return `${archivo}: ${path || '(raiz)'} ${mensaje}`;
-};
 
 function recorrer(dir, ext, salida = []) {
   if (!existsSync(dir)) return salida;
@@ -163,6 +163,50 @@ if (metodologia) {
   buscarProhibidos(METODOLOGIA, metodologia);
 }
 
+// ── Nutricion: consejos, alimentos, platos, suplementos y sus fotos ─────────
+/** Valida un archivo contra su esquema y devuelve su contenido, o null. */
+function validarArchivo(archivo, schema) {
+  const datos = leer(archivo);
+  if (!datos) return null;
+  const { ok, issues } = validate(schema, datos);
+  if (!ok) issues.forEach((issue) => errores.push(describir(archivo, issue)));
+  buscarProhibidos(archivo, datos);
+  return ok ? datos : null;
+}
+
+validarArchivo(DIETA, dietContentSchema);
+const alimentos = validarArchivo(ALIMENTOS, foodsSchema) ?? [];
+const platos = validarArchivo(PLATOS, platesSchema) ?? [];
+const suplementos = validarArchivo(SUPLEMENTOS, supplementsSchema) ?? [];
+
+const idsDeAlimento = new Set();
+alimentos.forEach((alimento, i) => {
+  if (idsDeAlimento.has(alimento.id))
+    errores.push(`${ALIMENTOS}: [${i}] repite el id "${alimento.id}"`);
+  idsDeAlimento.add(alimento.id);
+});
+// Platos y suplementos comparten carpeta de fotos: sus ids no pueden chocar.
+const idsConFoto = new Set();
+for (const [archivo, lista] of [
+  [PLATOS, platos],
+  [SUPLEMENTOS, suplementos],
+]) {
+  lista.forEach((item, i) => {
+    if (idsConFoto.has(item.id)) errores.push(`${archivo}: [${i}] repite el id "${item.id}"`);
+    idsConFoto.add(item.id);
+    if (item.source && !existsSync(join(FOTOS, `${item.id}.jpg`))) {
+      errores.push(`${archivo}: falta la foto ${join(FOTOS, `${item.id}.jpg`)} (npm run photos)`);
+    }
+  });
+}
+platos.forEach((plato, i) => {
+  for (const foodId of plato.foodIds) {
+    if (!idsDeAlimento.has(foodId)) {
+      errores.push(`${PLATOS}: [${i}].foodIds "${foodId}" no existe en ${ALIMENTOS}`);
+    }
+  }
+});
+
 // ── Clientes ────────────────────────────────────────────────────────────────
 const clientes = recorrer(CLIENTES, '.json').sort();
 for (const archivo of clientes) {
@@ -198,6 +242,35 @@ for (const archivo of clientes) {
         errores.push(`${archivo}: ${ruta} "${item.exerciseId}" se repite en la misma rutina`);
       }
       vistos.add(item.exerciseId);
+
+      // La alternativa sustituye al ejercicio: existe, es otro, no esta ya en la rutina
+      // (si no, el cliente haria lo mismo dos veces) y comparte el musculo principal: el
+      // primero de uno lo trabaja el otro. Asi una bisagra de cadera (lumbares) puede
+      // sustituirse por otra (pull through) aunque su primer musculo sea distinto.
+      if (!item.alternativeId) return;
+      const rutaAlt = `routines[${i}].exercises[${j}].alternativeId`;
+      const alternativa = biblioteca.get(item.alternativeId);
+      const principal = biblioteca.get(item.exerciseId);
+      if (!alternativa) {
+        errores.push(`${archivo}: ${rutaAlt} "${item.alternativeId}" no existe en la biblioteca`);
+        return;
+      }
+      alternativa.usado = true;
+      if (item.alternativeId === item.exerciseId) {
+        errores.push(`${archivo}: ${rutaAlt} es el mismo ejercicio que exerciseId`);
+      }
+      if (rutina.exercises.some((otro) => otro.exerciseId === item.alternativeId)) {
+        errores.push(`${archivo}: ${rutaAlt} "${item.alternativeId}" ya esta en la rutina`);
+      }
+      const comparten =
+        principal &&
+        (alternativa.muscleIds.includes(principal.muscleIds[0]) ||
+          principal.muscleIds.includes(alternativa.muscleIds[0]));
+      if (principal && !comparten) {
+        errores.push(
+          `${archivo}: ${rutaAlt} "${item.alternativeId}" no trabaja el musculo principal de "${item.exerciseId}"`,
+        );
+      }
     });
   });
 }
@@ -216,5 +289,5 @@ if (errores.length > 0) {
   process.exit(1);
 }
 console.log(
-  `Contenido correcto: ${biblioteca.size} ejercicios, ${clientes.length} cliente(s), ${metodologia?.sections.length ?? 0} secciones de metodologia.`,
+  `Contenido correcto: ${biblioteca.size} ejercicios, ${clientes.length} cliente(s), ${metodologia?.sections.length ?? 0} secciones de metodologia, ${alimentos.length} alimentos, ${platos.length} platos, ${suplementos.length} suplementos.`,
 );

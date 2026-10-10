@@ -17,7 +17,7 @@ export const methodologySchema = {
     __each: {
       id: r.slug(),
       title: r.text(LIMITS.name),
-      body: r.listOfText(LIMITS.methodologyBody),
+      body: r.listOfText(LIMITS.sectionBody),
     },
     __min: LIMITS.methodologySections.min,
     __max: LIMITS.methodologySections.max,

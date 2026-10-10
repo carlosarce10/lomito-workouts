@@ -2,8 +2,10 @@
  * Valida un valor contra un esquema.
  *
  * Un esquema es un objeto plano `{ campo: regla }`, o `{ __each: esquema, __min, __max }`
- * para una lista homogenea con longitud acotada. El resultado nunca lanza: la capa que llama decide que
- * hacer con los problemas encontrados.
+ * para una lista homogenea con longitud acotada. Un objeto anidado con `__optional: true`
+ * se omite cuando el valor es null o undefined (`optional` solo envuelve reglas, no
+ * subesquemas). El resultado nunca lanza: la capa que llama decide que hacer con los
+ * problemas encontrados.
  *
  * @param {object} schema Esquema de validacion.
  * @param {unknown} value Valor a comprobar.
@@ -37,12 +39,15 @@ function recorrer(schema, value, path, issues) {
     return;
   }
 
+  if (schema.__optional && (value === null || value === undefined)) return;
+
   if (value === null || typeof value !== 'object') {
     issues.push({ path, code: 'notAnObject' });
     return;
   }
 
   for (const [campo, regla] of Object.entries(schema)) {
+    if (campo.startsWith('__')) continue;
     recorrer(regla, value[campo], path ? `${path}.${campo}` : campo, issues);
   }
 }
