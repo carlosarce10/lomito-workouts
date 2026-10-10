@@ -1,0 +1,20 @@
+{
+  "id": "db-overhead-triceps-extension",
+  "name": "Extensión de tríceps sobre la cabeza con mancuerna",
+  "muscleIds": ["triceps"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "Siéntate con respaldo y sostén una mancuerna con las dos manos por encima de la cabeza.",
+    "Baja la mancuerna por detrás de la cabeza flexionando solo los codos.",
+    "Sube estirando los codos sin abrirlos hacia los lados."
+  ],
+  "commonMistakes": [
+    "Abrir los codos hacia afuera.",
+    "Arquear la espalda baja.",
+    "Recortar la bajada: se pierde el estiramiento de la cabeza larga."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Seated_Triceps_Press"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "cable-pull-through",
+  "name": "Pull through en polea",
+  "muscleIds": ["glutes", "hamstrings"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca la cuerda en la polea baja y ponte de espaldas, con la cuerda entre las piernas.",
+    "Con las rodillas un poco flexionadas, lleva la cadera atrás manteniendo la espalda recta.",
+    "Empuja la cadera adelante hasta quedar de pie y aprieta el glúteo."
+  ],
+  "commonMistakes": [
+    "Redondear la espalda al bajar.",
+    "Hacer una sentadilla en lugar de llevar la cadera atrás.",
+    "Tirar con los brazos."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Pull_Through"
+  }
+}

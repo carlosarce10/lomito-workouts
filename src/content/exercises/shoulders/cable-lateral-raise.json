@@ -1,0 +1,20 @@
+{
+  "id": "cable-lateral-raise",
+  "name": "Elevación lateral en polea",
+  "muscleIds": ["shoulders-side"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Ponte de pie de lado a la polea baja y toma el agarre con la mano más alejada, con el cable por delante del cuerpo.",
+    "Sube el brazo hacia el lado con el codo ligeramente flexionado hasta la altura del hombro.",
+    "Baja despacio sin dejar que la pesa toque abajo."
+  ],
+  "commonMistakes": [
+    "Subir por encima del hombro con el trapecio.",
+    "Balancear el cuerpo para subir.",
+    "Girar la mano hacia arriba como si sirvieras agua al revés."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Standing_Low-Pulley_Deltoid_Raise"
+  }
+}

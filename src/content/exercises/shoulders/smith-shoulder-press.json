@@ -1,0 +1,20 @@
+{
+  "id": "smith-shoulder-press",
+  "name": "Press de hombro en multipower",
+  "muscleIds": ["shoulders-front", "triceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Siéntate en un banco con respaldo vertical bajo la barra, que baje por delante de la cara.",
+    "Toma la barra un poco más ancho que los hombros y desbloquéala.",
+    "Baja hasta la barbilla y empuja hacia arriba sin bloquear los codos."
+  ],
+  "commonMistakes": [
+    "Arquear la espalda baja para empujar.",
+    "Bajar la barra por detrás de la cabeza.",
+    "Recortar el recorrido abajo."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Smith_Machine_Overhead_Shoulder_Press"
+  }
+}

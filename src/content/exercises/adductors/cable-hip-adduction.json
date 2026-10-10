@@ -1,0 +1,20 @@
+{
+  "id": "cable-hip-adduction",
+  "name": "Aducción en polea",
+  "muscleIds": ["adductors"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca una tobillera en la polea baja y ponte de lado, con la pierna más cercana enganchada.",
+    "Lleva la pierna hacia la otra y crúzala un poco por delante.",
+    "Vuelve despacio hasta notar el estiramiento en la cara interna del muslo."
+  ],
+  "commonMistakes": [
+    "Inclinar el torso para ayudarte.",
+    "Doblar la rodilla.",
+    "Soltar el peso al volver."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Cable_Hip_Adduction"
+  }
+}

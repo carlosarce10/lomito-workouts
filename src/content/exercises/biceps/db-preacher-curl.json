@@ -1,0 +1,20 @@
+{
+  "id": "db-preacher-curl",
+  "name": "Curl predicador con mancuerna",
+  "muscleIds": ["biceps"],
+  "equipmentId": "dumbbell",
+  "instructions": [
+    "Apoya la parte trasera del brazo en el banco predicador con una mancuerna en la mano.",
+    "Sube la mancuerna flexionando el codo sin despegar el brazo del banco.",
+    "Baja despacio hasta casi estirar el codo."
+  ],
+  "commonMistakes": [
+    "Despegar el codo o el brazo del cojín.",
+    "Dejar caer el peso abajo.",
+    "Encoger el hombro para subir."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "One_Arm_Dumbbell_Preacher_Curl"
+  }
+}

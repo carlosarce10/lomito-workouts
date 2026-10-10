@@ -1,0 +1,20 @@
+{
+  "id": "barbell-wrist-curl",
+  "name": "Curl de muñeca con barra",
+  "muscleIds": ["forearms"],
+  "equipmentId": "barbell",
+  "instructions": [
+    "Siéntate con los antebrazos apoyados en un banco y las palmas hacia arriba, las muñecas fuera del borde.",
+    "Deja bajar la barra hasta que los dedos se abran un poco.",
+    "Cierra la mano y sube la barra flexionando solo la muñeca. Baja despacio."
+  ],
+  "commonMistakes": [
+    "Levantar los antebrazos del banco.",
+    "Usar un peso que obliga a mover los codos.",
+    "Recortar el recorrido abajo."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Palms-Up_Barbell_Wrist_Curl_Over_A_Bench"
+  }
+}

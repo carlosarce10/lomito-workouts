@@ -1,0 +1,20 @@
+{
+  "id": "one-arm-cable-pulldown",
+  "name": "Jalón a una mano en polea alta",
+  "muscleIds": ["lats", "biceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca la polea arriba con un agarre de una mano y arrodíllate o siéntate debajo.",
+    "Tira del codo hacia la cadera, llevando la mano al costado del pecho.",
+    "Estira el brazo arriba controlando hasta notar el dorsal estirado."
+  ],
+  "commonMistakes": [
+    "Girar el torso para tirar.",
+    "Tirar con el bíceps en lugar de llevar el codo abajo.",
+    "Soltar el peso de golpe arriba."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "One_Arm_Lat_Pulldown"
+  }
+}

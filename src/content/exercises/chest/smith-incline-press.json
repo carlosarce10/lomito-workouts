@@ -1,0 +1,20 @@
+{
+  "id": "smith-incline-press",
+  "name": "Press inclinado en multipower",
+  "muscleIds": ["chest-upper", "shoulders-front", "triceps"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Coloca un banco a 30-45 grados bajo la barra del multipower, de modo que baje a la parte alta del pecho.",
+    "Junta las escápulas, apoya los pies y desbloquea la barra girándola.",
+    "Baja en 2-3 segundos hasta rozar el pecho y empuja hasta casi estirar los codos."
+  ],
+  "commonMistakes": [
+    "Banco tan inclinado que el trabajo pasa al hombro.",
+    "Bajar la barra al cuello o al abdomen.",
+    "Despegar los hombros del banco al empujar."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Smith_Machine_Incline_Bench_Press"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "cable-rear-delt-fly",
+  "name": "Aperturas posteriores en polea",
+  "muscleIds": ["shoulders-rear", "back-upper"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca dos poleas a la altura de los hombros y cruza los cables: la mano derecha toma el de la izquierda y al revés.",
+    "Con los brazos casi estirados, ábrelos hacia atrás hasta que queden en línea con el cuerpo.",
+    "Aprieta la parte posterior del hombro y vuelve despacio."
+  ],
+  "commonMistakes": [
+    "Doblar los codos y convertirlo en un remo.",
+    "Echar el torso hacia atrás.",
+    "Juntar las escápulas en lugar de mover los brazos."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Cable_Rear_Delt_Fly"
+  }
+}

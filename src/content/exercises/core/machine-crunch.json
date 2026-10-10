@@ -1,0 +1,20 @@
+{
+  "id": "machine-crunch",
+  "name": "Crunch en máquina",
+  "muscleIds": ["abs"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Ajusta el asiento para que los agarres queden a la altura de los hombros y apoya los pies.",
+    "Exhala y lleva el pecho hacia la cadera redondeando la espalda, sin tirar con los brazos.",
+    "Aprieta el abdomen un segundo abajo y vuelve despacio sin soltar la tensión."
+  ],
+  "commonMistakes": [
+    "Tirar con los brazos en lugar de contraer el abdomen.",
+    "Mover la cadera en vez de redondear la espalda.",
+    "Dejar caer el peso en la subida."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Ab_Crunch_Machine"
+  }
+}

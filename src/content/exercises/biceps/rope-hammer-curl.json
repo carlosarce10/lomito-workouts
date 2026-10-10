@@ -1,0 +1,20 @@
+{
+  "id": "rope-hammer-curl",
+  "name": "Curl martillo en polea con cuerda",
+  "muscleIds": ["biceps", "forearms"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca la cuerda en la polea baja y tómala con las palmas enfrentadas.",
+    "Sube las manos flexionando los codos, pegados al cuerpo.",
+    "Baja despacio hasta estirar los brazos."
+  ],
+  "commonMistakes": [
+    "Mover los codos hacia delante.",
+    "Balancear el torso.",
+    "Girar las palmas hacia arriba."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Cable_Hammer_Curls_-_Rope_Attachment"
+  }
+}

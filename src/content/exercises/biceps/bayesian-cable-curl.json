@@ -1,0 +1,20 @@
+{
+  "id": "bayesian-cable-curl",
+  "name": "Curl bayesiano en polea",
+  "muscleIds": ["biceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca la polea abajo y da la espalda a la máquina con el agarre en una mano.",
+    "Da un paso al frente para que el brazo quede por detrás del torso.",
+    "Sube la mano flexionando el codo sin moverlo hacia delante y baja despacio hasta estirar."
+  ],
+  "commonMistakes": [
+    "Llevar el codo hacia delante: se pierde el estiramiento.",
+    "Inclinar el torso para ayudarte.",
+    "Recortar el recorrido abajo."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Standing_One-Arm_Cable_Curl"
+  }
+}

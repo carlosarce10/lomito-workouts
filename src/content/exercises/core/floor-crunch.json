@@ -1,0 +1,20 @@
+{
+  "id": "floor-crunch",
+  "name": "Crunch en el suelo",
+  "muscleIds": ["abs"],
+  "equipmentId": "bodyweight",
+  "instructions": [
+    "Acuéstate boca arriba con las rodillas flexionadas y los pies apoyados. Cruza los brazos sobre el pecho.",
+    "Exhala y despega los hombros del suelo llevando las costillas hacia la cadera.",
+    "Sostén un segundo arriba y baja despacio hasta apoyar los hombros."
+  ],
+  "commonMistakes": [
+    "Tirar del cuello con las manos.",
+    "Subir hasta sentarte: el trabajo pasa a la cadera.",
+    "Hacerlo con rebote y sin control."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Crunches"
+  }
+}

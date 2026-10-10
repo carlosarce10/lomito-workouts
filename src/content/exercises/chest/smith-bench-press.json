@@ -1,0 +1,20 @@
+{
+  "id": "smith-bench-press",
+  "name": "Press de banca en multipower",
+  "muscleIds": ["chest", "triceps", "shoulders-front"],
+  "equipmentId": "machine",
+  "instructions": [
+    "Coloca el banco plano bajo la barra para que baje a la mitad del pecho.",
+    "Junta las escápulas, apoya los pies y desbloquea la barra girándola.",
+    "Baja controlando hasta rozar el pecho y empuja hasta casi estirar los codos."
+  ],
+  "commonMistakes": [
+    "Codos abiertos a 90 grados del cuerpo: carga el hombro.",
+    "Rebotar la barra en el pecho.",
+    "Levantar la cadera del banco."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Smith_Machine_Bench_Press"
+  }
+}

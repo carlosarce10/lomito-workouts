@@ -1,0 +1,20 @@
+{
+  "id": "barbell-seated-calf-raise",
+  "name": "Elevación de talones sentado con peso libre",
+  "muscleIds": ["calves"],
+  "equipmentId": "barbell",
+  "instructions": [
+    "Siéntate con la punta de los pies sobre un disco o escalón y apoya una barra o mancuernas sobre los muslos, cerca de las rodillas.",
+    "Sube los talones lo más alto que puedas.",
+    "Baja despacio hasta el estiramiento completo."
+  ],
+  "commonMistakes": [
+    "Rebotar abajo.",
+    "Empujar con las manos en lugar de con la pantorrilla.",
+    "Recortar el recorrido."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Barbell_Seated_Calf_Raise"
+  }
+}
