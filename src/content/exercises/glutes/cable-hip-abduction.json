@@ -1,0 +1,18 @@
+{
+  "id": "cable-hip-abduction",
+  "name": "Abducción en polea",
+  "muscleIds": ["glutes"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca una tobillera en la polea baja y ponte de lado, con la pierna más lejana a la polea enganchada.",
+    "Apóyate en la máquina con la mano y mantén el torso recto.",
+    "Lleva la pierna hacia fuera con la punta del pie mirando al frente, hasta donde permita la cadera.",
+    "Vuelve despacio, sin dejar que las placas choquen."
+  ],
+  "commonMistakes": [
+    "Inclinar el torso hacia el lado contrario para subir más la pierna.",
+    "Girar la punta del pie hacia arriba: el trabajo pasa a la parte delantera de la cadera.",
+    "Soltar el peso al volver."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Side_Leg_Raises" }
+}

@@ -49,6 +49,7 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `cable-wrist-curl` | `Cable_Wrist_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Wrist_Curl/ |
 | `db-wrist-curl` | `Seated_Dumbbell_Palms-Up_Wrist_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Dumbbell_Palms-Up_Wrist_Curl/ |
 | `cable-glute-kickback` | `One-Legged_Cable_Kickback` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/One-Legged_Cable_Kickback/ |
+| `cable-hip-abduction` | `Side_Leg_Raises` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Side_Leg_Raises/ |
 | `cable-pull-through` | `Pull_Through` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Pull_Through/ |
 | `hip-abduction-machine` | `Thigh_Abductor` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Thigh_Abductor/ |
 | `hip-thrust` | `Barbell_Hip_Thrust` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Hip_Thrust/ |

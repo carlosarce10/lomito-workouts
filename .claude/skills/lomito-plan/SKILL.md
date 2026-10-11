@@ -47,6 +47,10 @@ por que en la respuesta.
 para seguir progresando, asi que los dias disponibles son un maximo, no un objetivo.
 3 dias o 6 dias solo en un caso concreto, y ese caso se nombra en la respuesta.
 
+**Ejercicios por rutina.** Maximo 8 por dia, por preferencia del entrenador, aunque
+el cliente tenga mas tiempo. Si no caben, el volumen se reparte entre los dias (el
+abdomen puede ir al final de un dia de tren superior) antes que pasar de 8.
+
 **Frecuencia por musculo.** Cada grupo se entrena 2 o 3 veces por semana y nunca en
 dos dias seguidos, abdomen incluido. Con el mismo volumen semanal, entrenarlo a diario
 no suma estimulo y le quita recuperacion; ademas, el abdomen ya trabaja como
@@ -154,7 +158,8 @@ del cliente van a 10-16; el resto, a 8-10; lo que no es objetivo, o lo que el cl
 prefiere no desarrollar, puede quedarse en mantenimiento. Nunca por encima de 16.
 
 Mantenimiento es el minimo, no cero: biceps, triceps, gemelos y aductores llevan al
-menos 4 series directas aunque no sean prioridad. El antebrazo lleva trabajo directo:
+menos 4 series directas aunque no sean prioridad. En hombres, el antebrazo lleva
+trabajo directo (en mujeres no, ver "Sexo del cliente"):
 un curl de muneca despues del biceps, con mancuerna o barra y el antebrazo apoyado
 (`db-wrist-curl`, `barbell-wrist-curl`). Por defecto, de flexores (palmas arriba),
 que es el musculo mas grande; de extensores solo si el entrenador lo pide. El curl de
@@ -218,6 +223,12 @@ Reglas fijas, en cualquier nivel:
   alta, que exige controlar la cadera. No es un limite: el press Pallof,
   las elevaciones de rodillas u otros ejercicios de core se pueden anadir cuando
   sumen.
+- **Aductores: primero en maquina** (`hip-adduction-machine`), con la polea
+  (`cable-hip-adduction`) como alternativa.
+- **Gemelos en mantenimiento: de pie o en prensa** (`standing-calf-raise`,
+  `leg-press-calf-raise`), que los trabajan mejor que los sentados; el sentado no
+  entra. Si el gemelo es prioridad, se combinan tipos distintos (de pie, en prensa y
+  sentado).
 - Si la biblioteca solo tiene una version tecnica de un ejercicio, se crea la version
   guiada (en maquina o polea) en lugar de meter la tecnica.
 - En la respuesta se dice que ejercicios se descartaron por nivel y cual los sustituye.
@@ -235,9 +246,11 @@ Lo que el sexo no cambia:
 - **Las prioridades.** Los grupos que van a 10-16 series salen de la respuesta del
   cliente (pregunta de grupos prioritarios de `docs/intake.md`), nunca del sexo. Sin
   prioridad declarada, el reparto es equilibrado. No existe "mujer = gluteo" ni
-  "hombre = pecho y brazos".
+  "hombre = pecho y brazos". Las excepciones son el pecho y el antebrazo en mujeres,
+  abajo.
 - **La seleccion por nivel.** Un ejercicio entra o sale por el nivel, las molestias y
-  las preferencias, no por el sexo. La unica excepcion son los abductores, abajo.
+  las preferencias, no por el sexo. Las excepciones son los abductores en hombres y
+  el pecho y el antebrazo en mujeres, abajo.
 - **La carga.** El plan no prescribe pesos, y ninguna nota dice "peso ligero" ni "peso
   pesado" en funcion del sexo.
 
@@ -246,7 +259,13 @@ Lo que el sexo si aporta:
 - **Abductores y aductores en hombres.** Un plan de hombre no lleva abductores para el
   gluteo salvo que hagan falta o el entrenador los pida. Los aductores si entran, para
   que la pierna crezca a lo ancho.
-
+- **Pecho en mujeres.** Sin indicacion del entrenador, 2 ejercicios de pecho a la
+  semana (4 series, mantenimiento), un press y un aislamiento, en maquina o con
+  mancuernas; nunca con barra salvo que se pida. A muchas mujeres no les gusta
+  entrenarlo: si el entrenador o la clienta lo indican, el plan no lleva pecho. En un
+  Upper con un solo ejercicio de pecho se intercala igual: espalda, pecho, espalda.
+- **Antebrazo en mujeres.** No lleva curl de muneca ni otro trabajo directo de
+  antebrazo salvo que se pida; el martillo ya le da estimulo.
 - **Variante de sentadilla o prensa.** La pelvis ancha y el angulo Q mayor son mas
   frecuentes en mujeres, no exclusivos. Si el cliente refiere molestia de rodilla o
   cadera en un patron de sentadilla, se elige el que tolera (prensa, hack o bulgara,
