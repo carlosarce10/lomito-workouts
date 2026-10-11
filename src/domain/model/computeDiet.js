@@ -1,5 +1,6 @@
 import { getActivityFactor, getDietGoal } from '../catalogs/index.js';
 import { dietInputSchema } from '../schemas/diet.schema.js';
+import { LIMITS } from '../validation/limits.js';
 import { validate } from '../validation/validate.js';
 
 /**
@@ -27,7 +28,7 @@ import { validate } from '../validation/validate.js';
  * @param {{min:number,max:number}} [input.adjustmentPercent] Ajuste sobre el mantenimiento; sin el, el del objetivo.
  * @param {{min:number,max:number}} [input.proteinPerKg] Gramos por kilo; sin el, los del objetivo.
  * @param {{min:number,max:number}} [input.fatPercent] Porcentaje de calorias en grasas; sin el, el del objetivo.
- * @param {number} [input.mealsPerDay] Comidas al dia, solo para repartir la proteina.
+ * @param {number} [input.mealsPerDay] Comidas que dice hacer el cliente; el plan lleva al menos 3.
  * @param {string} input.today Fecha del calculo, YYYY-MM-DD.
  * @returns {{ ok: true, value: object } | { ok: false, issues: Array<{ path: string, code: string, params?: object }> }}
  */
@@ -79,7 +80,10 @@ export function computeDiet(input) {
         min: roundTo(WATER_ML_PER_KG.min * bodyMass, 100),
         max: roundTo(WATER_ML_PER_KG.max * bodyMass, 100),
       },
-      ...(mealsPerDay === null ? {} : { mealsPerDay }),
+      // Minimo 3 comidas completas, diga lo que diga el cliente (Lomito Dev, 2026-10-11).
+      ...(mealsPerDay === null
+        ? {}
+        : { mealsPerDay: Math.max(LIMITS.mealsPerDay.min, mealsPerDay) }),
       calculatedAt: input.today,
     },
   };

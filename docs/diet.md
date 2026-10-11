@@ -248,4 +248,6 @@ npm run diet -- --sex male --age 30 --height 170cm --body-mass 154lb --activity 
 
 Opcionales: `--sex` (sin el, rango entre las dos constantes), `--activity a:b` cuando
 hay duda entre dos niveles, `--adjustment`, `--protein-per-kg`, `--fat-percent` y
-`--meals`. El bloque `diet` que imprime se pega tal cual en el JSON del cliente.
+`--meals`. Con `--meals` por debajo de 3 el plan lleva 3 comidas completas igualmente:
+es el minimo de Lomito Dev, diga lo que diga el cliente. El bloque `diet` que imprime
+se pega tal cual en el JSON del cliente.

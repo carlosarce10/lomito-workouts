@@ -115,6 +115,11 @@ console.error(`  Proteina: ${r(diet.protein, ' g')} (${r(diet.proteinPerKg, ' g/
 console.error(`  Grasas: ${r(diet.fat, ' g')} (${r(diet.fatPercent, ' % de las calorias')})`);
 console.error(`  Carbohidratos: ${r(diet.carbs, ' g')}`);
 console.error(`  Fibra: ${r(diet.fiber, ' g')}; agua: ${r(diet.water, ' ml')}`);
+if (entrada.mealsPerDay && diet.mealsPerDay > entrada.mealsPerDay) {
+  console.error(
+    `  Comidas: el cliente hace ${entrada.mealsPerDay}; el plan lleva ${diet.mealsPerDay}, el minimo`,
+  );
+}
 if (diet.mealsPerDay) {
   const porComida = {
     min: Math.round(diet.protein.min / diet.mealsPerDay / 5) * 5,

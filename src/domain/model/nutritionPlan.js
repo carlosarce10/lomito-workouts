@@ -22,7 +22,6 @@ const SOURCE_PROTEIN_PER_KG = [0.55, 0.5, 0.45, 0.4];
 const BREAKFAST_SOURCE_PROTEIN_PER_KG = 0.3;
 // Que comidas principales lleva un dia segun cuantas hace el cliente.
 const MAIN_MEALS = {
-  2: ['lunch', 'dinner'],
   3: ['breakfast', 'lunch', 'dinner'],
   4: ['breakfast', 'lunch', 'lunch', 'dinner'],
   5: ['breakfast', 'lunch', 'lunch', 'dinner', 'dinner'],

@@ -209,7 +209,8 @@ Invariantes que impone `lint:content` y ninguna escritura puede romper:
    `bodyMass`, `height`, `age`, `sex` y la actividad son claves prohibidas en todo
    JSON: las entradas del calculo no entran en el repositorio. Ver [docs/diet.md](docs/diet.md).
 9. Todo `foodId` de un plato existe en `foods.json`; los ids de platos y suplementos no
-   se repiten; uno con `source` tiene `public/nutrition/<id>.jpg`.
+   se repiten; uno con `source` tiene `public/nutrition/<id>.jpg`. Cada comida
+   principal tiene al menos 5 platos y comparte como mucho 2 con otros momentos.
 
 El runtime no valida forma. `resolvePlan` solo resuelve referencias y aplica los
 valores por defecto de la metodologia; un `exerciseId` huerfano devuelve

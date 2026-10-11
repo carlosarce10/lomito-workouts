@@ -35,7 +35,8 @@ export const LIMITS = {
   carbs: { min: 50, max: 800 },
   fiber: { min: 15, max: 80 },
   water: { min: 1000, max: 6000 },
-  mealsPerDay: { min: 2, max: 6 },
+  // Minimo 3 comidas completas aunque el cliente diga que hace menos (Lomito Dev).
+  mealsPerDay: { min: 3, max: 6 },
   dietSections: { min: 1, max: 8 },
   dietTips: { min: 1, max: 6, itemMax: 160 },
 
@@ -47,6 +48,10 @@ export const LIMITS = {
   unit: { min: 1, max: 20 },
   plateItems: { min: 2, max: 6 },
   plateMeals: { min: 1, max: 4 },
+  // Cada comida principal ofrece al menos 5 platos, y como mucho 2 se comparten con
+  // otro momento del dia: al menos 3 son solo suyos.
+  mainMealPlates: { min: 5 },
+  sharedPlatesPerMeal: { max: 2 },
   supplementBody: { min: 1, max: 3, itemMax: 240 },
 
   // Entradas del calculo. Solo adultos (docs/diet.md); nunca se escriben en un JSON.

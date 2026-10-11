@@ -37,6 +37,26 @@
     }
   },
   {
+    "id": "avocado-egg-toast",
+    "name": "Pan tostado con huevo y aguacate",
+    "mealIds": ["breakfast"],
+    "foodIds": ["eggs", "egg-whites", "bread", "avocado"],
+    "source": {
+      "provider": "openverse",
+      "id": "6464ec62-9526-4354-a094-fd7b6effc834"
+    }
+  },
+  {
+    "id": "oat-pancakes",
+    "name": "Hotcakes de avena",
+    "mealIds": ["breakfast"],
+    "foodIds": ["egg-whites", "oats", "banana", "berries"],
+    "source": {
+      "provider": "openverse",
+      "id": "52153826-93bb-4f21-9044-8bd7eee5d79d"
+    }
+  },
+  {
     "id": "chicken-rice-broccoli",
     "name": "Pollo con arroz y brócoli",
     "mealIds": ["lunch", "dinner"],
@@ -49,7 +69,7 @@
   {
     "id": "steak-potatoes-salad",
     "name": "Bistec con papas y ensalada",
-    "mealIds": ["lunch", "dinner"],
+    "mealIds": ["lunch"],
     "foodIds": ["beef-sirloin", "potato", "avocado", "salad"],
     "source": {
       "provider": "openverse",
@@ -59,7 +79,7 @@
   {
     "id": "fish-tacos",
     "name": "Tacos de pescado",
-    "mealIds": ["lunch", "dinner"],
+    "mealIds": ["dinner"],
     "foodIds": ["white-fish", "corn-tortilla", "avocado", "pico-de-gallo"],
     "source": {
       "provider": "openverse",
@@ -69,7 +89,7 @@
   {
     "id": "salmon-sweet-potato",
     "name": "Salmón con camote y verduras",
-    "mealIds": ["lunch", "dinner"],
+    "mealIds": ["lunch"],
     "foodIds": ["salmon", "sweet-potato", "olive-oil", "mixed-vegetables"],
     "source": {
       "provider": "openverse",
@@ -79,7 +99,7 @@
   {
     "id": "tuna-pasta",
     "name": "Pasta con atún y verduras",
-    "mealIds": ["lunch", "dinner"],
+    "mealIds": ["dinner"],
     "foodIds": ["tuna", "pasta", "olive-oil", "mixed-vegetables"],
     "source": {
       "provider": "openverse",
@@ -94,6 +114,26 @@
     "source": {
       "provider": "openverse",
       "id": "225a7967-cf39-4f18-8f53-2afea4726f05"
+    }
+  },
+  {
+    "id": "chicken-tacos",
+    "name": "Tacos de pollo",
+    "mealIds": ["lunch"],
+    "foodIds": ["chicken-breast", "corn-tortilla", "avocado", "pico-de-gallo"],
+    "source": {
+      "provider": "openverse",
+      "id": "9f6e4c66-2d19-4632-9c60-8a831373fbb6"
+    }
+  },
+  {
+    "id": "veggie-omelette",
+    "name": "Omelette de verduras con pan",
+    "mealIds": ["dinner"],
+    "foodIds": ["eggs", "egg-whites", "mixed-vegetables", "bread"],
+    "source": {
+      "provider": "openverse",
+      "id": "25fc74b5-4c29-4638-bbda-0d85c65a4fdf"
     }
   },
   {

@@ -25,7 +25,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 
-import { getMuscleGroup, GROUP_IDS, IMAGE_FRAMES } from '../src/domain/catalogs/index.js';
+import { getMuscleGroup, GROUP_IDS, IMAGE_FRAMES, MEAL_IDS } from '../src/domain/catalogs/index.js';
 import { clientSchema } from '../src/domain/schemas/client.schema.js';
 import { dietContentSchema } from '../src/domain/schemas/diet.schema.js';
 import {
@@ -35,6 +35,7 @@ import {
 } from '../src/domain/schemas/nutrition.schema.js';
 import { exerciseSchema } from '../src/domain/schemas/exercise.schema.js';
 import { methodologySchema } from '../src/domain/schemas/methodology.schema.js';
+import { LIMITS } from '../src/domain/validation/limits.js';
 import { isClientSlug } from '../src/domain/validation/slugs.js';
 import { validate } from '../src/domain/validation/validate.js';
 
@@ -206,6 +207,23 @@ platos.forEach((plato, i) => {
     }
   }
 });
+
+// Cada comida principal ofrece variedad propia: un minimo de platos y como mucho unos
+// pocos compartidos con otro momento del dia. El snack no cuenta como comida principal.
+for (const mealId of MEAL_IDS.filter((id) => id !== 'snack')) {
+  const delMomento = platos.filter((plato) => plato.mealIds?.includes(mealId));
+  const compartidos = delMomento.filter((plato) => plato.mealIds.length > 1);
+  if (delMomento.length < LIMITS.mainMealPlates.min) {
+    errores.push(
+      `${PLATOS}: "${mealId}" tiene ${delMomento.length} platos; minimo ${LIMITS.mainMealPlates.min}`,
+    );
+  }
+  if (compartidos.length > LIMITS.sharedPlatesPerMeal.max) {
+    errores.push(
+      `${PLATOS}: "${mealId}" comparte ${compartidos.length} platos con otros momentos; maximo ${LIMITS.sharedPlatesPerMeal.max}`,
+    );
+  }
+}
 
 // ── Clientes ────────────────────────────────────────────────────────────────
 const clientes = recorrer(CLIENTES, '.json').sort();

@@ -142,6 +142,10 @@ puno de verdura (libre). `measure` es como se mide esa porcion en casa y `step` 
 redondeo al escalarla; con `unit: "g"` la medida es el peso. `macros` son los gramos de
 proteina, carbohidratos y grasa de esa porcion.
 
+Cada comida principal (desayuno, comida, cena) ofrece al menos 5 platos, y como mucho
+2 se comparten con otro momento del dia: al menos 3 son solo suyos. Un dia lleva
+siempre 3 comidas completas como minimo, aunque el cliente diga que hace menos.
+
 Un plato lista sus alimentos sin cantidades. Para cada cliente, las porciones del dia
 se reparten un 80 % entre sus comidas principales y un 20 % a snacks: uno, entre la
 comida y la cena, o dos (media manana y tarde) si ese 20 % pasa de 450 kcal. El dia se
@@ -185,7 +189,7 @@ npm run diet -- --sex male --age 30 --height 170cm --body-mass 154lb --activity 
 | `carbs`               | rango 50 a 800 g                                                            |
 | `fiber`               | rango 15 a 80 g                                                             |
 | `water`               | opcional, rango 1000 a 6000 ml                                              |
-| `mealsPerDay`         | opcional, 2 a 6                                                             |
+| `mealsPerDay`         | opcional, 3 a 6; si el cliente hace menos, el script lo sube a 3            |
 | `calculatedAt`        | `YYYY-MM-DD`                                                                |
 | `notes`               | opcional, hasta 300 caracteres del entrenador; nada de datos de salud       |
 
@@ -210,7 +214,8 @@ progresion). Se cambia a mano, nunca desde la skill.
    (aviso hasta que la fase 3 descargue las imagenes; error despues).
 8. `diet`, si existe, cumple su esquema: solo resultados en metrico, como rangos.
 9. Todo `foodId` de un plato existe; los ids de platos y suplementos no se repiten; uno
-   con `source` tiene su foto en `public/nutrition/<id>.jpg`.
+   con `source` tiene su foto en `public/nutrition/<id>.jpg`. Cada comida principal
+   tiene al menos 5 platos y comparte como mucho 2 con otros momentos.
 10. Un `alternativeId` existe, no es el mismo ejercicio, no esta ya en la rutina y
     comparte el musculo principal del ejercicio al que sustituye.
 

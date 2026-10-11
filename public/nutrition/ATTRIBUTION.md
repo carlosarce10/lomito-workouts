@@ -9,12 +9,16 @@ cita. Para usar una foto propia, se quita `source` del plato y se coloca el arch
 | `eggs-beans-tortillas.jpg` | Brunch burrito | Ruth and Dave | BY 2.0 | https://www.flickr.com/photos/95142644@N00/8262202008 |
 | `oatmeal-banana.jpg` | oatmeal with banana | functoruser | BY 2.0 | https://www.flickr.com/photos/54458860@N00/2276800807 |
 | `yogurt-berries-granola.jpg` | Fruit, yogurt and honey | Average Jane | BY 2.0 | https://www.flickr.com/photos/64401168@N00/3604928038 |
+| `avocado-egg-toast.jpg` | poached eggs with avocado and toast | Stacy Spensley | BY 2.0 | https://www.flickr.com/photos/21001756@N06/4532239153 |
+| `oat-pancakes.jpg` | maple oatmeal pancakes | kae71463 | BY 2.0 | https://www.flickr.com/photos/75231152@N00/7109416253 |
 | `chicken-rice-broccoli.jpg` | Malaysia Airlines' Fried Rice With Sweet & Sour Fish | thienzieyung | BY 2.0 | https://www.flickr.com/photos/26978304@N08/5267602689 |
 | `steak-potatoes-salad.jpg` | Mmm... ribeye, asparagus, little potatoes, and a caprese salad | jeffreyw | BY 2.0 | https://www.flickr.com/photos/7927684@N03/14589335795 |
 | `fish-tacos.jpg` | Mmm... fish tacos | jeffreyw | BY 2.0 | https://www.flickr.com/photos/7927684@N03/9641664708 |
 | `salmon-sweet-potato.jpg` | Grilled Salmon | Prayitno / Thank you for (12 millions +) view | BY 2.0 | https://www.flickr.com/photos/34128007@N04/15950616571 |
 | `tuna-pasta.jpg` | Pasta summer salad recipe | moonjazz | PDM 1.0 | https://www.flickr.com/photos/8398907@N02/7809748008 |
 | `beef-rice-beans-bowl.jpg` | Burrito bowl | goblinbox_(queen_of_ad_hoc_bento) | BY 2.0 | https://www.flickr.com/photos/25977089@N00/37544165280 |
+| `chicken-tacos.jpg` | Mmm... chicken tacos | jeffreyw | BY 2.0 | https://www.flickr.com/photos/7927684@N03/27468854972 |
+| `veggie-omelette.jpg` | Vegetable Omelette and Garden Salad – Red Moon Sanctuary, Redmond, Western Australia | Red Moon Sanctuary | BY 2.0 | https://www.flickr.com/photos/71646105@N03/36976129583 |
 | `protein-shake.jpg` | Hemp hearts, whey protein, bee pollen, egg, fresh banana and strawberries, spinach, and flax seeds with a chia seed topper. Good morning, #losangeles! #smoothie | adrielhampton | BY 2.0 | https://www.flickr.com/photos/9128236@N03/16699172737 |
 | `turkey-sandwich.jpg` | Mesquite Turkey Sandwich - 1 | The Marmot | BY 2.0 | https://www.flickr.com/photos/38142119@N00/15046644535 |
 | `cottage-cheese-fruit.jpg` | 10. cottage cheese with blackberries & cashews | jules:stonesoup | BY 2.0 | https://www.flickr.com/photos/58367355@N00/6902905454 |

@@ -17,7 +17,8 @@ export const dietInputSchema = {
   adjustmentPercent: r.optional(r.range({ ...LIMITS.adjustmentPercent, integer: true })),
   proteinPerKg: r.optional(r.range(LIMITS.proteinPerKg)),
   fatPercent: r.optional(r.range({ ...LIMITS.fatPercent, integer: true })),
-  mealsPerDay: r.optional(r.number({ ...LIMITS.mealsPerDay, integer: true })),
+  // La respuesta del cliente puede ser menor que el minimo: computeDiet la sube.
+  mealsPerDay: r.optional(r.number({ min: 1, max: LIMITS.mealsPerDay.max, integer: true })),
   today: r.plainDate(),
 };
 

@@ -70,7 +70,7 @@ no una dieta estricta)
     (entrada de `npm run diet`)
 22. ¿Qué buscas con la alimentación: bajar grasa, mantenerte, recomponer (ganar músculo sin subir de peso) o ganar
     músculo? (`diet.dietGoalId`)
-23. ¿Cuántas comidas sueles hacer al día? (`diet.mealsPerDay`)
+23. ¿Cuántas comidas sueles hacer al día? (`diet.mealsPerDay`; el plan lleva al menos 3)
 24. ¿Tienes alguna alergia, restricción o alimento que no comas? (criterio del
     entrenador, no se guarda)
 25. ¿En qué país vives? Decide si tu plan muestra kilos o libras. (`unitSystemId`)
