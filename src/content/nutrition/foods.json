@@ -170,6 +170,23 @@
     }
   },
   {
+    "id": "panela-cheese",
+    "name": "Queso panela",
+    "foodGroupId": "protein",
+    "grams": 120,
+    "measure": {
+      "amount": 4,
+      "unit": "rebanada",
+      "unitPlural": "rebanadas",
+      "step": 1
+    },
+    "macros": {
+      "protein": 22,
+      "carbs": 4,
+      "fat": 19
+    }
+  },
+  {
     "id": "protein-powder",
     "name": "Proteína en polvo",
     "foodGroupId": "protein",
@@ -523,6 +540,74 @@
     "macros": {
       "protein": 2,
       "carbs": 8,
+      "fat": 0
+    }
+  },
+  {
+    "id": "salsa",
+    "name": "Salsa verde o roja",
+    "foodGroupId": "vegetables",
+    "grams": 60,
+    "measure": {
+      "amount": 0.25,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.25
+    },
+    "macros": {
+      "protein": 0.5,
+      "carbs": 3,
+      "fat": 0
+    }
+  },
+  {
+    "id": "nopales",
+    "name": "Nopales cocidos",
+    "foodGroupId": "vegetables",
+    "grams": 150,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 2,
+      "carbs": 5,
+      "fat": 0
+    }
+  },
+  {
+    "id": "spinach",
+    "name": "Espinaca",
+    "foodGroupId": "vegetables",
+    "grams": 30,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 1,
+      "carbs": 1,
+      "fat": 0
+    }
+  },
+  {
+    "id": "mushrooms",
+    "name": "Champiñones",
+    "foodGroupId": "vegetables",
+    "grams": 70,
+    "measure": {
+      "amount": 1,
+      "unit": "taza",
+      "unitPlural": "tazas",
+      "step": 0.5
+    },
+    "macros": {
+      "protein": 2,
+      "carbs": 2,
       "fat": 0
     }
   }
