@@ -51,6 +51,10 @@ para seguir progresando, asi que los dias disponibles son un maximo, no un objet
 el cliente tenga mas tiempo. Si no caben, el volumen se reparte entre los dias (el
 abdomen puede ir al final de un dia de tren superior) antes que pasar de 8.
 
+**Cada dia, su tren.** Un dia de tren inferior no lleva ejercicios de tren superior
+(ni un curl de muneca para hacer sitio), y un dia de tren superior no lleva de pierna,
+salvo que el entrenador lo indique. El abdomen puede ir en cualquiera de los dos.
+
 **Frecuencia por musculo.** Cada grupo se entrena 2 o 3 veces por semana y nunca en
 dos dias seguidos, abdomen incluido. Con el mismo volumen semanal, entrenarlo a diario
 no suma estimulo y le quita recuperacion; ademas, el abdomen ya trabaja como
@@ -223,6 +227,13 @@ Reglas fijas, en cualquier nivel:
   alta, que exige controlar la cadera. No es un limite: el press Pallof,
   las elevaciones de rodillas u otros ejercicios de core se pueden anadir cuando
   sumen.
+- **Press inclinado: de entrada con mancuernas** (`incline-db-press`), con el
+  inclinado con barra (`incline-barbell-bench-press`) como alternativa. En mujeres, la
+  alternativa es el inclinado en maquina (`machine-incline-chest-press`), sin barra.
+- **Tres ejercicios de pecho en un dia: aislado, pecho alto y pecho bajo**, en ese
+  orden. Aislado, el pec deck; pecho alto, el press inclinado; pecho bajo, el cruce de
+  poleas de arriba abajo (`cable-crossover`) o los fondos (`chest-dip`, no en
+  principiantes), uno como alternativa del otro.
 - **Aductores: primero en maquina** (`hip-adduction-machine`), con la polea
   (`cable-hip-adduction`) como alternativa.
 - **Gemelos en mantenimiento: de pie o en prensa** (`standing-calf-raise`,
@@ -259,6 +270,9 @@ Lo que el sexo si aporta:
 - **Abductores y aductores en hombres.** Un plan de hombre no lleva abductores para el
   gluteo salvo que hagan falta o el entrenador los pida. Los aductores si entran, para
   que la pierna crezca a lo ancho.
+- **Dias de pierna en hombres.** Como maximo 2 por semana, aunque la pierna sea
+  prioridad; 3 dias de pierna solo si el entrenador lo indica. Con la pierna como
+  prioridad, el extra se busca dentro de esos 2 dias.
 - **Pecho en mujeres.** Sin indicacion del entrenador, 2 ejercicios de pecho a la
   semana (4 series, mantenimiento), un press y un aislamiento, en maquina o con
   mancuernas; nunca con barra salvo que se pida. A muchas mujeres no les gusta

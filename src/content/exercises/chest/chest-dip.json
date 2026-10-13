@@ -1,0 +1,18 @@
+{
+  "id": "chest-dip",
+  "name": "Fondos para pecho",
+  "muscleIds": ["chest", "triceps", "shoulders-front"],
+  "equipmentId": "bodyweight",
+  "instructions": [
+    "Sujétate en las paralelas con los brazos extendidos y cruza los pies detrás.",
+    "Inclina el torso hacia delante y baja en 2-3 segundos abriendo un poco los codos, hasta sentir el estiramiento en el pecho.",
+    "Sube empujando con el pecho hasta casi extender los brazos, sin bloquear los codos.",
+    "Cuando completes el rango con tu peso, añade carga con un cinturón de lastre o una mancuerna entre los pies."
+  ],
+  "commonMistakes": [
+    "Mantener el torso vertical: el trabajo pasa al tríceps.",
+    "Bajar más de lo que permite el hombro y sentir molestia delante de la articulación.",
+    "Encoger los hombros hacia las orejas al bajar."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Dips_-_Chest_Version" }
+}

@@ -33,6 +33,7 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `standing-calf-raise` | `Standing_Calf_Raises` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Standing_Calf_Raises/ |
 | `barbell-bench-press` | `Barbell_Bench_Press_-_Medium_Grip` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Bench_Press_-_Medium_Grip/ |
 | `cable-crossover` | `Cable_Crossover` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Cable_Crossover/ |
+| `chest-dip` | `Dips_-_Chest_Version` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Dips_-_Chest_Version/ |
 | `incline-barbell-bench-press` | `Barbell_Incline_Bench_Press_-_Medium_Grip` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Incline_Bench_Press_-_Medium_Grip/ |
 | `incline-db-press` | `Incline_Dumbbell_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Incline_Dumbbell_Press/ |
 | `machine-chest-press` | `Leverage_Chest_Press` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leverage_Chest_Press/ |
@@ -56,6 +57,7 @@ Origen: https://github.com/yuhonas/free-exercise-db. Licencia: Unlicense.
 | `lying-leg-curl` | `Lying_Leg_Curls` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Lying_Leg_Curls/ |
 | `romanian-deadlift` | `Romanian_Deadlift` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Romanian_Deadlift/ |
 | `seated-leg-curl` | `Seated_Leg_Curl` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Seated_Leg_Curl/ |
+| `barbell-back-squat` | `Barbell_Squat` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Barbell_Squat/ |
 | `db-split-squat` | `Split_Squat_with_Dumbbells` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Split_Squat_with_Dumbbells/ |
 | `hack-squat` | `Hack_Squat` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Hack_Squat/ |
 | `leg-extension` | `Leg_Extensions` | https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/Leg_Extensions/ |
