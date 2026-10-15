@@ -1,7 +1,8 @@
 {
-  "name": "Kathya Lomita",
+  "name": "Kathya Vázquez",
   "goalId": "hypertrophy",
   "levelId": "intermediate",
+  "unitSystemId": "imperial",
   "startDate": "2026-10-05",
   "reviewDate": "2026-11-09",
   "notes": "Semana: Lower A, Upper A, Lower B, Upper B y Lower C, de lunes a viernes. Prioridad: glúteo y abdomen. Por las molestias de muñeca, el plan deja fuera la sentadilla con barra y el peso muerto rumano; en jalones, remos y presses usa agarre neutro cuando se pueda.",
@@ -306,5 +307,58 @@
         }
       ]
     }
-  ]
+  ],
+  "diet": {
+    "dietGoalId": "recomposition",
+    "activityFactor": {
+      "min": 1.35,
+      "max": 1.35
+    },
+    "adjustmentPercent": {
+      "min": -5,
+      "max": 5
+    },
+    "restingCalories": {
+      "min": 1280,
+      "max": 1280
+    },
+    "maintenanceCalories": {
+      "min": 1700,
+      "max": 1700
+    },
+    "targetCalories": {
+      "min": 1600,
+      "max": 1800
+    },
+    "proteinPerKg": {
+      "min": 1.8,
+      "max": 2.2
+    },
+    "protein": {
+      "min": 100,
+      "max": 120
+    },
+    "fatPercent": {
+      "min": 25,
+      "max": 30
+    },
+    "fat": {
+      "min": 45,
+      "max": 60
+    },
+    "carbs": {
+      "min": 170,
+      "max": 220
+    },
+    "fiber": {
+      "min": 20,
+      "max": 25
+    },
+    "water": {
+      "min": 1600,
+      "max": 1900
+    },
+    "mealsPerDay": 3,
+    "calculatedAt": "2026-10-15"
+  }
 }
