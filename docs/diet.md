@@ -218,6 +218,12 @@ sintesis muscular casi al maximo en adultos jovenes (Moore y otros, 2009; Witard
 otros, 2014), y asi no hacen falta 3 huevos y claras. La proteina de la guarnicion
 cuenta para el total del dia, no para esos minimos.
 
+En una persona ligera, 0,3 g/kg deja el desayuno en 13-16 g (1 huevo y un poco de
+clara), por debajo de los 20 g que aportan los 2-3 g de leucina necesarios: el desayuno
+lleva como minimo 20 g de proteina de calidad. El snack es una cuarta toma de proteina
+y no un resto: como minimo 15 g de calidad (decision de Lomito Dev, 2026-10-15, al
+revisar la dieta de Kathya, que tenia snacks de 0 a 12 g).
+
 ### Redondeos
 
 Ninguna cifra se muestra con precision falsa. Gasto en reposo a 10 kcal; mantenimiento

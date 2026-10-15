@@ -308,9 +308,9 @@
   },
   {
     "id": "apple-peanut-butter",
-    "name": "Manzana con crema de cacahuate",
+    "name": "Yogur griego con manzana y crema de cacahuate",
     "mealIds": ["snack"],
-    "foodIds": ["apple", "peanut-butter"],
+    "foodIds": ["greek-yogurt", "apple", "peanut-butter"],
     "source": {
       "provider": "openverse",
       "id": "7efe4c44-ac1a-4cd4-bb10-fe90ef06a7cb"
@@ -368,9 +368,9 @@
   },
   {
     "id": "peanut-butter-banana-toast",
-    "name": "Pan con crema de cacahuate y plátano",
+    "name": "Pan con crema de cacahuate, plátano y licuado de proteína",
     "mealIds": ["snack"],
-    "foodIds": ["bread", "peanut-butter", "banana"],
+    "foodIds": ["bread", "peanut-butter", "banana", "protein-powder"],
     "source": {
       "provider": "openverse",
       "id": "9c3ab21e-c6c9-4b7f-8912-63bb52f684dd"

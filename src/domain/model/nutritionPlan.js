@@ -20,6 +20,12 @@ const SOURCE_PROTEIN_PER_KG = [0.55, 0.5, 0.45, 0.4];
 // sintesis muscular casi al maximo en una comida (Moore 2009, Witard 2014). Asi no hacen
 // falta 3 huevos y claras para llegar a la cifra de la comida o la cena.
 const BREAKFAST_SOURCE_PROTEIN_PER_KG = 0.3;
+// Suelos de proteina de calidad, en gramos. En una persona ligera, 0,3 g/kg se queda en
+// 13-16 g (1 huevo y un poco de clara): 20 g aportan los 2-3 g de leucina que estimulan
+// la sintesis casi al maximo (Moore 2009, Witard 2014). El snack es una toma de
+// proteina mas, no un resto: 15 g evitan que quede en una rebanada de pavo.
+const MIN_BREAKFAST_SOURCE_PROTEIN = 20;
+const MIN_SNACK_SOURCE_PROTEIN = 15;
 // Que comidas principales lleva un dia segun cuantas hace el cliente.
 const MAIN_MEALS = {
   3: ['breakfast', 'lunch', 'dinner'],
@@ -77,7 +83,10 @@ export function buildNutritionPlan({ diet, foods, plates }) {
     const objetivoComida = { ...portions.mealTargets, protein: gramosPorKg * bodyMass };
     const objetivoDesayuno = {
       ...portions.mealTargets,
-      protein: Math.min(gramosPorKg, BREAKFAST_SOURCE_PROTEIN_PER_KG) * bodyMass,
+      protein: Math.max(
+        MIN_BREAKFAST_SOURCE_PROTEIN,
+        Math.min(gramosPorKg, BREAKFAST_SOURCE_PROTEIN_PER_KG) * bodyMass,
+      ),
     };
     const comidaDe = (mealId) => (plate) =>
       scalePlate(
@@ -104,6 +113,7 @@ export function buildNutritionPlan({ diet, foods, plates }) {
         objetivoSnack.protein - (prueba.protein - prueba.sourceProtein),
       );
     }
+    objetivoSnack.protein = Math.max(MIN_SNACK_SOURCE_PROTEIN, objetivoSnack.protein);
     const snack = (plate) => scalePlate(plate, objetivoSnack, null, foodById);
     const day = momentos.map(({ plates: opciones, ...slot }) => ({
       ...slot,

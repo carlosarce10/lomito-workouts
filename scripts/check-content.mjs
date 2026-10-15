@@ -225,6 +225,16 @@ for (const mealId of MEAL_IDS.filter((id) => id !== 'snack')) {
   }
 }
 
+// El snack es una toma de proteina: todo plato de snack lleva al menos un alimento
+// proteico, para que el suelo de proteina del snack se pueda cumplir con cualquiera.
+const grupoDe = new Map(alimentos.map((alimento) => [alimento.id, alimento.foodGroupId]));
+platos.forEach((plato, i) => {
+  if (!plato.mealIds?.includes('snack')) return;
+  if (!plato.foodIds?.some((id) => grupoDe.get(id) === 'protein')) {
+    errores.push(`${PLATOS}: [${i}] "${plato.id}" es snack y no lleva ningun alimento proteico`);
+  }
+});
+
 // ── Clientes ────────────────────────────────────────────────────────────────
 const clientes = recorrer(CLIENTES, '.json').sort();
 for (const archivo of clientes) {

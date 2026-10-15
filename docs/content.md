@@ -158,12 +158,13 @@ medida casera.
 Proteina de calidad primero: la proteina de cada comida principal sale de su fuente
 proteica (carne, pescado, huevo, lacteo, proteina en polvo), de 0,4 a 0,55 g por kilo
 de peso en comida y cena, el valor mas alto que no pasa del maximo de proteina del dia,
-y 0,3 g/kg en el desayuno, que es mas ligero. La que traen
+y 0,3 g/kg en el desayuno, que es mas ligero, con un minimo de 20 g. La que traen
 arroz, tortilla o frijoles suma al total del dia pero no achica la carne. Ninguna
 fuente de carbohidratos pasa de 2 1/2 porciones en un plato. Los snacks cubren lo que
 falta para la mitad de cada rango del dia, descontando la proteina que ya trae su
-avena o su granola. El total del dia muestra cuanta proteina viene de fuente de
-calidad.
+avena o su granola, y nunca con menos de 15 g de proteina de calidad: el snack es una
+toma de proteina mas, y todo plato de snack lleva un alimento proteico (lo valida
+lint:content). El total del dia muestra cuanta proteina viene de fuente de calidad.
 
 Las fotos las descarga `npm run photos` desde Openverse (licencias CC0, dominio publico
 o CC BY) a `public/nutrition/<id>.jpg`, con la atribucion en
