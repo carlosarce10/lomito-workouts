@@ -1,4 +1,11 @@
-import { DIET_GOAL_IDS, GOAL_IDS, LEVEL_IDS, UNIT_SYSTEM_IDS } from '../catalogs/index.js';
+import {
+  COUNTRY_IDS,
+  DIET_GOAL_IDS,
+  GOAL_IDS,
+  LEVEL_IDS,
+  MEAL_SPLIT_IDS,
+  UNIT_SYSTEM_IDS,
+} from '../catalogs/index.js';
 import { LIMITS } from '../validation/limits.js';
 import * as r from '../validation/rules.js';
 
@@ -56,18 +63,22 @@ export const dietSchema = {
   mealsPerDay: r.optional(r.number({ ...LIMITS.mealsPerDay, integer: true })),
   calculatedAt: r.plainDate(),
   notes: r.optional(r.text({ min: 1, max: LIMITS.notes.max })),
+  // Eleccion del entrenador, como notes: como se reparte el dia entre las comidas.
+  mealSplitId: r.optional(r.oneOf(MEAL_SPLIT_IDS)),
 };
 
 /**
  * Forma de un cliente (`public/clients/<slug>.json`). El slug es el nombre del
- * archivo y lo comprueba lint:content. `name` lleva nombre y apellido. `unitSystemId`
- * y `diet` son opcionales: sin ellos el plan se ve en metrico y sin recomendacion.
+ * archivo y lo comprueba lint:content. `name` lleva nombre y apellido. `unitSystemId`,
+ * `countryId` y `diet` son opcionales: sin ellos el plan se ve en metrico, con los
+ * alimentos de Mexico y sin recomendacion.
  */
 export const clientSchema = {
   name: r.text(LIMITS.name),
   goalId: r.oneOf(GOAL_IDS),
   levelId: r.oneOf(LEVEL_IDS),
   unitSystemId: r.optional(r.oneOf(UNIT_SYSTEM_IDS)),
+  countryId: r.optional(r.oneOf(COUNTRY_IDS)),
   startDate: r.plainDate(),
   reviewDate: r.optional(r.plainDate()),
   notes: r.optional(r.text({ min: 1, max: LIMITS.notes.max })),

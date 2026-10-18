@@ -47,6 +47,8 @@ export const LIMITS = {
   measureStep: { min: 0.25, max: 50 },
   unit: { min: 1, max: 20 },
   plateItems: { min: 2, max: 6 },
+  // Gramos de relleno que caben en una pieza (un taco, una rebanada, un wrap).
+  fillingGrams: { min: 10, max: 300 },
   plateMeals: { min: 1, max: 4 },
   // Cada comida principal ofrece al menos 5 platos, y como mucho 2 se comparten con
   // otro momento del dia: al menos 3 son solo suyos.

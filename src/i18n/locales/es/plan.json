@@ -43,6 +43,8 @@
     "plateLead_one": "Arma así tu comida principal.",
     "plateLead_many": "Arma así cada una de tus {{count}} comidas principales.",
     "plateLead_other": "Arma así cada una de tus {{count}} comidas principales.",
+    "plateLeadSplit": "Arma así tu desayuno y tu comida. La cena va aparte.",
+    "dinnerLine": "En la cena, alta en proteína y ligera en carbohidratos y grasa: {{items}}, y de {{min}} a {{max}} puños de verdura.",
     "portion": {
       "protein_one": "{{value}} palma de proteína",
       "protein_many": "{{value}} palmas de proteína",

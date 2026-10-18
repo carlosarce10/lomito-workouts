@@ -1,4 +1,4 @@
-import { DEFAULT_UNIT_SYSTEM_ID } from '../catalogs/index.js';
+import { DEFAULT_COUNTRY_ID, DEFAULT_UNIT_SYSTEM_ID } from '../catalogs/index.js';
 
 /**
  * Hidrata el plan de un cliente: resuelve cada exerciseId y su alternativa contra la biblioteca,
@@ -58,6 +58,7 @@ export function resolvePlan({ client, library, methodology }) {
         goalId: client.goalId,
         levelId: client.levelId,
         unitSystemId: client.unitSystemId ?? DEFAULT_UNIT_SYSTEM_ID,
+        countryId: client.countryId ?? DEFAULT_COUNTRY_ID,
         startDate: client.startDate,
         reviewDate: client.reviewDate ?? null,
         notes: client.notes ?? null,

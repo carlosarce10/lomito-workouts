@@ -103,16 +103,20 @@ traduccion y ambitos de commit. La columna "codigo" manda.
 | Carbohidratos en gramos                               | `carbs`                                      | Carbohidratos                            |
 | Fibra en gramos y agua en mililitros                  | `fiber`, `water`                             | Fibra, Agua                              |
 | Comidas al dia                                        | `mealsPerDay`                                | Comidas al dia                           |
+| Reparto de la dieta entre comidas (catalogo)          | `mealSplitId`                                | Parejo, Cena proteica                    |
 | Pestana del plan (catalogo en AppShell)               | `routines`, `diet`, `info`                   | Rutina, Dieta, Informacion               |
 | Alimento con su porcion de mano y medida casera       | `food`                                       | Alimento                                 |
 | Grupo de alimentos (catalogo)                         | `foodGroupId`                                | Proteina, Carbohidratos, Grasa, Verdura  |
 | Porcion de mano: palma, puno, pulgar                  | `portion`                                    | Palma, Puno, Pulgar                      |
 | Plato o snack sugerido, con foto                      | `plate`                                      | Plato                                    |
+| Alimento que envuelve el relleno (tortilla, pan)      | `carrier`, `fillingGrams`                    |                                          |
 | Momento del dia (catalogo)                            | `mealId`, `mealIds`                          | Desayuno, Comida, Cena, Snack            |
 | Suplemento recomendado                                | `supplement`                                 | Suplemento                               |
 | Alimentos, platos, suplementos y consejos             | `nutrition`                                  | Dieta                                    |
 | Fecha del calculo                                     | `calculatedAt`                               | Calculado el                             |
 | Sistema de unidades con que el cliente lee el plan    | `unitSystemId`                               |                                          |
+| Pais del cliente (catalogo): decide sus alimentos     | `countryId`                                  | Mexico, Estados Unidos                   |
+| Paises donde un alimento es facil de conseguir        | `countryIds`                                 |                                          |
 | Entradas del calculo, nunca en un JSON                | `bodyMass` (kg), `height` (cm), `age`, `sex` |                                          |
 
 Palabras prohibidas y su sustituto:
@@ -209,8 +213,8 @@ Invariantes que impone `lint:content` y ninguna escritura puede romper:
    `bodyMass`, `height`, `age`, `sex` y la actividad son claves prohibidas en todo
    JSON: las entradas del calculo no entran en el repositorio. Ver [docs/diet.md](docs/diet.md).
 9. Todo `foodId` de un plato existe en `foods.json`; los ids de platos y suplementos no
-   se repiten; uno con `source` tiene `public/nutrition/<id>.jpg`. Cada comida
-   principal tiene al menos 5 platos y comparte como mucho 2 con otros momentos.
+   se repiten; uno con `source` tiene `public/nutrition/<id>.jpg`. En cada pais, cada
+   comida principal tiene al menos 5 platos y comparte como mucho 2 con otros momentos.
 
 El runtime no valida forma. `resolvePlan` solo resuelve referencias y aplica los
 valores por defecto de la metodologia; un `exerciseId` huerfano devuelve

@@ -1,4 +1,9 @@
-import { COUNTED_FOOD_GROUPS, FOOD_GROUP_IDS } from '../catalogs/index.js';
+import {
+  COUNTED_FOOD_GROUPS,
+  DEFAULT_COUNTRY_ID,
+  FOOD_GROUP_IDS,
+  getMealSplit,
+} from '../catalogs/index.js';
 
 // Parte de las porciones del dia que va a las comidas principales; el resto, a snacks.
 const MAIN_SHARE = 0.8;
@@ -10,6 +15,9 @@ const VEGETABLES_IN_SNACK = { min: 0.5, max: 1 };
 // Vueltas del ajuste de cada plato y tope de porciones de un grupo en un plato.
 const FIT_ROUNDS = 25;
 const MAX_PORTIONS = 8;
+// Un envoltorio (tortilla, pan) lleva como poco esta parte de su relleno maximo por
+// pieza: un taco de 40 g no baja de 20 g.
+const MIN_FILLING_SHARE = 0.5;
 // Tope practico de una sola fuente de carbohidratos en un plato (2 1/2 punos: unos
 // 1 1/4 tazas de arroz). Lo que no cabe en las comidas pasa a los snacks.
 const MAX_CARB_PORTIONS_PER_FOOD = 2.5;
@@ -49,17 +57,24 @@ const TWO_SNACKS_FROM_KCAL = 450;
  * @param {object} input.diet Bloque `diet` del cliente, ya resuelto.
  * @param {object[]} input.foods Alimentos de src/content/nutrition/foods.json.
  * @param {object[]} input.plates Platos de src/content/nutrition/plates.json.
+ * @param {string} [input.countryId] Pais del cliente: solo entran los platos y
+ *   reemplazos cuyos alimentos son faciles de conseguir alli.
  * @returns {{ ok: true, value: object } | { ok: false, error: 'orphanFood', foodId: string }}
  */
-export function buildNutritionPlan({ diet, foods, plates }) {
+export function buildNutritionPlan({ diet, foods, plates, countryId = DEFAULT_COUNTRY_ID }) {
   const foodById = new Map(foods.map((food) => [food.id, food]));
   for (const plate of plates) {
     const huerfano = plate.foodIds.find((id) => !foodById.has(id));
     if (huerfano) return { ok: false, error: 'orphanFood', foodId: huerfano };
   }
+  const delPais = foods.filter((food) => isAvailableIn(food, countryId));
+  const platosDelPais = plates.filter((plate) =>
+    plate.foodIds.every((id) => isAvailableIn(foodById.get(id), countryId)),
+  );
 
   const meals = diet.mealsPerDay ?? 3;
   const portions = dailyPortions(diet, meals);
+  const reparto = getMealSplit(diet.mealSplitId).dinner;
   const mid = ({ min, max }) => (min + max) / 2;
   const bodyMass = mid(diet.protein) / mid(diet.proteinPerKg);
 
@@ -68,7 +83,12 @@ export function buildNutritionPlan({ diet, foods, plates }) {
   // ejemplo no repita plato.
   const usados = new Set();
   const momentos = daySlots(meals, portions.snacks).map((slot) => {
-    const candidatos = plates.filter((p) => p.mealIds.includes(slot.mealId));
+    // Una cena baja en carbohidratos no se arma con tortilla o pan como base: unos tacos
+    // logicos llevarian 4 tortillas y unos de 1 tortilla no son tacos.
+    const sinEnvoltorio = reparto && slot.mealId === 'dinner';
+    const candidatos = platosDelPais.filter(
+      (p) => p.mealIds.includes(slot.mealId) && !(sinEnvoltorio && p.carrier),
+    );
     const sugerido = candidatos.find((p) => !usados.has(p.id)) ?? candidatos[0];
     if (sugerido) usados.add(sugerido.id);
     const ordenados = sugerido ? [sugerido, ...candidatos.filter((p) => p !== sugerido)] : [];
@@ -79,22 +99,22 @@ export function buildNutritionPlan({ diet, foods, plates }) {
   // lacteo): la que traen arroz, frijoles o tortilla suma al dia pero no achica la
   // carne. Lo que falta para la mitad de cada rango del dia lo cubren los snacks.
   let resultado = null;
-  for (const gramosPorKg of SOURCE_PROTEIN_PER_KG) {
-    const objetivoComida = { ...portions.mealTargets, protein: gramosPorKg * bodyMass };
+  for (const { gramosPorKg, cenaPorKg } of proteinSteps(reparto)) {
+    const { resto, cena } = splitTargets(portions.mealTargets, reparto, meals);
+    const objetivoComida = { ...resto, protein: gramosPorKg * bodyMass };
     const objetivoDesayuno = {
-      ...portions.mealTargets,
+      ...resto,
       protein: Math.max(
         MIN_BREAKFAST_SOURCE_PROTEIN,
         Math.min(gramosPorKg, BREAKFAST_SOURCE_PROTEIN_PER_KG) * bodyMass,
       ),
     };
+    const objetivoCena = cena ? { ...cena, protein: cenaPorKg * bodyMass } : objetivoComida;
+    const objetivoDe = { breakfast: objetivoDesayuno, lunch: objetivoComida, dinner: objetivoCena };
+    const verduraDe = (mealId) =>
+      mealId === 'dinner' && reparto ? reparto.vegetables : VEGETABLES_PER_MEAL;
     const comidaDe = (mealId) => (plate) =>
-      scalePlate(
-        plate,
-        mealId === 'breakfast' ? objetivoDesayuno : objetivoComida,
-        VEGETABLES_PER_MEAL,
-        foodById,
-      );
+      scalePlate(plate, objetivoDe[mealId], verduraDe(mealId), foodById);
     const principales = momentos
       .filter((slot) => slot.mealId !== 'snack' && slot.plates.length > 0)
       .map((slot) => comidaDe(slot.mealId)(slot.plates[0]).totals);
@@ -125,7 +145,7 @@ export function buildNutritionPlan({ diet, foods, plates }) {
       (suma, entry) => suma + entry.totals.sourceProtein,
       0,
     );
-    resultado = { day, dayTotals, objetivoComida, objetivoDesayuno, objetivoSnack };
+    resultado = { day, dayTotals, objetivoComida, objetivoDesayuno, objetivoCena, objetivoSnack };
     if (dayTotals.protein <= diet.protein.max) break;
   }
 
@@ -146,6 +166,21 @@ export function buildNutritionPlan({ diet, foods, plates }) {
     PORTION_STEP,
     roundTo(resultado.objetivoDesayuno.protein / palma, PORTION_STEP),
   );
+  // Con un reparto que cambia la cena, la guia la cuenta aparte; si no, es null.
+  portions.dinner = reparto
+    ? {
+        ...Object.fromEntries(
+          COUNTED_FOOD_GROUPS.map((group) => [
+            group.id,
+            Math.max(
+              PORTION_STEP,
+              roundTo(resultado.objetivoCena[group.macro] / group.grams, PORTION_STEP),
+            ),
+          ]),
+        ),
+        vegetables: reparto.vegetables,
+      }
+    : null;
   const { day, dayTotals } = resultado;
 
   return {
@@ -156,7 +191,7 @@ export function buildNutritionPlan({ diet, foods, plates }) {
       dayTotals,
       swaps: FOOD_GROUP_IDS.map((foodGroupId) => ({
         foodGroupId,
-        foods: foods.filter((food) => food.foodGroupId === foodGroupId),
+        foods: delPais.filter((food) => food.foodGroupId === foodGroupId),
       })),
     },
   };
@@ -193,6 +228,55 @@ function dailyPortions(diet, meals) {
 }
 
 /**
+ * Indica si un alimento entra en la dieta de un pais: sin `countryIds`, en todos.
+ *
+ * @param {object} food Alimento de foods.json.
+ * @param {string} countryId Id del catalogo de paises.
+ * @returns {boolean}
+ */
+export const isAvailableIn = (food, countryId) =>
+  !food.countryIds || food.countryIds.includes(countryId);
+
+/**
+ * Pasos de proteina de calidad por comida que se prueban hasta que el dia no pasa del
+ * maximo. Sin reparto de cena, la cena va como la comida. Con el, la cena se queda en
+ * su valor alto mientras bajan las demas comidas, y solo despues baja ella.
+ */
+function proteinSteps(reparto) {
+  const pasos = SOURCE_PROTEIN_PER_KG.map((gramosPorKg) => ({
+    gramosPorKg,
+    cenaPorKg: reparto ? Math.max(gramosPorKg, reparto.sourceProteinPerKg) : gramosPorKg,
+  }));
+  if (!reparto) return pasos;
+  const minimo = SOURCE_PROTEIN_PER_KG.at(-1);
+  const cena = SOURCE_PROTEIN_PER_KG.filter((g) => g < reparto.sourceProteinPerKg);
+  return [...pasos, ...cena.map((cenaPorKg) => ({ gramosPorKg: minimo, cenaPorKg }))];
+}
+
+/**
+ * Gramos de carbohidratos y grasa de cada comida principal segun el reparto. Sin
+ * reparto de cena, todas iguales. Con el, la cena se queda con su fraccion y lo que
+ * suelta se suma a partes iguales a las demas comidas principales; lo que sus platos no
+ * puedan llevar acaba en los snacks, que cubren lo que falta del dia.
+ */
+function splitTargets(mealTargets, reparto, meals) {
+  if (!reparto) return { resto: mealTargets, cena: null };
+  const dia = MAIN_MEALS[meals] ?? MAIN_MEALS[3];
+  const cenas = dia.filter((mealId) => mealId === 'dinner').length;
+  const otras = dia.length - cenas;
+  const resto = { ...mealTargets };
+  const cena = { ...mealTargets };
+  for (const [macro, share] of [
+    ['carbs', reparto.carbsShare],
+    ['fat', reparto.fatShare],
+  ]) {
+    cena[macro] = mealTargets[macro] * share;
+    resto[macro] = mealTargets[macro] + ((mealTargets[macro] - cena[macro]) * cenas) / otras;
+  }
+  return { resto, cena };
+}
+
+/**
  * Orden del dia: las comidas principales y los snacks entre ellas. Con un snack, va
  * entre la comida y la cena; con dos, uno a media manana y otro por la tarde.
  */
@@ -209,7 +293,8 @@ function daySlots(meals, snacks) {
  * objetivo / total de su macro hasta que el plato cuadra. La proteina cuenta solo la
  * de los alimentos proteicos, para que la guarnicion no achique la carne; carbohidratos
  * y grasa cuentan todo (el huevo trae grasa). Ninguna fuente de carbohidratos pasa de
- * 2 1/2 porciones. Despues se redondea cada cantidad a su medida casera.
+ * 2 1/2 porciones. Despues se redondea cada cantidad a su medida casera, y el envoltorio
+ * (tortilla, pan) lleva las piezas que necesita su relleno aunque pase de su objetivo.
  */
 function scalePlate(plate, targets, vegetables, foodById) {
   const alimentos = plate.foodIds.map((id) => foodById.get(id));
@@ -247,8 +332,19 @@ function scalePlate(plate, targets, vegetables, foodById) {
     }
   }
 
+  // Cantidad de cada alimento en su medida casera, redondeada a su paso.
+  const cantidades = new Map(
+    alimentos
+      .filter((food) => food.foodGroupId !== 'vegetables')
+      .map((food) => {
+        const { amount, step } = food.measure;
+        return [food, Math.max(step, roundTo(porciones(food) * amount, step))];
+      }),
+  );
+  if (plate.carrier) ajustarEnvoltorio(plate.carrier, alimentos, cantidades);
+
   const items = alimentos.map((food) => {
-    const { amount, step } = food.measure;
+    const { amount } = food.measure;
     if (food.foodGroupId === 'vegetables') {
       return {
         food,
@@ -258,7 +354,7 @@ function scalePlate(plate, targets, vegetables, foodById) {
         macros: scaleMacros(food.macros, porcionesVerdura),
       };
     }
-    const cantidad = Math.max(step, roundTo(porciones(food) * amount, step));
+    const cantidad = cantidades.get(food);
     const reales = cantidad / amount;
     return {
       food,
@@ -274,6 +370,45 @@ function scalePlate(plate, targets, vegetables, foodById) {
     sumMacros(items.filter((item) => deFuente(item.food)).map((item) => item.macros)).protein,
   );
   return { plate, items, totals };
+}
+
+/**
+ * Deja el envoltorio (tortilla, pan) con las piezas que pide su relleno: cada pieza
+ * lleva como mucho `fillingGrams` de alimento proteico y como poco la mitad. Un taco
+ * va de 20 a 40 g: ni 130 g de pescado en 1 tortilla ni 70 g de pollo en 4. Si sobran
+ * piezas, sus carbohidratos pasan al otro carbohidrato del plato (los frijoles de la
+ * tinga, la papa de la hamburguesa) hasta su tope; lo que no cabe lo cubre el snack.
+ * Cambia `cantidades` en su sitio.
+ */
+function ajustarEnvoltorio(carrier, alimentos, cantidades) {
+  const envoltorio = alimentos.find((food) => food.id === carrier.foodId);
+  const relleno = alimentos
+    .filter((food) => food.foodGroupId === 'protein')
+    .reduce((suma, food) => suma + (cantidades.get(food) / food.measure.amount) * food.grams, 0);
+  const { amount } = envoltorio.measure;
+  // Un sandwich o una hamburguesa van de dos en dos rebanadas: `carrier.step` lo dice.
+  const step = carrier.step ?? envoltorio.measure.step;
+  const minimo = Math.max(step, Math.ceil(relleno / carrier.fillingGrams / step) * step);
+  const maximo = Math.max(
+    minimo,
+    Math.floor(relleno / (carrier.fillingGrams * MIN_FILLING_SHARE) / step) * step,
+  );
+  const antes = cantidades.get(envoltorio);
+  const ahora = Math.min(maximo, Math.max(minimo, Math.round(antes / step) * step));
+  cantidades.set(envoltorio, ahora);
+  if (ahora >= antes) return;
+
+  const sobran = ((antes - ahora) / amount) * envoltorio.macros.carbs;
+  const otros = alimentos.filter(
+    (food) => food.foodGroupId === 'carbs' && food !== envoltorio && cantidades.has(food),
+  );
+  for (const food of otros) {
+    const medida = food.measure;
+    const extra = (sobran / otros.length / food.macros.carbs) * medida.amount;
+    const tope = MAX_CARB_PORTIONS_PER_FOOD * medida.amount;
+    const nueva = Math.min(tope, roundTo(cantidades.get(food) + extra, medida.step));
+    cantidades.set(food, Math.max(cantidades.get(food), nueva));
+  }
 }
 
 const scaleMacros = ({ protein, carbs, fat }, factor) => ({

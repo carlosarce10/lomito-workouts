@@ -1,10 +1,18 @@
 export { ACTIVITY_IDS, ACTIVITY_LEVELS, getActivityFactor, isActivityId } from './activity.js';
+export { COUNTRY_IDS, DEFAULT_COUNTRY_ID, isCountryId } from './countries.js';
 export { DIET_GOAL_IDS, DIET_GOALS, getDietGoal, isDietGoalId } from './dietGoals.js';
 export { EQUIPMENT_IDS, EQUIPMENT_TYPES, getEquipmentIcon, isEquipmentId } from './equipment.js';
 export { COUNTED_FOOD_GROUPS, FOOD_GROUP_IDS, FOOD_GROUPS, getFoodGroup } from './foodGroups.js';
 export { GOAL_IDS, isGoalId } from './goals.js';
 export { isLevelId, LEVEL_IDS } from './levels.js';
 export { isMealId, MEAL_IDS } from './meals.js';
+export {
+  DEFAULT_MEAL_SPLIT_ID,
+  getMealSplit,
+  isMealSplitId,
+  MEAL_SPLIT_IDS,
+  MEAL_SPLITS,
+} from './mealSplits.js';
 export {
   getMuscleColor,
   getMuscleGroup,

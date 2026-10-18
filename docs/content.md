@@ -97,6 +97,7 @@ repositorio es publico: los JSON de clientes se leen en GitHub.
 | `reviewDate`               | no          | `YYYY-MM-DD`                                                          |
 | `notes`                    | no          | hasta 300 caracteres; nada de datos de salud detallados               |
 | `unitSystemId`             | no          | `metric` (por defecto) o `imperial`; solo cambia como se muestra      |
+| `countryId`                | no          | `mx` (por defecto) o `us`; decide que platos y reemplazos ve          |
 | `diet`                     | no          | el bloque que imprime `npm run diet`, nunca escrito a mano            |
 | `routines`                 | si          | 1 a 7. Su numero es la posicion: no hay campo `day`                   |
 | `routines[].name`          | si          | 1 a 60 caracteres, unico dentro del cliente                           |
@@ -129,12 +130,12 @@ cliente los ve ajustados a su `diet` por `buildNutritionPlan`
 (`src/domain/model/nutritionPlan.js`), que corre en el navegador porque solo usa
 resultados.
 
-| Archivo            | Cada entrada                                                                                 |
-| ------------------ | -------------------------------------------------------------------------------------------- |
-| `foods.json`       | `id`, `name`, `foodGroupId`, `grams`, `measure { amount, unit, unitPlural, step }`, `macros` |
-| `plates.json`      | `id`, `name`, `mealIds` (desayuno, comida, cena, snack), `foodIds`, `source` de la foto      |
-| `supplements.json` | `id`, `name`, `dose`, `body` (1 a 3 parrafos), `source` de la foto                           |
-| `diet.json`        | `tips` (consejos cortos) y `sections` (id, titulo y parrafos, plegados al final)             |
+| Archivo            | Cada entrada                                                                                                        |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| `foods.json`       | `id`, `name`, `foodGroupId`, `grams`, `measure { amount, unit, unitPlural, step }`, `macros`, `countryIds` opcional |
+| `plates.json`      | `id`, `name`, `mealIds` (desayuno, comida, cena, snack), `foodIds`, `carrier` opcional, `source` de la foto         |
+| `supplements.json` | `id`, `name`, `dose`, `body` (1 a 3 parrafos), `source` de la foto                                                  |
+| `diet.json`        | `tips` (consejos cortos) y `sections` (id, titulo y parrafos, plegados al final)                                    |
 
 Un alimento se describe por UNA porcion de mano de su grupo: una palma de proteina
 (unos 25 g), un puno de carbohidratos (unos 25 g), un pulgar de grasa (unos 10 g) o un
@@ -142,9 +143,25 @@ puno de verdura (libre). `measure` es como se mide esa porcion en casa y `step` 
 redondeo al escalarla; con `unit: "g"` la medida es el peso. `macros` son los gramos de
 proteina, carbohidratos y grasa de esa porcion.
 
-Cada comida principal (desayuno, comida, cena) ofrece al menos 5 platos, y como mucho
-2 se comparten con otro momento del dia: al menos 3 son solo suyos. Un dia lleva
+La dieta usa alimentos faciles de conseguir en el pais del cliente (`countryId`). Un
+alimento con `countryIds` solo entra en esos paises (los nopales y el queso panela, en
+Mexico; el bagel y la carne molida de pavo, en Estados Unidos); sin el, en todos. Un
+plato aparece si todos sus alimentos se consiguen alli, y los reemplazos se filtran
+igual. Que un alimento sea caro no lo saca: es otro criterio, que decide el entrenador.
+
+En cada pais, cada comida principal (desayuno, comida, cena) ofrece al menos 5 platos,
+y como mucho 2 se comparten con otro momento del dia: al menos 3 son solo suyos. Un dia lleva
 siempre 3 comidas completas como minimo, aunque el cliente diga que hace menos.
+
+Las porciones tienen que formar un plato logico. En los platos donde la tortilla o el
+pan envuelven el relleno (tacos, tostadas, sandwiches, wraps, hamburguesa), `carrier`
+dice cual es ese alimento y cuantos gramos de relleno proteico caben en una pieza
+(`fillingGrams`: 40 g en un taco, 100 g en un wrap). Cada pieza lleva entre la mitad y
+el total de ese relleno: un taco, de 20 a 40 g. El plato lleva las piezas que pide su
+relleno aunque pase de su objetivo de carbohidratos (nunca 1 tortilla con 130 g de
+pescado), y si le sobran, sus carbohidratos pasan al otro carbohidrato del plato o al
+snack (nunca 70 g de pollo en 4 tortillas). `step` agrupa las piezas: el pan de un
+sandwich o una hamburguesa va de dos en dos rebanadas.
 
 Un plato lista sus alimentos sin cantidades. Para cada cliente, las porciones del dia
 se reparten un 80 % entre sus comidas principales y un 20 % a snacks: uno, entre la
@@ -193,6 +210,7 @@ npm run diet -- --sex male --age 30 --height 170cm --body-mass 154lb --activity 
 | `mealsPerDay`         | opcional, 3 a 6; si el cliente hace menos, el script lo sube a 3            |
 | `calculatedAt`        | `YYYY-MM-DD`                                                                |
 | `notes`               | opcional, hasta 300 caracteres del entrenador; nada de datos de salud       |
+| `mealSplitId`         | opcional, eleccion del entrenador: `even` (defecto) o `protein-dinner`      |
 
 ## La metodologia
 
@@ -216,7 +234,7 @@ progresion). Se cambia a mano, nunca desde la skill.
 8. `diet`, si existe, cumple su esquema: solo resultados en metrico, como rangos.
 9. Todo `foodId` de un plato existe; los ids de platos y suplementos no se repiten; uno
    con `source` tiene su foto en `public/nutrition/<id>.jpg`. Cada comida principal
-   tiene al menos 5 platos y comparte como mucho 2 con otros momentos.
+   tiene al menos 5 platos en cada pais y comparte como mucho 2 con otros momentos.
 10. Un `alternativeId` existe, no es el mismo ejercicio, no esta ya en la rutina y
     comparte el musculo principal del ejercicio al que sustituye.
 
@@ -256,7 +274,7 @@ Las preguntas que se le hacen al cliente antes estan en [intake.md](intake.md).
    salvo excepciones a la metodologia.
 3. Si el cliente lleva recomendacion nutrimental, `npm run diet` con sus datos y pegar
    el bloque `diet` que imprime, sin tocar una cifra; `unitSystemId: "imperial"` si
-   lee en libras.
+   lee en libras y `countryId` segun el pais en que vive.
 4. `npm run format`, `npm run lint:content` y `npm run check`.
 5. La URL del plan es `<sitio>/#/<slug>`.
 

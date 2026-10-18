@@ -224,6 +224,27 @@ lleva como minimo 20 g de proteina de calidad. El snack es una cuarta toma de pr
 y no un resto: como minimo 15 g de calidad (decision de Lomito Dev, 2026-10-15, al
 revisar la dieta de Kathya, que tenia snacks de 0 a 12 g).
 
+### Reparto entre comidas
+
+Por defecto las comidas principales se reparten por igual. Para quien cena fuerte, el
+entrenador puede poner `mealSplitId: "protein-dinner"` en el bloque `diet`, a mano y
+como `notes`, porque es una eleccion y no un resultado del calculo
+(`src/domain/catalogs/mealSplits.js`). La cena pasa a ser la toma con mas proteina de
+calidad (hasta 0,55 g/kg: unos 40 g antes de dormir aumentan la sintesis nocturna, Res
+y otros 2012, Snijders y otros 2015), con el 30 % de los carbohidratos y la mitad de
+la grasa de una comida pareja, y de 2 a 3 punos de verdura para que siga siendo
+abundante. Lo que suelta la cena se suma al desayuno y la comida, y lo que sus platos
+no pueden llevar pasa a los snacks. Las calorias y los rangos del dia no cambian. La
+cena no ofrece platos con tortilla o pan como envoltorio (`carrier`): unos tacos con
+las tortillas que piden ya no serian una cena baja en carbohidratos, y con 1 tortilla
+no serian tacos. lint:content exige 5 cenas sin envoltorio en cada pais.
+
+Si el dia se pasa del maximo de proteina, baja primero la de desayuno y comida y solo
+despues la de la cena. Cenar carbohidratos no engorda por si mismo: el reparto responde
+a la preferencia y la saciedad del cliente, y conviene que los carbohidratos queden
+cerca del entrenamiento; con entreno nocturno, la cena es la comida de despues y este
+reparto no es el indicado.
+
 ### Redondeos
 
 Ninguna cifra se muestra con precision falsa. Gasto en reposo a 10 kcal; mantenimiento

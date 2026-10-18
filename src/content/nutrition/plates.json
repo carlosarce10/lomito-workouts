@@ -64,10 +64,42 @@
     }
   },
   {
+    "id": "breakfast-burrito",
+    "name": "Burrito de huevo con frijoles",
+    "mealIds": ["breakfast"],
+    "foodIds": ["eggs", "egg-whites", "flour-tortilla", "beans", "salsa"],
+    "carrier": {
+      "foodId": "flour-tortilla",
+      "fillingGrams": 150
+    },
+    "source": {
+      "provider": "openverse",
+      "id": "ced70a3b-901f-4a99-a3ab-4b7f69f09b84"
+    }
+  },
+  {
+    "id": "bagel-egg-turkey",
+    "name": "Bagel con huevo y pavo",
+    "mealIds": ["breakfast"],
+    "foodIds": ["eggs", "turkey-breast", "bagel", "avocado"],
+    "carrier": {
+      "foodId": "bagel",
+      "fillingGrams": 160
+    },
+    "source": {
+      "provider": "openverse",
+      "id": "5e19a809-efda-46b9-88dc-fca408308fbd"
+    }
+  },
+  {
     "id": "avocado-egg-toast",
     "name": "Pan tostado con huevo y aguacate",
     "mealIds": ["breakfast"],
     "foodIds": ["eggs", "egg-whites", "bread", "avocado"],
+    "carrier": {
+      "foodId": "bread",
+      "fillingGrams": 100
+    },
     "source": {
       "provider": "openverse",
       "id": "6464ec62-9526-4354-a094-fd7b6effc834"
@@ -128,6 +160,10 @@
     "name": "Tacos de pescado",
     "mealIds": ["dinner"],
     "foodIds": ["white-fish", "corn-tortilla", "avocado", "pico-de-gallo"],
+    "carrier": {
+      "foodId": "corn-tortilla",
+      "fillingGrams": 40
+    },
     "source": {
       "provider": "openverse",
       "id": "cb07a010-ded0-4da9-82be-61efccebecc9"
@@ -168,6 +204,10 @@
     "name": "Tacos de pollo",
     "mealIds": ["lunch"],
     "foodIds": ["chicken-breast", "corn-tortilla", "avocado", "pico-de-gallo"],
+    "carrier": {
+      "foodId": "corn-tortilla",
+      "fillingGrams": 40
+    },
     "source": {
       "provider": "openverse",
       "id": "9f6e4c66-2d19-4632-9c60-8a831373fbb6"
@@ -195,6 +235,10 @@
       "salad",
       "avocado"
     ],
+    "carrier": {
+      "foodId": "corn-tortilla",
+      "fillingGrams": 40
+    },
     "source": {
       "provider": "openverse",
       "id": "212752d2-22e8-41d9-8732-32c238ab77a9"
@@ -205,6 +249,10 @@
     "name": "Fajitas de res con tortillas",
     "mealIds": ["lunch"],
     "foodIds": ["beef-sirloin", "corn-tortilla", "mixed-vegetables", "avocado"],
+    "carrier": {
+      "foodId": "corn-tortilla",
+      "fillingGrams": 40
+    },
     "source": {
       "provider": "openverse",
       "id": "55c6f66c-a7d4-4d51-9bf5-771da03870a6"
@@ -231,10 +279,59 @@
     }
   },
   {
+    "id": "chicken-wrap",
+    "name": "Wrap de pollo con aguacate",
+    "mealIds": ["lunch"],
+    "foodIds": ["chicken-breast", "flour-tortilla", "salad", "avocado"],
+    "carrier": {
+      "foodId": "flour-tortilla",
+      "fillingGrams": 100
+    },
+    "source": {
+      "provider": "openverse",
+      "id": "cac91f73-e2fc-4353-9bbc-70bb623d0c1c"
+    }
+  },
+  {
+    "id": "turkey-burger-potatoes",
+    "name": "Hamburguesa de pavo con papas al horno",
+    "mealIds": ["lunch"],
+    "foodIds": ["ground-turkey", "bread", "potato", "salad", "olive-oil"],
+    "carrier": {
+      "foodId": "bread",
+      "fillingGrams": 60,
+      "step": 2
+    },
+    "source": {
+      "provider": "openverse",
+      "id": "96b1b13b-b8c2-4855-92a3-b986d175dcba"
+    }
+  },
+  {
+    "id": "chicken-soup",
+    "name": "Caldo de pollo con verduras y arroz",
+    "mealIds": ["lunch"],
+    "foodIds": [
+      "chicken-breast",
+      "mixed-vegetables",
+      "rice",
+      "potato",
+      "avocado"
+    ],
+    "source": {
+      "provider": "openverse",
+      "id": "3fe169fb-eff5-41f1-809b-5407d27457b6"
+    }
+  },
+  {
     "id": "tuna-tostadas",
     "name": "Tostadas de atún",
     "mealIds": ["dinner"],
     "foodIds": ["tuna", "corn-tortilla", "avocado", "pico-de-gallo"],
+    "carrier": {
+      "foodId": "corn-tortilla",
+      "fillingGrams": 40
+    },
     "source": {
       "provider": "openverse",
       "id": "e6aa6881-b1dd-46e9-a118-535ffeaae17c"
@@ -248,22 +345,6 @@
     "source": {
       "provider": "openverse",
       "id": "a0ea01d4-58bd-412a-b074-44460aaf560a"
-    }
-  },
-  {
-    "id": "chicken-soup",
-    "name": "Caldo de pollo con verduras y arroz",
-    "mealIds": ["dinner"],
-    "foodIds": [
-      "chicken-breast",
-      "mixed-vegetables",
-      "rice",
-      "potato",
-      "avocado"
-    ],
-    "source": {
-      "provider": "openverse",
-      "id": "3fe169fb-eff5-41f1-809b-5407d27457b6"
     }
   },
   {
@@ -291,6 +372,11 @@
     "name": "Sándwich de pavo",
     "mealIds": ["snack"],
     "foodIds": ["turkey-breast", "bread", "avocado", "salad"],
+    "carrier": {
+      "foodId": "bread",
+      "fillingGrams": 50,
+      "step": 2
+    },
     "source": {
       "provider": "openverse",
       "id": "d99f4bdc-84eb-4517-a4f3-087eb1b7fc69"
@@ -331,6 +417,10 @@
     "name": "Quesadilla de panela con salsa",
     "mealIds": ["snack"],
     "foodIds": ["panela-cheese", "corn-tortilla", "salsa"],
+    "carrier": {
+      "foodId": "corn-tortilla",
+      "fillingGrams": 30
+    },
     "source": {
       "provider": "openverse",
       "id": "7f263225-effe-45dd-9345-d28ff379d4b0"
@@ -341,6 +431,10 @@
     "name": "Tacos de pavo con aguacate",
     "mealIds": ["snack"],
     "foodIds": ["turkey-breast", "corn-tortilla", "avocado"],
+    "carrier": {
+      "foodId": "corn-tortilla",
+      "fillingGrams": 40
+    },
     "source": {
       "provider": "openverse",
       "id": "3bae4a2a-9397-4622-a936-5067163a7265"
@@ -361,6 +455,11 @@
     "name": "Sándwich de huevo",
     "mealIds": ["snack"],
     "foodIds": ["eggs", "bread", "pico-de-gallo"],
+    "carrier": {
+      "foodId": "bread",
+      "fillingGrams": 50,
+      "step": 2
+    },
     "source": {
       "provider": "openverse",
       "id": "b177703e-06c2-4715-abb1-9cfc64c31bb5"

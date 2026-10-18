@@ -34,7 +34,12 @@ export async function planLoader({ params }) {
   if (!plan.ok) throw new Error(plan.error);
   if (!plan.value.diet) return { ...plan.value, nutrition: null };
 
-  const nutrition = buildNutritionPlan({ diet: plan.value.diet, foods: FOODS, plates: PLATES });
+  const nutrition = buildNutritionPlan({
+    diet: plan.value.diet,
+    foods: FOODS,
+    plates: PLATES,
+    countryId: plan.value.client.countryId,
+  });
   if (!nutrition.ok) throw new Error(nutrition.error);
   return { ...plan.value, nutrition: nutrition.value };
 }

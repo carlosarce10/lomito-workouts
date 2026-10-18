@@ -3,6 +3,7 @@
   "goalId": "hypertrophy",
   "levelId": "beginner",
   "unitSystemId": "imperial",
+  "countryId": "us",
   "startDate": "2026-10-12",
   "reviewDate": "2026-12-07",
   "notes": "Semana: Push, Pull, Leg, Upper y Lower, de lunes a viernes. En cada grupo, primero el ejercicio aislado y después el compuesto. La misma semana se repite dos meses: busca mejorar repeticiones y carga en cada ejercicio.",
@@ -57,7 +58,8 @@
       "max": 2700
     },
     "mealsPerDay": 3,
-    "calculatedAt": "2026-10-10"
+    "calculatedAt": "2026-10-10",
+    "mealSplitId": "protein-dinner"
   },
   "routines": [
     {

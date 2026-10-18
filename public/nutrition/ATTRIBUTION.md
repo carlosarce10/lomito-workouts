@@ -11,6 +11,8 @@ cita. Para usar una foto propia, se quita `source` del plato y se coloca el arch
 | `eggs-nopales.jpg` | Nopales con Huevos (cactus with eggs) | pointnshoot | BY 2.0 | https://www.flickr.com/photos/18244673@N00/446638127 |
 | `spinach-mushroom-omelette.jpg` | Spinach–mushroom omelette with quinoa an mixed vegetables. #veggielifter #stillhungry | Kim Siever | PDM 1.0 | https://www.flickr.com/photos/57873306@N00/15201719054 |
 | `eggs-turkey-potatoes.jpg` | Breakfast at the Ararat Shrine Restaraunt | heatherhoesly | BY 2.0 | https://www.flickr.com/photos/27822894@N04/4392638490 |
+| `breakfast-burrito.jpg` | Breakfast burrito at Tod Mountain Cafe | Ruth and Dave | BY 2.0 | https://www.flickr.com/photos/95142644@N00/52152008426 |
+| `bagel-egg-turkey.jpg` | Egg McMartin at Martin's, Great Barrington, MA | Yzukerman | BY 2.0 | https://www.flickr.com/photos/48947735@N00/10256488553 |
 | `avocado-egg-toast.jpg` | poached eggs with avocado and toast | Stacy Spensley | BY 2.0 | https://www.flickr.com/photos/21001756@N06/4532239153 |
 | `oat-pancakes.jpg` | maple oatmeal pancakes | kae71463 | BY 2.0 | https://www.flickr.com/photos/75231152@N00/7109416253 |
 | `oatmeal-banana.jpg` | oatmeal with banana | functoruser | BY 2.0 | https://www.flickr.com/photos/54458860@N00/2276800807 |
@@ -27,9 +29,11 @@ cita. Para usar una foto propia, se quita `source` del plato y se coloca el arch
 | `beef-fajitas.jpg` | Mmm... beef and cheese fajita | jeffreyw | BY 2.0 | https://www.flickr.com/photos/7927684@N03/8247613209 |
 | `fish-rice-salad.jpg` | Dinner - Fried Tilapia, Rice, Green Beans with Bacon | shelnew19 | BY 2.0 | https://www.flickr.com/photos/77161127@N00/5269005320 |
 | `chicken-nopales-rice.jpg` | Ensalada de Nopales | jlastras | BY 2.0 | https://www.flickr.com/photos/22662305@N04/3829036499 |
+| `chicken-wrap.jpg` | vegetarian buffalo chicken wrap | Thriving Vegetarian | BY 2.0 | https://www.flickr.com/photos/90155432@N02/8462205332 |
+| `turkey-burger-potatoes.jpg` | Turkey Burger with Baked Beans and Potato Salad | TheCulinaryGeek | BY 2.0 | https://www.flickr.com/photos/72949902@N00/5076897718 |
+| `chicken-soup.jpg` | Caldo de Pollo | Howdy, I'm HMK | BY 2.0 | https://www.flickr.com/photos/48889115061@N01/52484943301 |
 | `tuna-tostadas.jpg` | Local blue fin tuna tostada with uni, lemon, Kyoho grapes, habanero, & furikake | T.Tseng | BY 2.0 | https://www.flickr.com/photos/68147320@N02/14756453829 |
 | `chicken-potato-salad.jpg` | Mmm... BBQ chicken with slaw and potato salad | jeffreyw | BY 2.0 | https://www.flickr.com/photos/7927684@N03/9018746845 |
-| `chicken-soup.jpg` | Caldo de Pollo | Howdy, I'm HMK | BY 2.0 | https://www.flickr.com/photos/48889115061@N01/52484943301 |
 | `chicken-pasta-broccoli.jpg` | Mmm... chicken lo mein | jeffreyw | BY 2.0 | https://www.flickr.com/photos/7927684@N03/10715374483 |
 | `protein-shake.jpg` | Hemp hearts, whey protein, bee pollen, egg, fresh banana and strawberries, spinach, and flax seeds with a chia seed topper. Good morning, #losangeles! #smoothie | adrielhampton | BY 2.0 | https://www.flickr.com/photos/9128236@N03/16699172737 |
 | `turkey-sandwich.jpg` | Mesquite Turkey Sandwich - 1 | The Marmot | BY 2.0 | https://www.flickr.com/photos/38142119@N00/15046644535 |

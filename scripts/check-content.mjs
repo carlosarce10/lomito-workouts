@@ -25,7 +25,14 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 
-import { getMuscleGroup, GROUP_IDS, IMAGE_FRAMES, MEAL_IDS } from '../src/domain/catalogs/index.js';
+import {
+  COUNTRY_IDS,
+  getMuscleGroup,
+  GROUP_IDS,
+  IMAGE_FRAMES,
+  MEAL_IDS,
+} from '../src/domain/catalogs/index.js';
+import { isAvailableIn } from '../src/domain/model/nutritionPlan.js';
 import { clientSchema } from '../src/domain/schemas/client.schema.js';
 import { dietContentSchema } from '../src/domain/schemas/diet.schema.js';
 import {
@@ -201,6 +208,9 @@ for (const [archivo, lista] of [
   });
 }
 platos.forEach((plato, i) => {
+  if (plato.carrier && !plato.foodIds.includes(plato.carrier.foodId)) {
+    errores.push(`${PLATOS}: [${i}].carrier "${plato.carrier.foodId}" no esta en sus foodIds`);
+  }
   for (const foodId of plato.foodIds) {
     if (!idsDeAlimento.has(foodId)) {
       errores.push(`${PLATOS}: [${i}].foodIds "${foodId}" no existe en ${ALIMENTOS}`);
@@ -208,20 +218,38 @@ platos.forEach((plato, i) => {
   }
 });
 
-// Cada comida principal ofrece variedad propia: un minimo de platos y como mucho unos
-// pocos compartidos con otro momento del dia. El snack no cuenta como comida principal.
-for (const mealId of MEAL_IDS.filter((id) => id !== 'snack')) {
-  const delMomento = platos.filter((plato) => plato.mealIds?.includes(mealId));
-  const compartidos = delMomento.filter((plato) => plato.mealIds.length > 1);
-  if (delMomento.length < LIMITS.mainMealPlates.min) {
+// Cada comida principal ofrece variedad propia en cada pais: un minimo de platos que
+// se consiguen alli y como mucho unos pocos compartidos con otro momento del dia. El
+// snack no cuenta como comida principal.
+const alimentoPorId = new Map(alimentos.map((alimento) => [alimento.id, alimento]));
+for (const countryId of COUNTRY_IDS) {
+  const delPais = platos.filter((plato) =>
+    plato.foodIds?.every(
+      (id) => alimentoPorId.has(id) && isAvailableIn(alimentoPorId.get(id), countryId),
+    ),
+  );
+  // La cena proteica no ofrece platos con envoltorio: tambien necesita sus 5 opciones.
+  const cenasSinEnvoltorio = delPais.filter(
+    (plato) => plato.mealIds?.includes('dinner') && !plato.carrier,
+  );
+  if (cenasSinEnvoltorio.length < LIMITS.mainMealPlates.min) {
     errores.push(
-      `${PLATOS}: "${mealId}" tiene ${delMomento.length} platos; minimo ${LIMITS.mainMealPlates.min}`,
+      `${PLATOS}: la cena tiene ${cenasSinEnvoltorio.length} platos sin tortilla ni pan como envoltorio en "${countryId}"; minimo ${LIMITS.mainMealPlates.min}`,
     );
   }
-  if (compartidos.length > LIMITS.sharedPlatesPerMeal.max) {
-    errores.push(
-      `${PLATOS}: "${mealId}" comparte ${compartidos.length} platos con otros momentos; maximo ${LIMITS.sharedPlatesPerMeal.max}`,
-    );
+  for (const mealId of MEAL_IDS.filter((id) => id !== 'snack')) {
+    const delMomento = delPais.filter((plato) => plato.mealIds?.includes(mealId));
+    const compartidos = delMomento.filter((plato) => plato.mealIds.length > 1);
+    if (delMomento.length < LIMITS.mainMealPlates.min) {
+      errores.push(
+        `${PLATOS}: "${mealId}" tiene ${delMomento.length} platos en "${countryId}"; minimo ${LIMITS.mainMealPlates.min}`,
+      );
+    }
+    if (compartidos.length > LIMITS.sharedPlatesPerMeal.max) {
+      errores.push(
+        `${PLATOS}: "${mealId}" comparte ${compartidos.length} platos con otros momentos en "${countryId}"; maximo ${LIMITS.sharedPlatesPerMeal.max}`,
+      );
+    }
   }
 }
 

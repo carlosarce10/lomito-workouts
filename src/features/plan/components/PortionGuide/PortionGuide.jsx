@@ -9,7 +9,8 @@ const GRUPOS = ['protein', 'carbs', 'fat'];
 
 /**
  * "Tu plato en cada comida": cuantas palmas de proteina, punos de carbohidratos y
- * pulgares de grasa lleva cada comida principal, mas la verdura libre y el snack.
+ * pulgares de grasa lleva cada comida principal, mas la verdura libre, la cena cuando
+ * el reparto la cambia y el snack.
  * Es la regla que el cliente puede seguir sin bascula.
  *
  * @param {object} props
@@ -25,11 +26,17 @@ export default function PortionGuide({ portions }) {
     porcion(grupo, portions.snack[grupo]),
   );
   const verdura = portions.perMeal.vegetables;
+  // Con cena proteica, la casilla de arriba es para desayuno y comida y la cena va aparte.
+  const cena = portions.dinner
+    ? GRUPOS.map((grupo) => porcion(grupo, portions.dinner[grupo])).join(', ')
+    : null;
 
   return (
     <section className="c-portion-guide">
       <h2 className="c-portion-guide__title">{t('diet.plateTitle')}</h2>
-      <p className="c-portion-guide__lead">{t('diet.plateLead', { count: portions.meals })}</p>
+      <p className="c-portion-guide__lead">
+        {cena ? t('diet.plateLeadSplit') : t('diet.plateLead', { count: portions.meals })}
+      </p>
       <ul className="c-portion-guide__grid">
         {GRUPOS.map((grupo) => (
           <li key={grupo} className="c-portion-guide__tile">
@@ -53,6 +60,15 @@ export default function PortionGuide({ portions }) {
           {t('diet.breakfastNote', {
             count: plural(portions.breakfastProtein),
             value: toMixedNumber(portions.breakfastProtein),
+          })}
+        </p>
+      ) : null}
+      {cena ? (
+        <p className="c-portion-guide__note">
+          {t('diet.dinnerLine', {
+            items: cena,
+            min: portions.dinner.vegetables.min,
+            max: portions.dinner.vegetables.max,
           })}
         </p>
       ) : null}
