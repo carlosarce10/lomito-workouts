@@ -1,0 +1,21 @@
+{
+  "id": "high-cable-wrist-curl",
+  "name": "Curl de muñeca en polea alta",
+  "muscleIds": ["forearms"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca una barra recta o EZ en la polea alta y tómala con las dos manos, palmas hacia arriba, a la anchura de los hombros.",
+    "De pie frente a la polea y con el torso un poco inclinado, pega los codos a los costados con los antebrazos apuntando hacia la polea.",
+    "Deja que el cable lleve las muñecas hacia atrás hasta notar el estiramiento del antebrazo.",
+    "Dobla solo las muñecas para acercar las palmas a los antebrazos, aprieta un segundo y vuelve en 2-3 segundos."
+  ],
+  "commonMistakes": [
+    "Doblar o estirar los codos: el trabajo pasa al bíceps o al tríceps.",
+    "Separar los codos del cuerpo a medida que te cansas.",
+    "Hacer recorridos cortos sin llegar al estiramiento."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Reverse_Grip_Triceps_Pushdown"
+  }
+}

@@ -146,7 +146,7 @@
           "notes": "Baja hasta que los muslos queden paralelos a la plataforma, sin despegar los talones."
         },
         {
-          "exerciseId": "lying-leg-curl",
+          "exerciseId": "seated-leg-curl",
           "reps": {
             "min": 8,
             "max": 12
@@ -256,7 +256,7 @@
       "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
       "exercises": [
         {
-          "exerciseId": "lying-leg-curl",
+          "exerciseId": "seated-leg-curl",
           "reps": {
             "min": 8,
             "max": 12

@@ -113,7 +113,7 @@
           "notes": "Sube y baja en control, sin bloquear la rodilla de golpe."
         },
         {
-          "exerciseId": "lying-leg-curl",
+          "exerciseId": "seated-leg-curl",
           "reps": {
             "min": 10,
             "max": 12

@@ -1,0 +1,18 @@
+{
+  "id": "pull-up",
+  "name": "Dominadas",
+  "muscleIds": ["lats", "biceps", "back-upper"],
+  "equipmentId": "bodyweight",
+  "instructions": [
+    "Cuélgate de la barra con las palmas hacia delante, un poco más abiertas que los hombros, y los brazos estirados.",
+    "Baja los hombros lejos de las orejas antes de empezar a tirar.",
+    "Sube llevando los codos hacia abajo y hacia los costados hasta que la barbilla pase la barra.",
+    "Baja en 2-3 segundos hasta estirar los brazos del todo, sin soltarte."
+  ],
+  "commonMistakes": [
+    "Balancearte o patear para subir.",
+    "Quedarte a medio recorrido abajo, con los codos doblados.",
+    "Estirar el cuello hacia la barra en lugar de subir el cuerpo."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Pullups" }
+}

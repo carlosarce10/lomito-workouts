@@ -1,0 +1,21 @@
+{
+  "id": "cable-reverse-spider-curl",
+  "name": "Curl araña invertido en polea",
+  "muscleIds": ["forearms", "biceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Pon frente a la polea baja, con barra recta o EZ, el banco Scott por su lado vertical o un banco a 45 grados, y apoya el pecho en el respaldo.",
+    "Toma la barra con las palmas hacia abajo y deja los brazos colgando delante del banco, perpendiculares al suelo.",
+    "Sube la barra flexionando solo los codos, sin moverlos hacia delante ni hacia atrás.",
+    "Aprieta un segundo arriba y baja en 2-3 segundos hasta estirar los brazos."
+  ],
+  "commonMistakes": [
+    "Despegar el pecho del banco para ayudarte con el torso.",
+    "Llevar los codos hacia delante al subir: el trabajo pasa al hombro.",
+    "Doblar las muñecas hacia abajo en lugar de mantenerlas en línea con el antebrazo."
+  ],
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Reverse_Barbell_Preacher_Curls"
+  }
+}

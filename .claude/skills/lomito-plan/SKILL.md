@@ -164,10 +164,11 @@ prefiere no desarrollar, puede quedarse en mantenimiento. Nunca por encima de 16
 Mantenimiento es el minimo, no cero: biceps, triceps, gemelos y aductores llevan al
 menos 4 series directas aunque no sean prioridad. En hombres, el antebrazo lleva
 trabajo directo (en mujeres no, ver "Sexo del cliente"):
-un curl de muneca despues del biceps, con mancuerna o barra y el antebrazo apoyado
-(`db-wrist-curl`, `barbell-wrist-curl`). Por defecto, de flexores (palmas arriba),
-que es el musculo mas grande; de extensores solo si el entrenador lo pide. El curl de
-muneca en polea no se usa: no le gusta al entrenador. Los encogimientos (trapecio) no
+un curl de muneca despues del biceps, con mancuerna y el antebrazo apoyado
+(`db-wrist-curl`), con el de polea alta (`high-cable-wrist-curl`) como alternativa.
+Por defecto, de flexores (palmas arriba), que es el musculo mas grande; si ademas va
+un curl invertido (`cable-reverse-curl`), el curl de muneca va antes. El curl de
+muneca en polea baja no se usa: no le gusta al entrenador. Los encogimientos (trapecio) no
 entran por defecto, solo si el entrenador los pide; si entran, van al final del bloque
 de espalda y cuentan como espalda alta (`back-upper`). La zona lumbar se cubre con las
 bisagras de cadera.
@@ -218,6 +219,9 @@ Reglas fijas, en cualquier nivel:
   sentadilla, bulgara y zancada son el mismo patron: nunca dos en la misma rutina.
   El resto del dia se completa con extension de cuadriceps, curl femoral, gluteo y
   gemelo.
+- **Curl femoral: de entrada, sentado** (`seated-leg-curl`), con el acostado
+  (`lying-leg-curl`) como alternativa. Sentado es mucho mejor. Nunca los dos en la
+  misma rutina: es literalmente el mismo ejercicio.
 - **La extension de cuadriceps esta en toda semana con pierna**, aunque el cuadriceps
   no sea prioridad: es de los mejores ejercicios de cuadriceps y no se quita para
   hacer sitio.
@@ -304,12 +308,23 @@ reglas por sexo hasta que esten escritos aqui.
    el entrenador quiera decir algo de ese ejercicio. No existe `day`: el orden en la
    lista es el dia.
    Cada ejercicio lleva `alternativeId`: el que lo sustituye si el gimnasio no tiene
-   la maquina. Mismo movimiento y mismo enfasis muscular (pec deck por cruce de poleas,
-   press en maquina por press en multipower, prensa por hack), permitido para el nivel
+   la maquina. Mismo movimiento y mismo enfasis muscular (prensa por hack), permitido para el nivel
    del cliente y que no este ya en esa rutina. Usa la misma prescripcion: no lleva reps
    propias. `lint:content` exige que comparta el musculo principal. Si no existe un
    sustituto real del mismo movimiento, el ejercicio va sin alternativa: la extension
    de cuadriceps nunca la lleva. La alternativa tiene foto siempre que se pueda.
+   Alternativas fijas del entrenador, en cualquier nivel:
+
+   | Principal                                          | Alternativa                                  |
+   | -------------------------------------------------- | -------------------------------------------- |
+   | Pec deck (`pec-deck`)                              | Aperturas en polea media (`cable-chest-fly`) |
+   | Press de hombro en maquina                         | Press sentado con mancuernas                 |
+   | Jalon al pecho (`lat-pulldown`)                    | Dominadas (`pull-up`)                        |
+   | Curl bayesiano en polea                            | Curl inclinado con mancuernas                |
+   | Curl femoral sentado                               | Curl femoral acostado                        |
+   | Curl de muneca con mancuernas                      | Curl de muneca en polea alta                 |
+   | Cruce de poleas altas, de arriba abajo, pecho bajo | Fondos (`chest-dip`), salvo en principiantes |
+
 3. **Ejercicios nuevos** solo si no hay uno equivalente en la biblioteca. Se crean
    en `src/content/exercises/<grupo de muscleIds[0]>/<id>.json` con `id` en ingles y
    kebab-case, `name`, `instructions` (3 a 5 pasos) y `commonMistakes` (2 a 3) en

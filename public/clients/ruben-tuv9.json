@@ -1,0 +1,324 @@
+{
+  "name": "Rubén Arce de la Torre",
+  "goalId": "hypertrophy",
+  "levelId": "beginner",
+  "countryId": "mx",
+  "startDate": "2026-10-19",
+  "reviewDate": "2026-12-14",
+  "notes": "Semana: Push, Pull, Lower y Upper, de lunes a jueves. Prioridad: espalda y pecho. La pierna va en mantenimiento porque el ciclismo ya la trabaja; rueda lejos del miércoles. Espalda baja: nada de peso muerto ni bisagras. Hombro y clavícula: empuje solo en máquina; si algo molesta, usa la alternativa.",
+  "routines": [
+    {
+      "name": "Push",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        {
+          "exerciseId": "pec-deck",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "alternativeId": "cable-chest-fly"
+        },
+        {
+          "exerciseId": "machine-incline-chest-press",
+          "alternativeId": "smith-incline-press",
+          "reps": {
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "cable-crossover",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "warmupSets": 0,
+          "notes": "Poleas en lo más alto: lleva las manos de arriba abajo hasta delante de la cadera."
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "alternativeId": "cable-lateral-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          }
+        },
+        {
+          "exerciseId": "machine-shoulder-press",
+          "alternativeId": "seated-db-shoulder-press",
+          "reps": {
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "alternativeId": "db-overhead-triceps-extension",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "triceps-rope-pushdown",
+          "alternativeId": "triceps-vbar-pushdown",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Pull",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        {
+          "exerciseId": "lat-pulldown",
+          "alternativeId": "pull-up",
+          "reps": {
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "machine-row",
+          "alternativeId": "seated-cable-row",
+          "reps": {
+            "min": 6,
+            "max": 10
+          },
+          "notes": "Pecho apoyado en el respaldo durante toda la serie: tira con la espalda, no con el torso."
+        },
+        {
+          "exerciseId": "reverse-machine-fly",
+          "alternativeId": "cable-rear-delt-fly",
+          "reps": {
+            "min": 12,
+            "max": 15
+          }
+        },
+        {
+          "exerciseId": "bayesian-cable-curl",
+          "alternativeId": "incline-db-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "hammer-curl",
+          "alternativeId": "rope-hammer-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "db-wrist-curl",
+          "alternativeId": "high-cable-wrist-curl",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "cable-reverse-curl",
+          "alternativeId": "cable-reverse-spider-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "warmupSets": 0
+        }
+      ]
+    },
+    {
+      "name": "Lower",
+      "notes": "Calentamiento: balanceos de pierna, círculos de cadera, puente de glúteo y sentadilla sin peso, 2 × 10.",
+      "exercises": [
+        {
+          "exerciseId": "leg-extension",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "seated-leg-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          },
+          "alternativeId": "lying-leg-curl"
+        },
+        {
+          "exerciseId": "leg-press",
+          "alternativeId": "hack-squat",
+          "reps": {
+            "min": 6,
+            "max": 10
+          },
+          "notes": "Pies a media altura y a la anchura de la cadera. Baja solo hasta donde la espalda baja siga pegada al respaldo."
+        },
+        {
+          "exerciseId": "hip-adduction-machine",
+          "alternativeId": "cable-hip-adduction",
+          "reps": {
+            "min": 10,
+            "max": 12
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "floor-crunch",
+          "alternativeId": "machine-crunch",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "warmupSets": 0,
+          "notes": "Cuando completes el rango, sostén un disco contra el pecho."
+        },
+        {
+          "exerciseId": "parallel-bar-knee-raise",
+          "reps": {
+            "min": 10,
+            "max": 15
+          },
+          "warmupSets": 0,
+          "notes": "Sube las rodillas hacia el pecho sin balancearte y baja despacio."
+        }
+      ]
+    },
+    {
+      "name": "Upper",
+      "notes": "Calentamiento: rotaciones externas e internas con liga para el manguito rotador, aperturas con liga y círculos de hombro, 2 × 15.",
+      "exercises": [
+        {
+          "exerciseId": "lat-pulldown",
+          "alternativeId": "pull-up",
+          "reps": {
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "pec-deck",
+          "alternativeId": "cable-chest-fly",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "machine-row",
+          "alternativeId": "seated-cable-row",
+          "reps": {
+            "min": 6,
+            "max": 10
+          },
+          "notes": "Pecho apoyado en el respaldo durante toda la serie: tira con la espalda, no con el torso."
+        },
+        {
+          "exerciseId": "machine-chest-press",
+          "alternativeId": "smith-bench-press",
+          "reps": {
+            "min": 6,
+            "max": 10
+          }
+        },
+        {
+          "exerciseId": "db-lateral-raise",
+          "alternativeId": "cable-lateral-raise",
+          "reps": {
+            "min": 12,
+            "max": 15
+          }
+        },
+        {
+          "exerciseId": "reverse-machine-fly",
+          "alternativeId": "cable-rear-delt-fly",
+          "reps": {
+            "min": 12,
+            "max": 15
+          },
+          "warmupSets": 0
+        },
+        {
+          "exerciseId": "machine-preacher-curl",
+          "alternativeId": "db-preacher-curl",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        },
+        {
+          "exerciseId": "cable-overhead-triceps-extension",
+          "alternativeId": "db-overhead-triceps-extension",
+          "reps": {
+            "min": 8,
+            "max": 12
+          }
+        }
+      ]
+    }
+  ],
+  "diet": {
+    "dietGoalId": "deficit",
+    "activityFactor": {
+      "min": 1.7,
+      "max": 1.7
+    },
+    "adjustmentPercent": {
+      "min": -15,
+      "max": -10
+    },
+    "restingCalories": {
+      "min": 1990,
+      "max": 1990
+    },
+    "maintenanceCalories": {
+      "min": 3400,
+      "max": 3400
+    },
+    "targetCalories": {
+      "min": 2900,
+      "max": 3050
+    },
+    "proteinPerKg": {
+      "min": 2,
+      "max": 2.2
+    },
+    "protein": {
+      "min": 195,
+      "max": 215
+    },
+    "fatPercent": {
+      "min": 20,
+      "max": 25
+    },
+    "fat": {
+      "min": 65,
+      "max": 85
+    },
+    "carbs": {
+      "min": 350,
+      "max": 390
+    },
+    "fiber": {
+      "min": 40,
+      "max": 45
+    },
+    "water": {
+      "min": 2900,
+      "max": 3400
+    },
+    "mealsPerDay": 3,
+    "calculatedAt": "2026-10-21"
+  }
+}

@@ -1,17 +1,21 @@
 {
   "id": "cable-crossover",
-  "name": "Cruce de poleas",
+  "name": "Cruce de poleas altas",
   "muscleIds": ["chest"],
   "equipmentId": "cable",
   "instructions": [
-    "Coloca las poleas por encima de la cabeza, toma una manija en cada mano y da un paso al frente con una pierna adelantada.",
-    "Con los codos ligeramente flexionados y fijos, junta las manos delante del pecho describiendo un arco, como si abrazaras un tronco.",
-    "Aprieta el pecho un segundo al final y vuelve controlando hasta sentir el estiramiento."
+    "Coloca las dos poleas en lo más alto, toma una manija en cada mano y da un paso al frente con una pierna adelantada y el torso un poco inclinado.",
+    "Empieza con los brazos abiertos hacia arriba y los codos ligeramente flexionados y fijos, hasta sentir el estiramiento del pecho.",
+    "Baja las manos en arco, de arriba abajo, hasta juntarlas delante de la cadera: así trabaja la parte baja del pecho.",
+    "Aprieta el pecho un segundo abajo y vuelve controlando hasta la posición inicial."
   ],
   "commonMistakes": [
+    "Juntar las manos a la altura del pecho: deja de trabajar la parte baja.",
     "Flexionar y extender los codos: lo convierte en un press.",
-    "Encoger los hombros hacia las orejas.",
-    "Usar tanto peso que el torso se inclina hacia adelante para compensar."
+    "Encoger los hombros hacia las orejas."
   ],
-  "source": { "provider": "free-exercise-db", "id": "Cable_Crossover" }
+  "source": {
+    "provider": "free-exercise-db",
+    "id": "Cable_Iron_Cross"
+  }
 }

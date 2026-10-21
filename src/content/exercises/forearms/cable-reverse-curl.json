@@ -1,0 +1,18 @@
+{
+  "id": "cable-reverse-curl",
+  "name": "Curl invertido en polea",
+  "muscleIds": ["forearms", "biceps"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca una barra recta o EZ en la polea baja y tómala con las palmas hacia abajo, a la anchura de los hombros.",
+    "De pie frente a la polea, pega los codos a los costados y mantén las muñecas rectas.",
+    "Sube la barra flexionando solo los codos hasta que los antebrazos queden casi verticales.",
+    "Baja en 2-3 segundos hasta estirar los brazos, sin soltar la tensión del cable."
+  ],
+  "commonMistakes": [
+    "Doblar las muñecas hacia abajo al subir: pierden la línea con el antebrazo.",
+    "Separar los codos del cuerpo o balancear el torso para subir más peso.",
+    "Girar las palmas hacia arriba al final del recorrido."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Reverse_Cable_Curl" }
+}

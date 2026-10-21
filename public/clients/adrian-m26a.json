@@ -16,7 +16,8 @@
           "reps": {
             "min": 8,
             "max": 12
-          }
+          },
+          "alternativeId": "cable-chest-fly"
         },
         {
           "exerciseId": "incline-db-press",
@@ -78,7 +79,7 @@
       "exercises": [
         {
           "exerciseId": "lat-pulldown",
-          "alternativeId": "one-arm-cable-pulldown",
+          "alternativeId": "pull-up",
           "reps": {
             "min": 6,
             "max": 10
@@ -121,7 +122,7 @@
         },
         {
           "exerciseId": "db-wrist-curl",
-          "alternativeId": "barbell-wrist-curl",
+          "alternativeId": "high-cable-wrist-curl",
           "reps": {
             "min": 10,
             "max": 12
@@ -209,7 +210,7 @@
       "exercises": [
         {
           "exerciseId": "pec-deck",
-          "alternativeId": "cable-crossover",
+          "alternativeId": "cable-chest-fly",
           "reps": {
             "min": 8,
             "max": 12
@@ -225,7 +226,7 @@
         },
         {
           "exerciseId": "lat-pulldown",
-          "alternativeId": "one-arm-cable-pulldown",
+          "alternativeId": "pull-up",
           "reps": {
             "min": 6,
             "max": 10

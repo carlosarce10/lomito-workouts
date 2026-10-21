@@ -1,0 +1,18 @@
+{
+  "id": "cable-chest-fly",
+  "name": "Aperturas en polea media",
+  "muscleIds": ["chest"],
+  "equipmentId": "cable",
+  "instructions": [
+    "Coloca las dos poleas a la altura de los hombros, toma una manija en cada mano y da un paso al frente con una pierna adelantada.",
+    "Abre los brazos en cruz, con los codos ligeramente flexionados y fijos, hasta sentir el estiramiento del pecho.",
+    "Junta las manos delante del pecho describiendo un arco horizontal, como si abrazaras un tronco.",
+    "Aprieta el pecho un segundo y vuelve controlando hasta la posición inicial."
+  ],
+  "commonMistakes": [
+    "Flexionar y extender los codos: lo convierte en un press.",
+    "Bajar o subir las manos durante el recorrido: cambia la parte del pecho que trabaja.",
+    "Encoger los hombros hacia las orejas."
+  ],
+  "source": { "provider": "free-exercise-db", "id": "Cable_Crossover" }
+}
